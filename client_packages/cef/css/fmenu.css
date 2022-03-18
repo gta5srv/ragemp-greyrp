@@ -1,0 +1,479 @@
+﻿.fmenu {position: absolute;width: 120vh;height: 75vh;color: #fff;left: 0;top: 10%;background: #1f2427cc;display: block;right: 0;margin: 0 auto;border-radius: 2.5vh;border: 1.5vh solid #000;letter-spacing: initial;background-image: url(../images/bgtab.jpg);background-size: cover;background-repeat: no-repeat;}
+hr {
+    display: none;
+}
+.info {text-align: center;}
+    .fmenu .right {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        height: 47vh;
+        margin: 0 auto 0;
+        padding: 0 0;
+        padding-top: 0;
+        border-bottom-left-radius: 1vh;
+        border-bottom-right-radius: 1vh;
+        top: 8vh;
+        /* max-height: 30vh; */
+        overflow-x: auto;
+    }
+
+    .fmenu .left {
+        text-align: left;
+        float: none;
+        width: 100%;
+        height: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 4vh;
+    }
+.fmenu .right h1 {
+    border-radius: 0;
+}
+    .fmenu h1 {
+        color: white;
+        font-size: 2vh;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 2vh 0;
+        border-top-right-radius: 1vh;
+        border-top-left-radius: 1vh;
+        background-color: #2c2f339c;
+    }
+     .fmenu .priem {height: 57.5vh;}
+    .fmenu .priem h1 {
+    background: #000;
+    padding: 1.5vh;
+    font-size: 1.5vh;
+    text-transform: inherit;
+}
+
+    .fmenu .btns {
+        padding: 1vh 0;
+        text-align: center;
+        margin-top: 3vh;
+    }
+
+    .fmenu .btn {
+    color: #6c6c6c;
+    margin-right: 3vh;
+    }
+    .fmenu .btn .online {
+    margin: 0;
+}
+.fmenu .btn:last-child {
+}
+.fmenu .btn:last-child:hover {
+}
+        .fmenu .btn:hover{
+        color: #fff;
+        }
+
+        .fmenu .btn.active {
+            color: #ffffff;
+        }
+
+    .fmenu table {
+        width: 100%;
+        border-top: 0px solid #6f0000;
+        padding: 2vh;
+        margin: 0px auto;
+        background-color: #2c2f339c;
+        padding-top: 2vh;
+    }
+
+.fmenu table tbody tr:first-child {
+    background: #6f0000a6;
+    margin: 0;
+    padding: 0;
+}
+.fmenu table tbody tr:first-child th {border-radius: 1vh;box-shadow: 0px 0px 1vh #980000;text-align: left;padding: 1vh 2vh;font-weight: 700;font-size: 1.5vh;}
+        .fmenu table th {
+            font-weight: normal;
+            color: #fff;
+            font-size: 14px;
+        }
+        .fmenu tbody th {font-weight: bold;font-size: 1.5vh;padding: 0.8vh 1vh;font-weight: 400;}
+.fmenu tbody th div {
+    text-align: center;
+    padding: 0.8vh;
+    background: #6f0000;
+    border-radius: 1vh;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.2vh;
+    margin: 0 0.5vh;
+}
+.fmenu tbody th:last-child {
+    padding: 0 5px;
+    text-align: center;
+}
+    .fmenu .info p {
+        color: #fff;
+        display: inline-block;
+        margin: 15px 0;
+        font-size: 15px;
+        width: 30%;
+        font-weight: 500;
+        background: #000;
+        padding: 10px 0;
+        box-shadow: 0px 0px 15px #980000;
+        background-color: #6f0000;
+        border-radius: 5px;
+        margin: 10px 5px;
+        color: #fff !important;
+    }
+
+    .fmenu .online span {
+        background: #3de239;
+        width: 10px;
+        height: 10px;
+        display: block;
+        border-radius: 100%;
+        margin-left: 15px;
+        /* margin: 0 auto; */
+    }
+    .fmenu .offline span {
+        background: #ea3942;
+        width: 10px;
+        height: 10px;
+        display: block;
+        border-radius: 100%;
+        margin-left: 15px;
+        /* margin: 0 auto; */
+    }
+	
+	.fmenu .work {
+        color: #3de239;
+    }
+
+    .fmenu .offline {
+        color: #ea3942;
+    }
+
+    .fmenu .info span {
+        color: #fff;
+        margin-left: 5px;
+        font-weight: 800;
+    }
+
+    .fmenu .btn-submit {
+        cursor: pointer;
+        border-radius: 1vh;
+        padding: 0.5vh;
+        font-size: 1.5vh;
+        display: inline-block;
+        width: 15vh;
+        margin: 0 2vh;
+        margin-top: 5vh;
+        border: none;
+        border-width: 0 !important;
+        margin-bottom: 2vh;
+        margin-left: 60px;
+        margin-top: 20px;
+        margin-right: 0;
+        font-family: 'Uni Neue';
+        background: #3d3d3d;
+        text-align: center;
+    }
+
+
+    .fmenu .btn-submit:hover{
+        background-color: #ea3942;
+    }
+
+    .fmenu .listranks{
+        margin-left: 50px;
+    }
+
+    .fmenu input {
+        border-radius: 0.5vh;
+        border: none;
+        padding: 0.5vh;
+        font-size: 1.5vh;
+        display: inline-block;
+        width: 25vh;
+        color: rgb(95, 95, 95);
+        margin-top: 10px;
+        padding-left: 5px;
+        border: none;
+        border-width: 0 !important;
+        margin-left: 100px;
+        font-family: 'Uni Neue';
+    }
+
+.head {
+    padding: 2.3vh 5vh;
+    background: #242424;
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
+    color: #fff;
+    font-size: 1.5vh;
+    height: 6vh;
+    border-radius: 1vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 117.2vh;
+    position: relative;
+    left: -1px;
+}
+.content {
+    margin: 0 auto;
+    max-width: 107vh;
+    background: #000000cc;
+    border-radius: 1.5vh;
+    height: 57.5vh;
+}
+.frackcars {
+    padding: 2vh;
+    height: 57.5vh;
+    font-size: 1.5vh;
+    overflow-x: overlay;
+}
+.frackcars .car {
+    padding: 2vh;
+    display: inline-block;
+    width: 47vh;
+    background: #000000b8;
+    border-radius: 0.7vh;
+    font-size: 1.5vh;
+    line-height: normal;
+    font-weight: 400;
+    text-align: center;
+    margin: 2vh 2vh;
+}
+.frackcars .car .names {
+    margin-bottom: 2vh;
+}
+.frackcars .car .names b {
+    color: #6c6c6c;
+    margin-right: 1vh;
+}
+.frackcars .car .bts {
+    display: inline-block;
+    padding: 1vh;
+    margin: 1vh 3vh;
+    background: #3d3d3d;
+    border-radius: 0.5vh;
+    font-size: 1.5vh;
+    cursor: pointer;
+}
+.frackcars .car .bts:hover {
+    background: #ea3942;
+}
+.content .head {
+    padding: 1.5vh 2vh;
+    background: #000000;
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
+    color: #6c6c6c;
+    font-size: 1.5vh;
+    height: inherit;
+    border-radius: 1.5vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: auto;
+}
+.us{
+    height: 53vh;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    font-size: 1.5vh;
+    overflow-x: overlay;
+}
+.us .user {
+    border-bottom: 0.1vh solid #242424;
+    padding: 1vh 0;
+}
+.content .head .q1 {
+    display: inline-block;
+    width: 3vh;
+}
+.content .head .q2 {
+    display: inline-block;
+    width: 5vh;
+}
+.content .head .q3 {
+    display: inline-block;
+    width: 18vh;
+}
+.content .head .q4 {
+    display: inline-block;
+    width: 16vh;
+}
+.content .head .q5 {
+    display: inline-block;
+    width: 10vh;
+}
+.content .head .q6 {
+    display: inline-block;
+    width: 15vh;
+}
+.menue {
+    max-width: 107vh;
+    margin: 0 auto;
+    font-size: 1.5vh;
+    font-weight: 400;
+}
+.con {
+    margin: 0 auto;
+    padding: 1.5vh 0;
+    background: #000000;
+    margin-bottom: 2vh;
+    width: 117.2vh;
+    position: relative;
+    left: -1px;
+    }
+.head h2 {
+    margin: 0;
+    display: inline-block;
+    border-right: 0.1vh solid #ccc;
+    padding-right: 1vh;
+    font-weight: 700;
+    vertical-align: top;
+    font-size: 1.5vh;
+}
+h2 {
+    text-align: left;
+    font-size: 1.8vh;
+    font-weight: 700;
+    margin-bottom: 1vh;
+}
+.head .name {
+    display: inline-block;
+    margin-left: 1vh;
+    color: #ea3942;
+    vertical-align: top;
+}
+.online {
+    display: inline-block;
+    margin-left: 0;
+    color: #ffffff;
+    float: right;
+    vertical-align: top;
+    margin-right: 2vh;
+    font-size: 1.5vh;
+    }
+     .vixod {background:#3d3d3d;
+     float: right;
+    padding: 1vh 2vh;
+    color: #fff;
+    border-radius: 0.5vh;
+    vertical-align: top;
+    position: relative;
+    top: -1vh;
+    cursor: pointer;}
+    
+    .vixod:hover {
+    background: #ea3942;
+}
+.fmenu .head .online span {
+    color: #6c6c6c;
+    font-size: 1.3vh;
+    margin: inherit;
+    width: initial;
+    height: inherit;
+    border: none;
+    background: none;
+    display: initial;
+}
+.us .offline {
+    display: inline-block;
+    width: 4.5vh;
+}
+.us .online {
+    display: inline-block;
+    width: 4.5vh;
+    float: initial;
+    margin: inherit;
+    vertical-align: initial;
+    font-size: initial;
+    color: inherit;
+}
+.us .q2 {
+    display: inline-block;
+    width: 5.5vh;
+}
+.us .q3 {
+    display: inline-block;
+    width: 18vh;
+}
+.us .q4 {
+    display: inline-block;
+    width: 16vh;
+}
+.us .q5 {
+    display: inline-block;
+    width: 10vh;
+}
+.us .q6 {
+    display: inline-block;
+    width: 23vh;
+}
+.us .bt {
+    margin-left: 1vh;
+    display: inline-block;
+    width: 12vh;
+    background: #3d3d3d;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+    text-align: center;
+    font-size: 1.3vh;
+    cursor: pointer;
+}
+.us .bt:hover {
+    background: #ea3942;
+}
+
+.stocks .head .q2 {
+    display: inline-block;
+    width: 20vh;
+}
+.stocks .q3 {
+    display: inline-block;
+    width: 18vh;
+}
+
+.stocks .us .q2 {
+    display: inline-block;
+    width: 22vh;
+    padding-left: 2vh;
+    font-weight: 400;
+}
+.stocks .us .q2 b {
+    color: #6c6c6c;
+    font-size: 1.3vh;
+    margin-right: .5vh;
+    font-weight: 400;
+}
+.stocks .us .q3 {
+    display: inline-block;
+    width: 80vh;
+    font-size: 1.5vh;
+    font-weight: 400;
+    color: #6c6c6c;
+}
+.stocks .us .q3 b {
+    color: #ea3942;
+}
+.stocks .us .q3 span {
+    color: #fff;
+}
+::-webkit-scrollbar {
+    width: 1vh;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #571c1c;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #e42d2d 5%, #ff0000 100%);
+    border-radius: 0;
+  }
+  
+::-webkit-scrollbar{width: 0.2vh;display:block;border-radius: 0vh;}
+::-webkit-scrollbar-track{background: #000000;border-radius: 0vh;}
+::-webkit-scrollbar-thumb{background-color: #3d3d3d;border-radius: 0vh;}

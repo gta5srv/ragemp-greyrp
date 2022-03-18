@@ -1,0 +1,163 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link href="css/stylegang.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+      <link href="fonts/TTNorms/stylesheet.css" rel="stylesheet" type="text/css">
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	  <script src="js/vue.js"></script>
+   </head>
+   <body>
+      <div class="gangs" v-if="active">
+         <!-- Окно начала по клику на Е метки -->
+         <div class="go" v-if="page == 0">
+            <h1>GangArena</h1>
+            <div id="exit" class="exit" v-on:click="hide()"><i class="fas fa-times"></i></div>
+            <div class="btn1" v-on:click="gopage(1)">
+               <p>Создать лобби</p>
+            </div>
+            <div class="btn2" v-on:click="gopage(2)">
+               <p>Присоединиться</p>
+            </div>
+         </div>
+         <!-- Окно конец по клику на Е метки -->
+         <!-- Окно начала создания лобби -->
+         <div class="addlobbi" v-if="page == 1">
+            <h1>Создание лобби</h1>
+            <div id="exit" class="exit" v-on:click="hide()"><i class="fas fa-times"></i></div>
+            <div><input class="btn3 password" type="text" size="40" placeholder="Укажите пароль" v-model="lobby[0]"></div>
+            <p class="small">Укажите пароль, чтобы лобби было закрытого типа</p>
+            <div><input class="btn3 uchastn" type="number" min="0" max="16" value="1" step="1" placeholder="Количество участников" v-model="lobby[1]"></div>
+            <p class="small">Максимальное количество участников 16</p>
+            <div class="btn4" v-on:click="set(0)" v-bind:id="[ weapon == 0 ? 'act' : '' ]">
+               <p>Revolver</p>
+            </div>
+            <div class="btn4" v-on:click="set(1)" v-bind:id="[ weapon == 1 ? 'act' : '' ]">
+               <p>SMG</p>
+            </div>
+            <div class="btn4" v-on:click="set(2)" v-bind:id="[ weapon == 2 ? 'act' : '' ]">
+               <p>Rifle</p>
+            </div>
+            <div class="btn4" v-on:click="set(3)" v-bind:id="[ weapon == 3 ? 'act' : '' ]">
+               <p>Knife</p>
+            </div>
+            <p class="small">Укажите тип оружия</p>
+            <div><input class="btn3 vznos" type="text" size="40" placeholder="Сумма взноса" v-model="lobby[2]"></div>
+            <p class="small">Укажите сумму взноса, общая сумма = выигрыш.<br>Максимальная сумма взноса 100 000$</p>
+            <div class="btn1 sozd" v-on:click="sendlobby()">
+               <p>Создать лобби</p>
+            </div>
+         </div>
+         <!-- Окно конец создания лобби -->
+         <!-- Окно начала присоедениться к лобби -->
+         <div class="gotolobbi" v-if="page == 2">
+            <h1>Присоединиться</h1>
+            <div id="exit" class="exit" v-on:click="hide()"><i class="fas fa-times"></i></div>
+            <div class="ower">
+               <!-- Блок вывода строки лобби начало -->
+               <div class="lobb" v-for="data in lobbies">
+                  <div class="gou">
+                     <h1>Лобби №{{data[0]}}</h1>
+                  </div>
+                  <div class="gou open"  v-if="!data[1]">
+                     <h1>Открытое</h1>
+                  </div>
+                  <div class="gou closed" v-else>
+                     <h1>Закрытое</h1>
+                  </div>
+                  <div class="gou">
+                     <div class="cez ych">
+                        Участники 
+                        <p>{{data[2]}}</p>
+                     </div>
+                  </div>
+                  <div class="gou">
+                     <div class="cez vzn">
+                        Взнос 
+                        <p>{{data[3]}}$</p>
+                     </div>
+                  </div>
+                  <div class="gou">
+                     <div class="cez ory">
+                        Оружие 
+                        <p>{{data[4]}}</p>
+                     </div>
+                  </div>
+                  <div class="gou btn5" v-on:click="connectlobby(data[0])">
+                     <p>GO</p>
+                  </div>
+               </div>
+               <!-- Блок вывода строки лобби конец -->
+            </div>
+         </div>
+         <!-- Окно конец присоедениться к лобби -->
+         <!-- Окно начала победитель катки -->
+         <div class="win" v-if="page == 3">
+            <h1>Победитель</h1>
+            <div id="exit" class="exit" v-on:click="hide()"><i class="fas fa-times"></i></div>
+            <div class="ower">
+               <div class="cool" v-for="winner in winners">
+                  <div class="gou">
+                     <h1>{{winner[0]}}</h1>
+                  </div>
+                  <div class="gou">
+                     <div class="cez yb">
+                        Убийств 
+                        <p>{{winner[1]}}</p>
+                     </div>
+                  </div>
+                  <div class="gou">
+                     <div class="cez sm">
+                        Смертей 
+                        <p>{{winner[2]}}</p>
+                     </div>
+                  </div>
+                  <div class="gou">
+                     <div class="cez vii">
+                        Выигрыш 
+                        <p>{{winner[3]}}$</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Окно конец победитель катки -->
+         <div class="addlobbitd" v-if="page == 4">
+            <h1>Лобби №{{lobby[3]}}</h1>
+            <div id="exit" class="exit" v-on:click="hide()"><i class="fas fa-times"></i></div>
+            <p class="medium">Игроков {{lobby[0]}}</p>
+            <p class="medium">Оружие: {{lobby[1]}}</p>
+            <p class="medium">Взнос: {{lobby[2]}}$</p>
+            <div class="player" v-for="player in players">
+               {{player}}
+               <div class="kick" v-if="adm" v-on:click="kick(player)">Кик</div>
+            </div>
+            <div class="btn1 sozd" v-if="adm" v-on:click="start()">
+               <p>Начать</p>
+            </div>
+         </div>
+      </div>
+	  <div class="timers" v-if="hud">
+            <div class="gou">
+               <div class="time">
+                  Время 
+                  <p>{{time}}</p>
+               </div>
+            </div>
+            <div class="gou">
+               <div class="cez dead">
+                  Убийств 
+                  <p>{{kills}}</p>
+               </div>
+            </div>
+            <div class="gou">
+               <div class="cez life">
+                  Смертей 
+                  <p>{{deaths}}</p>
+               </div>
+            </div>
+         </div>
+	  <script src="js/jquery-3.2.1.min.js"></script>
+	  <script src="js/gangarena.js"></script>
+   </body>
+</html>

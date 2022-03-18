@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="ls_castoms.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+			<a id="bamper_menu">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+			<img src="https://i.imgur.com/MJyVnie.png">
+			<a id="exit_menu">
+                <i class="fas fa-times"></i>
+            </a>
+		</div>
+        <div class="main">
+            <div class="content_box">
+                <div class="logo_categories">
+                    <p>Передние бамперы</p>
+                </div>
+                <div id="-1" class="item" v-if="tunings > 0">
+                    <p>Сток</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="0" class="item" v-if="tunings >= 1 && tunings > 0">
+                    <p>Вариант 1</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="1" class="item" v-if="tunings >= 2 && tunings > 0">
+                    <p>Вариант 2</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="2" class="item" v-if="tunings >= 3 && tunings > 0">
+                    <p>Вариант 3</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="3" class="item" v-if="tunings >= 4 && tunings > 0">
+                    <p>Вариант 4</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="4" class="item" v-if="tunings >= 5 && tunings > 0">
+                    <p>Вариант 5</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="5" class="item" v-if="tunings >= 6 && tunings > 0">
+                    <p>Вариант 6</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="6" class="item" v-if="tunings >= 7 && tunings > 0">
+                    <p>Вариант 7</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="7" class="item" v-if="tunings >= 8 && tunings > 0">
+                    <p>Вариант 8</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="8" class="item" v-if="tunings >= 9 && tunings > 0">
+                    <p>Вариант 9</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="9" class="item" v-if="tunings >= 10 && tunings > 0">
+                    <p>Вариант 10</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="10" class="item" v-if="tunings >= 11 && tunings > 0">
+                    <p>Вариант 11</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="11" class="item" v-if="tunings >= 12 && tunings > 0">
+                    <p>Вариант 12</p>
+                    <p>*price* $</p>
+                </div>
+
+               <div id="12" class="item" v-if="tunings >= 13 && tunings > 0">
+                    <p>Вариант 13</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="13" class="item" v-if="tunings >= 14 && tunings > 0">
+                    <p>Вариант 14</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="14" class="item" v-if="tunings >= 15 && tunings > 0">
+                    <p>Вариант 15</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="15" class="item" v-if="tunings >= 16 && tunings > 0">
+                    <p>Вариант 16</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="16" class="item" v-if="tunings >= 17 && tunings > 0">
+                    <p>Вариант 17</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="17" class="item" v-if="tunings >= 18 && tunings > 0">
+                    <p>Вариант 18</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="18" class="item" v-if="tunings >= 19 && tunings > 0">
+                    <p>Вариант 19</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="19" class="item" v-if="tunings >= 20 && tunings > 0">
+                    <p>Вариант 20</p>
+                    <p>*price* $</p>
+                </div>
+
+                <div id="20" class="item" v-if="tunings >= 21 && tunings > 0">
+                    <p>Вариант 21</p>
+                    <p>*price* $</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="left_part">
+                <p>Скорость</p>
+                <progress id="speed_bar" value="50" max="100"></progress>
+                <p>Торможение</p>
+                <progress id="brakes_bar" value="50" max="100"></progress>
+            </div>
+            <div class="right_part">
+                <p>Ускорение</p>
+                <progress id="boost_bar" value="50" max="100"></progress>
+                <p>Сцепление</p>
+                <progress id="clutch_bar" value="50" max="100"></progress>
+            </div>
+        </div>
+    </div>
+<script src="../js/jquery-3.2.1.min.js"></script>
+     <script src="../js/vue.js"></script>
+    <script src="tuning.js"></script>
+</body>
+</html>

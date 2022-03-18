@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/family.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <title>FamilyManager</title>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <div class="container" v-if="active">
+		<header>
+		<h2>Планшет семьи</h2> <div class="name">{{header}}</div><span @click="closeMenu()">X</span>
+        </header>
+		<div class="infos">
+		<a :class="{btnActive: page == 0}" class="button" @click="changePage(0)">Основное</a>
+		<a :class="{btnActive: page == 1}" class="button" @click="changePage(1)">Участники</a>
+		<div v-if="familyrank >= allranks.length"><a :class="{btnActive: page == 2}" class="button" @click="changePage(2)">Пригласить</a></div>
+		<a :class="{btnActive: page == 4}" class="button" @click="changePage(4)">Отчёты по складу</a>
+		<a :class="{btnActive: page == 5}" class="button" @click="changePage(5)">Магазин</a>
+        <div v-if="familyrank >= allranks.length"><a :class="{btnActive: page == 3}" class="button" @click="changePage(3)">Настройки</a></div>
+		</div>
+		<div class="main" v-if="page == 0">
+		<div class="bll">
+		<h3>Изображение Вашей семьи:</h3>
+		<div class="upblock"><div class="avatar"><img :src="familyimg" @error="familyimg = `images/avatar.png`" :alt="header"> </div></div>
+		</div>
+		<div class="bll">
+		<h3>Информация:</h3>
+		<p>Online: <b>{{membersonline}}</b></p>
+		<p>В семье: <b>{{membercount}} / {{membermax}}</b></p>
+		<p>Ваш ранг: <b>{{familyrank}}</b></p>
+		<p>Ваше звание: <b>{{familyrankname}}</b></p>
+		</div>
+		<div class="bll bll2 kozn">
+		<h3>Казна Вашей семьи:</h3>
+		<p>Компоненты: <b>{{comp}}/15000</b></p> <!--Максимум компанентов 15000 штук, нужно предусмотреть, что потом в магазине они смогу покупать увеличение максимального числа.-->
+		<p>Деньги: <b>{{money}}$</b></p>
+		<div class="pol" v-on:click="setmoney()">Положить</div> <!--Ложить могут все члены семьи, нажимая положить открывается input и в нем вводится сумма-->
+		<div class="pol" v-on:click="getmoney()">Снять</div> <!--Снимать может только 9 и 10 ранг, нажимая снять открывается input и в нем вводится сумма, если нет доступа по уровню то пишется соответсвующее уведомление и инпут не появляется-->
+		
+		</div>
+		<div class="bll bll2">
+		<h3>Новости Вашей семьи:</h3>
+		<p>{{desc_2 == null || desc_2 == "" ? "Заполните данный блок в настройках" : desc_2}}</p>
+		</div>
+		<div class="bll2">
+		<h3>История Вашей семьи:</h3>
+		<p>{{desc_1 == null || desc_1 == "" ? "Заполните данный блок в настройках" : desc_1}}</p>
+		</div>
+
+		
+		</div>
+		
+<div class="main pageMembers" v-if="page == 4">
+          <h2>Отчёты по складу</h2>
+          <div class="items">
+            <div class="item"><p>29.01.2021 в 18:30 Ivan_Ivanov взял со склада Pistol</p></div>
+			<div class="item"><p>29.01.2021 в 18:30 Ivan_Ivanov взял со склада Pistol</p></div>
+			<div class="item"><p>29.01.2021 в 18:30 Ivan_Ivanov взял со склада Pistol</p></div>
+			<div class="item"><p>29.01.2021 в 18:30 Ivan_Ivanov взял со склада Pistol</p></div>
+          </div>
+</div>
+
+<div class="main pageShop" v-if="page == 5">
+          <h2>Магазин товаров:</h2>
+		  <div class="head"><div class="b1">Наименование</div><div class="b2">Стоимость</div></div>
+          <div class="items">
+            <div class="item"><div class="autonames"><div class="name">Расширить обшак (на 150k $)</div><div class="price">500 ком.</div> <div class="buy" v-on:click="buy(0)">Приобрести</div></div></div>
+			<div class="item"><div class="autonames"><div class="name">Расширить обшак (на 300k $)</div><div class="price">1000 ком.</div> <div class="buy" v-on:click="buy(1)">Приобрести</div></div></div>
+			<div class="item"><div class="autonames"><div class="name">Расширить обшак (на 500k $)</div><div class="price">2500 ком.</div> <div class="buy" v-on:click="buy(2)">Приобрести</div></div></div>
+			<div class="item"><div class="autonames"><div class="name">Склад (50 сл.)</div><div class="price">3000 ком.</div> <div class="buy" v-on:click="buy(3)">Приобрести</div></div></div>
+			<div class="item"><div class="autonames"><div class="name">Расширить склад (на 50 сл.)</div><div class="price">350 ком.</div> <div class="buy" v-on:click="buy(4)">Приобрести</div></div></div>
+			<div class="item"><div class="autonames"><div class="name">Расширить склад (на 70 сл.)</div><div class="price">450 ком.</div> <div class="buy" v-on:click="buy(5)">Приобрести</div></div></div>
+			<div class="item"><div class="autonames"><div class="name">Расширить склад (на 100 сл.)</div><div class="price">750 ком.</div> <div class="buy" v-on:click="buy(6)">Приобрести</div></div></div>
+			<div class="item"><div class="autonames"><div class="name">Увеличить гараж (на 3 м.)</div><div class="price">3500 ком.</div> <div class="buy" v-on:click="buy(7)">Приобрести</div></div></div>
+			<div class="item"><div class="autonames"><div class="name">Увеличить гараж (на 5 м.)</div><div class="price">4500 ком.</div> <div class="buy" v-on:click="buy(8)">Приобрести</div></div></div>
+			<div class="item"><div class="autonames"><div class="name">Увеличить гараж (на 10 м.)</div><div class="price">9000 ком.</div> <div class="buy" v-on:click="buy(9)">Приобрести</div></div></div>
+			<div class="item"><div class="autonames"><div class="name">Перебивка номеров</div><div class="price">10000 ком.</div> <div class="buy" v-on:click="buy(10)">Приобрести</div></div></div>
+          </div>
+</div>
+
+<div class="main pageAuto" v-if="page == 6">
+          <h2>Настройки доступа к автомобилям:</h2>
+          <div class="items">
+            <div class="item" v-for="(veh,index) in vehicles">
+			<div class="autonames">{{veh[0]}} ({{veh[1]}})<input type="text" v-model="node[index]" placeholder="Укажите ранг доступа"></div>
+			</div>
+          </div>
+          <a @click="saveSettings()" class="btnBuy">Сохранить настройки</a>
+        </div>
+
+        <div class="main pageMembers" v-if="page == 1">
+          <h2>Список участников</h2>
+          <div class="items">
+            <div class="item" v-for="(member, index) in members">
+              <p>
+                <i class="fa fa-toggle-on" aria-hidden="true" v-if="member[0]"></i>
+                <i class="fa fa-toggle-off" aria-hidden="true" v-else></i>
+                [{{member[1]}}] {{member[2]}} | {{member[3]}} - {{member[4]}}
+              </p>
+              <span v-if="familyrank >= allranks.length"> <!-- ЛИДЕР -->
+                <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
+                <i @click="changerank(member)" class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                <i @click="deleteMember(member)" class="fa fa-user-times" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="main pageInvite" v-if="page == 2">
+          <h2>Пригласить</h2>
+          <div class="items">
+            <div class="item">
+              <input v-model="invitePlayerID" type="text" placeholder="ID игрока">
+              <p>Приглашаемый Вами игрок не должен состоять ни во фракции, ни в любых других семьях, организациях.</p>
+			 <p>А также должен находится рядом с вами в радиусе 3 метров.</p>
+            </div>
+          </div>
+          <a class="btnBuy" @click="invitePlayer(invitePlayerID)">Пригласить</a>
+        </div>
+
+        <div class="main pageSettings" v-if="page == 3">
+          <h2>Настройки семьи</h2>
+          <div class="items">
+            <div class="item">
+              <a @click="rankSettings()" class="btnSettings">Настроить ранги</a>
+			  <a class="btnSettings" @click="changePage(6)">Настроить доступ к авто</a>
+              <a @click="disbandFamily()" class="btnSettings btnActive">Расформировать семью</a>
+            </div>
+            <div class="item">
+              <div class="desc">
+                <textarea v-model="newdesc_1" name="desc_1" placeholder="Используйте данный блок, чтобы написать биографию Вашей семьи и её историю." maxlength="240"></textarea>
+              </div>
+            </div>
+            <div class="item">
+              <div class="desc">
+                <textarea v-model="newdesc_2" name="desc_1" placeholder="Можете использовать данный блок для того, чтобы оставить информацию на сегодня." maxlength="240"></textarea>
+              </div>
+            </div>
+          </div>
+          <a @click="saveSettings()" class="btnBuy">Сохранить</a>
+        </div>
+		
+		
+		
+
+        
+      </div>
+
+      <transition name="modal">
+        <div class="modal-window" v-if="activeChangeRank">
+          <header>
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            <h2>Изменить название рангов</h2>
+          </header>
+          <div class="items">
+            <div class="item rang" v-for="(rank, index) in allranks">
+              <p>Ранг №{{rank.Rank}}</p>
+              <input v-model="allranks[index].RankName" type="text" :value="rank.RankName">
+            </div>
+          </div>
+          <footer>
+            <a class="btnModal mg-center btnGps" @click="saveSettings()" >Подтвердить</a>
+            <a class="btnModal mg-center btnCancel" @click="cancelmodal()">Отмена</a>
+          </footer>
+        </div>
+      </transition>
+
+      <transition name="modal">
+        <div class="modal-window" v-if="activeModal || activeDisbandModal">
+          <header v-if="activeModal">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            <h2>{{member[2]}} [{{member[1]}}]</h2>
+          </header>
+          <header v-if="activeDisbandModal">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <h2>Расформировать семью</h2>
+          </header>
+          <div>
+            <p v-if="activeModal">
+              <i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Текущий ранг: <b>{{member[3]}}</b>
+            </p>
+            <p v-if="activeModal">
+              <i class="fa fa-star" aria-hidden="true"></i> Текущее звание: <b>{{member[4]}}</b>
+            </p>
+            <p v-if="activeDisbandModal">
+              <i class="fa fa-question-circle" aria-hidden="true"></i> Вы действительно хотите расформировать семью: <b>{{header}}</b>
+            </p>
+            <p>
+              <input v-model="changeRank" type="number" placeholder="Введите ранг" v-if="modalRank">
+              <input v-model="reasonKick" type="text" placeholder="Введите причину" v-else>
+            </p>
+          </div>
+          <footer>
+            <a class="btnModal mg-center btnGps" @click="btnAccept()">Подтвердить</a>
+            <a class="btnModal mg-center btnCancel" @click="cancelmodal()">Отмена</a>
+          </footer>
+        </div>
+      </transition>
+      <transition name="fade">
+        <div class="fade" v-if="activeModal || activeChangeRank || activeDisbandModal"></div>
+      </transition>
+
+    </div>
+    <script src="js/manager.js"></script>
+  </body>
+</html>

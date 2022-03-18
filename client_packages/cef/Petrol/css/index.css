@@ -1,0 +1,361 @@
+body {
+	-webkit-user-select: none;
+}
+.petrol {
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(47,47,47,.95);
+	font-family: Bebas Neue;
+	-webkit-animation: fadeInFromNone 1s ease-out;
+	-moz-animation: fadeInFromNone 1s ease-out;
+	-o-animation: fadeInFromNone 1s ease-out;
+	animation: fadeInFromNone 1s ease-out;
+}
+.petrol .petrol_center {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100vh;
+	height: 65vh;
+	top: 17.5vh;
+}
+.petrol .petrol_center .block_waves {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 35vh;
+	height: 65vh;
+	background: #ffffff20;
+	overflow: hidden;
+	border-radius: 1vh;
+}
+.wave1, .wave2 {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+}
+.petrol .petrol_center .block_waves .wave1 {
+    left: -7%;
+    top: 22%;
+    background-color: #ff002450;
+    border-radius: 45%;
+    animation: wave 9s linear infinite;
+}
+.petrol .petrol_center .block_waves .wave2 {
+    left: -40%;
+    top: 46%;
+    background-color: #ff0024;
+    border-radius: 45%;
+    animation: wave 8s linear infinite;
+}
+@keyframes wave {
+    100% {
+       transform: rotate(360deg);
+    }
+}
+.petrol .petrol_center .petrol_name_block {
+	position: absolute;
+	left: 40vh;
+}
+.petrol .petrol_center .petrol_name_block .petrol_name {
+	color: #fff;
+	opacity: 0.45;
+	font-size: 2.5vh;
+	letter-spacing: 0.5vh;
+}
+.petrol .petrol_center .petrol_name_block .petrol_street {
+	font-size: 7.5vh;
+	color: #fff;
+	width: 110vh;
+	margin-top: -1vh;
+}
+.petrol .petrol_center .petrol_info_block {
+	position: absolute;
+	left: 40vh;
+	width: 60vh;
+	height: 10vh;
+	/* background: #ffffff05; */
+	top: 15vh;
+}
+.petrol .petrol_center .petrol_info_block .block_petrol_price {
+	position: absolute;
+	width: 20vh;
+	height: 10vh;
+}
+.petrol .petrol_center .petrol_info_block .block_petrol_price .petrol_price_desc {
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	opacity: 0.35;
+	font-size: 2vh;
+	letter-spacing: 0.4vh;
+	font-weight: 400;
+}
+.petrol .petrol_center .petrol_info_block .block_petrol_price .petrol_count {
+	position: absolute;
+	color: #ff0024;
+	font-size: 8.5vh;
+	margin-top: -1vh;
+	margin-left: -0.5vh;
+	text-shadow: 0 0 4vh #ff0024;
+}
+.petrol .petrol_center .input_petrol_block {
+	z-index: 10;
+	left: 40vh;
+	top: 30vh;
+	position: absolute;
+}
+input:focus {
+	border: 0.2vh solid #ffffff80;
+	transition: all 0.33s;
+}
+input {
+	position: absolute;
+	width: 33.5vh;
+	outline: none;
+	transition: all 0.33s;
+	border: none;
+	border-radius: 0.5vh;
+	border: 0.2vh solid #ffffff50;
+	height: 9vh;
+	text-align: center;
+	color: #Fff;
+	font-family: Bebas Neue;
+	font-size: 4.5vh;
+	background: #ffffff20;
+}
+::placeholder {
+	color: #ffffff20;
+}
+.petrol .petrol_center .petrol_finish_block {
+	position: absolute;
+	left: 77vh;
+	top: 30.6vh;
+}
+.petrol .petrol_center .petrol_finish_block .petrol_finish_name {
+	color: #fff;
+	opacity: 0.3;
+	font-size: 2.5vh;
+	letter-spacing: 0.4vh;
+}
+.petrol .petrol_center .petrol_finish_block .petrol_finish_count {
+	color: #ff0024;
+	margin-top: -1vh;
+	text-shadow: 0 0 4vh #ff0024;
+	font-size: 6vh;
+	margin-left: -0.2vh;
+	font-weight: 600;
+}
+.petrol .petrol_center .petrol_buy:hover {
+	transition: all 0.33s;
+	box-shadow: 0 0 10vh 1vh #ff002480;
+	cursor: pointer;
+}
+.petrol .petrol_center .petrol_buy {
+	position: absolute;
+	left: 40vh;
+	transition: all 0.33s;
+	width: 57vh;
+	height: 8vh;
+	background: #ff0024;
+	font-size: 2vh;
+	bottom: 0;
+	border-radius: 0.5vh;
+	letter-spacing: 0.2vh;
+	color: #fff;
+	text-align: center;
+	line-height: 8vh;
+}
+.petrol .petrol_center .petrol_fast_block {
+	left: 40vh;
+	bottom: 10vh;
+	/* background: #ffffff05; */
+	width: 57vh;
+	height: 12vh;
+	position: absolute;
+}
+.petrol .petrol_center .petrol_fast_block .petrol_fast_name {
+	color: #fff;
+	opacity: 0.35;
+	font-size: 1.5vh;
+	letter-spacing: 0.3vh;
+}
+.petrol .petrol_center .petrol_fast_block .petrol_fblock {
+	position: absolute;
+	width: 20vh;
+	left: 7.5vh;
+	top: 3.5vh;
+	transition: all 0.33s;
+	height: 6vh;
+	font-family: Montserrat;
+	background: transparent;
+	border-radius: 0.5vh;
+	border: 0.2vh solid #ffffff80;
+}
+.petrol .petrol_center .petrol_fast_block .petrol_fblock .pfblock_name {
+	font-size: 1.2vh;
+	color: #fff;
+	/* letter-spacing: 0.1vh; */
+	position: absolute;
+	left: 7vh;
+	top: 1.3vh;
+	font-weight: 400;
+}
+.petrol .petrol_center .petrol_fast_block .petrol_fblock .pfblock_desc {
+	font-size: 1.1vh;
+	color: #fff;
+	/* letter-spacing: 0.1vh; */
+	position: absolute;
+	left: 7vh;
+	top: 2.8vh;
+	opacity: 0.4;
+	font-weight: 400;
+}
+.petrol .petrol_center .petrol_fast_block .petrol_fblock .petrol_ico {
+	position: absolute;
+	top: 1.5vh;
+	left: 2vh;
+}
+.electro {
+	position: absolute;
+	transform: rotate(270deg);
+	bottom: 30.5vh;
+	width: 65vh;
+	height: 3vh;
+	left: -35vh;
+}
+.petrol .petrol_center .petrol_fast_block .petrol_fblock2 {
+	position: absolute;
+	width: 20vh;
+	transition: all 0.33s;
+	right: 7.5vh;
+	top: 3.5vh;
+	height: 6vh;
+	background: transparent;
+	border-radius: 0.5vh;
+	border: 0.2vh solid #ffffff80;
+	font-family: Montserrat;
+}
+.petrol .petrol_center .petrol_fast_block .petrol_fblock2 .pfblock_name {
+	font-size: 1.2vh;
+	color: #fff;
+	/* letter-spacing: 0.1vh; */
+	position: absolute;
+	left: 7vh;
+	top: 1.3vh;
+	font-weight: 400;
+}
+.petrol .petrol_center .petrol_fast_block .petrol_fblock2 .pfblock_desc {
+	font-size: 1.1vh;
+	color: #fff;
+	/* letter-spacing: 0.1vh; */
+	position: absolute;
+	left: 7vh;
+	top: 2.8vh;
+	opacity: 0.4;
+	font-weight: 400;
+}
+.petrol .petrol_center .petrol_fast_block .petrol_fblock2 .petrol_ico {
+	position: absolute;
+	top: 1.5vh;
+	left: 2vh;
+}
+.petrol .petrol_center .petrol_fast_block .petrol_fblock2:hover,
+.petrol .petrol_center .petrol_fast_block .petrol_fblock:hover {
+	transition: all 0.33s;
+	border: 0.2vh solid #ffffff;
+	cursor: pointer;
+}
+.icop {
+	width: 3vh;
+}
+.petrol .exitp:hover {
+	opacity: 0.8;
+	transition: all 0.33s;
+	cursor: pointer;
+}
+.petrol .exitp {
+	position: absolute;
+	right: 2vh;
+	transition: all 0.33s;
+	top: 2vh;
+	width: 10vh;
+	height: 4vh;
+	color: #fff;
+	text-align: center;
+	line-height: 4vh;
+	opacity: 0.5;
+	background: #ffffff20;
+}
+
+	@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}

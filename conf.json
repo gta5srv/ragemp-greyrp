@@ -1,0 +1,19 @@
+{
+	"maxplayers" : 1500,
+	"name" : "❤ UNITED RP | BONUS 120.000.000$ | NEW UPDATE X3 | NEW REAL CAR | EVENT [BONUS][VOICE][CLOSED]",
+	"url" : "http://united5rp.ru/",
+	"gamemode" : "roleplay",
+	"language": "ru",
+	"stream-distance" : 250.0,
+	"csharp" : "enabled",
+	"enable-nodejs": true,
+	"resources-compression-level": -9,
+	"announce" : false,
+	"encryption" : true,
+	"bind" : "0.0.0.0",
+	"port" : 22000,
+	"voice-chat": true,
+	"voice-chat-sample-rate": 48000,
+	"allow-cef-debugging": false,
+	"api-threading-debugging": false
+}

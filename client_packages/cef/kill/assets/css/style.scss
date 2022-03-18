@@ -1,0 +1,60 @@
+// Обнуление
+*,*::before,*::after{margin: 0;padding: 0;box-sizing: border-box;}
+h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;}
+p{padding: 0;margin: 0;}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: url('../images/bg\ \(2\)\ 2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wrapper{
+    position: absolute;
+    right: .5vh;
+    top: 25vh;
+    font-family: 'Inter', sans-serif;
+    width: 40vh;
+
+    &__block{
+        width: 100%;
+        height: 4.2vh;
+        margin-bottom: 1vh;
+        color: #fff;
+        font-size: 16px;
+
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: space-between;
+        span{
+            padding: 1vh;
+        }
+        .fraction1{
+            color: #09ff00;
+        }
+        .fraction2{
+            color: #8000FF;
+        }
+        .fraction3{
+            color: #FAFF00;
+        }
+        .fraction4{
+            color: #00A3FF;
+        }
+        .fraction5{
+            color: #FF0000;
+        }
+        img{
+            width: 3.2vh;
+            height: 3.2vh;
+            margin: .5vh;
+            fill: #fff;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/tablet.css" />
+		<script src="js/vue.js"></script>
+		<meta charset="utf-8" />
+		 <style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+	</head>
+<body>
+<div v-cloak class="bgg orgn" v-if="active">
+<div class="cont org">
+<div class="head"><h2>Название компании</h2> <div class="name">{{data[0]}}</div> <h2 style="margin-left: 5vh;">Баланс компании</h2> <div class="name">{{data[1]}}$</div> <h2 style="margin-left: 5vh;">Налог за компанию</h2> <div class="name">{{data[2]}}$/ч</div></div>
+<div id="bl0" class="tabcontent" style="display: block;">
+<h3>Структура Вашей компании:</h3>
+	<div class="balance_block">
+		<div id="cancel2" v-on:click="sell()" v-if="access === 1">Продать</div>
+		<div id="cancel" v-on:click="exit()">Выйти</div>
+<div class="block users">
+<h4>Сотрудники Вашей компании</h4>
+<div class="int" v-if="access === 1"><input placeholder="ID" v-model="myuser"><button class="btn-submit" onclick="tabletorg.fak()">Принять</button></div>
+<div class="zz vips" v-for="data in members">
+<h2>{{ data }} <div class="btn-kick btn" v-on:click="callmembers(data)"><b>Уволить</b></div></h2></div>
+</div>
+
+<div class="block transport">
+<h4>Транспорт в Вашей компании</h4>
+<div v-for="data in cars">
+				<p class="centertext trans"><span class="nams">{{ data[1] }}</span>
+				<span class="bbls">
+				<span class="btn-kick4">{{ data[0] }}</span>
+				<button class="btn-kick1" v-on:click="callcars(data[0], 0)">Ключи</button>
+				<button class="btn-kick2" v-on:click="callcars(data[0], 1)">Эвакуация</button>
+				<button class="btn-kick3" v-on:click="callcars(data[0], 2)" v-if="access === 1">Продать</button>
+				</span>
+				</p>
+			</div>
+</div>
+
+
+
+	</div>
+</div>
+</div>
+	</div>	
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/org.js"></script>
+	</body>
+</html>

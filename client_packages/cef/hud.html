@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Основное -->
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="files/css/index.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" type="text/css" href="css/capt.css">
+    <!--  -->
+    <!-- Шрифт -->
+    <link rel="stylesheet" type="text/css" href="files/font/stylesheet.css"/>
+    <!--  -->
+    <script src="./files/js/vue.js"></script>
+</head>
+
+<body>
+
+       <div class="hud_wrapper" v-if="show">
+           <div class="top_right">
+               <div class="server_info">
+                <div class="logo">
+                    <img src="./files/images/logo.png">
+                </div>
+                <div class="info">
+                    <span>ID:{{id}}(#{{static}})</span><span>{{online}}</span>
+                </div>
+               </div>
+               <div class="prompt_info">
+                <div class="wrap">
+                    <div class="information">
+                        <p>ПОДСКАЗКА</p>
+                        <p>Выполняй квесты в меню F5!</p>
+                    </div>
+                    <div class="icon">
+                        <img src="./files/images/prompt.svg">
+                    </div>
+                </div>
+               </div>
+           </div>
+           <div class="help_wrapper" v-if="showhelp">
+               <div class="button_help" v-if="helpActive">
+                    <div class="help_title">Подсказки <div class="btn">F7</div></div>
+               </div>
+                <div class="info_help" v-else>
+                    <div class="button">
+                        <div class="b"><span>X</span></div><div class="b"><img src="./files/images/mic.png"></div>
+                    </div>
+                    <div class="button">
+                        <div class="b"><span>M</span></div><div class="b"><img src="./files/images/phonee.png"></div>
+                    </div>
+                    <div class="button">
+                        <div class="b"><span>I</span></div><div class="b"><img src="./files/images/invents.png"></div>
+                    </div>
+                    <div class="button">
+                        <div class="b"><span>Y</span></div><div class="b"><img src="./files/images/brelok.png"></div>
+                    </div>
+                    <div class="button">
+                        <div class="b"><span>U</span></div><div class="b"><img src="./files/images/anim.png"></div>
+                    </div>
+                    <div class="button">
+                        <div class="b"><span>F5</span></div><div class="b"><img src="./files/images/f5.png"></div>
+                    </div>
+                </div>
+           </div>
+           <div class="mappings_block">
+               <div class="wrapper bottoms needs-block ">
+                <div class="needs">
+                    <img src="./files/images/icon/eat.svg">
+                    <p>{{hunger}}</p>
+                </div>
+                <div class="needs">
+                    <img src="./files/images/icon/water.svg">
+                    <p>{{water}}</p>
+                </div>
+                <div class="needs" v-if="ammo">
+                    <img src="./files/images/bullet.svg">
+                    <p>{{ammo}}</p>
+                </div>
+               </div>
+               <div class="wrapper money-block">
+                   <div class="money">
+                       <div class="wallets">
+                           <p>Наличные</p>
+                           <p>${{money}}</p>
+                       </div>
+                       <div class="wallets">
+                           <p>Карта</p>
+                           <p>${{bank}}</p>
+                       </div>
+                   </div>
+               </div>
+               <div class="wrapper bottoms">
+                   <div class="location two"><span>{{date}}</span><span>  {{time}}</span></div>
+               </div>
+               <div class="wrapper" v-if="green">
+                   <div class="green"><span>GREEN <a>ZONE</a></span></div>
+               </div>
+               <div class="wrapper bottoms">
+                   <div class="micro" v-if="mic"><img src="./files/images/microphone.png"></div>
+                   <div class="micro"  v-if="!mic"><img src="./files/images/microphone1.png"></div>
+                   <div class="location"><span>{{crossingRoad}}</span><span>  {{street}}</span></div>
+               </div>
+           </div>
+           <div class="speedometer" v-if="isVeh">
+            <svg width="254" height="226" viewBox="0 0 254 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M223.213 12.2349H229.395V13.8579H225.018V15.7153H228.434V17.3384H225.018V20.6372H223.213V12.2349ZM233.233 18.6274C233.6 19.0063 234.04 19.1958 234.551 19.1958C235.063 19.1958 235.5 19.0063 235.864 18.6274C236.227 18.2485 236.409 17.7778 236.409 17.2153V12.2349H238.208V17.2153C238.208 18.2388 237.86 19.0962 237.165 19.7876C236.469 20.4751 235.596 20.8188 234.545 20.8188C233.499 20.8188 232.627 20.4751 231.932 19.7876C231.237 19.0962 230.889 18.2388 230.889 17.2153V12.2349H232.688V17.2153C232.688 17.7739 232.87 18.2446 233.233 18.6274ZM246.012 20.6372H240.311V12.2349H242.116V19.02H246.012V20.6372ZM253.09 20.6372H247.389V12.2349H249.194V19.02H253.09V20.6372Z" fill="white" fill-opacity="0.08"/>
+               
+                <!-- Здоровье автомобиля -->
+                <path opacity="0.13" d="M70.9746 223.5C-23.5256 171 -16.0254 49.5 71.9748 3" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                <path :style="{strokeDasharray: 504.295, strokeDashoffset: 504.295 - (hp * 150 / maxhp) * 1.83 }" d="M70.9746 223.5C-23.5256 171 -16.0254 49.5 71.9748 3" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                <!--  -->
+
+                <!-- Топливо -->
+                <path opacity="0.13" d="M181 3C275.5 55.5 268 177 180 223.5" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                <path :style="{strokeDasharray: 504.295, strokeDashoffset: 735 + (fuel * 150 / maxfuel) * 1.83 }" d="M181 3C275.5 55.5 268 177 180 223.5" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                <!--  -->
+
+                <!-- Скорость -->
+                <path opacity="0.13" d="M77.0043 206.142C38.5038 189.142 -9.49658 117.142 45.0037 46.1422C100.504 -13.8579 174.503 10.6418 202.003 43.1419C240.12 81.2991 246.003 166.642 174.003 206.642" stroke="white" stroke-width="7.5" stroke-linecap="round"/>
+                <path :style="{strokeDashoffset: 600, strokeDasharray: getSpeed() }" d="M77.0043 207.142C38.5038 190.142 -9.49658 118.142 45.0037 47.1422C100.504 -12.8579 174.503 11.6418 202.003 44.1419C240.12 82.2991 246.003 167.642 174.003 207.642" stroke="url(#paint0_linear)" stroke-width="8.5" stroke-linecap="round"/>
+                <linearGradient id="paint0_linear" x1="218.454" y1="109.312" x2="0.378616" y2="109.312" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E52D27"/>
+                    <stop offset="1" stop-color="#B31217"/>
+                </linearGradient>
+                <!--  -->
+            </svg>
+                
+            <div class="status_info">
+                <div class="bb">
+                    <span>{{hp / 10}}%</span>
+                </div>
+                <div class="bb">
+                    <span>{{fuel}}%</span>
+                </div>
+            </div>
+            <div class="info_speed">
+                <p>{{speed}}</p>
+                <p>КM/Ч</p>
+                <div class="info_icons">
+                    <div class="bb">
+                        <img :class="{active: isEngine}" src="./files/images/engine.svg">
+                    </div>
+                    <div class="bb">
+                        <img :class="{active: isBelt}" src="./files/images/belt.svg">
+                    </div>
+                    <div class="bb">
+                        <img :class="{active: isDoors}" src="./files/images/doors.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="status_bars">
+                <div class="bb">
+                    <img src="./files/images/stats-hp.svg">
+                </div>
+                <div class="bb">
+                    <img src="./files/images/gas.svg">
+                </div>
+            </div>
+
+
+           </div>
+           <div class="informations_press" v-if="biz == 'a'">
+            <div class="press">
+                <div class="btn">E</div> <span> Взаимодействие</span>
+		<div class="btn">Q</div> <span> Меню бизнеса</span>
+            </div>
+        </div>	
+       </div>
+	   
+
+                <div class="notify_list">
+        </div>
+      </div>
+       <div id="chat" class="chat"> 
+         <ul id="chat_messages"></ul> 
+       </div>
+       <div id="effect"></div>	
+        
+    <script src="./files/js/hud.js"></script>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/colorInterpolator.js"></script>
+	<script src="js/chat.js"></script>
+	<script src="js/gangzone.js"></script>
+</body>
+
+</html>
+
+
+    

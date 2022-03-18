@@ -1,0 +1,257 @@
+@import url('../fonts/Acrom/stylesheet.css');
+@import url('../fonts/TTNorms/stylesheet.css');
+@import url('../fonts/Montserrat/stylesheet.css');
+@import url('../fonts/Geometria/stylesheet.css');
+@import url('../fonts/Roboto/stylesheet.css');
+@import url('../fonts/Comic/stylesheet.css');
+@import url('../fonts/Gilroy/stylesheet.css');
+@import url('../fonts/GothamPro/stylesheet.css');
+.menu .block span{display:block;position:absolute;right:100px;display:none}
+.menu{display:none;position:absolute;width: 100%;height: 100%;color:#fff;left: 0;top: 0;border-radius: 0;background: url(../images/fonmenu.png) no-repeat;font-family: "TT Norms",sans-serif;background-size: cover;}
+.menu .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu .elements{margin-left: 0;position: relative;top: 13%;padding: 0vh;height: 51vh;width: 65vh;margin-bottom: 0;overflow: hidden;display: block;border-radius: 0;margin: 0 auto;overflow-y: auto;}
+.menu .block:hover{background: #fd000024;}
+.menu .block{display: inline-block;height: 14vh;width: 19vh;position:relative;top: 0;bottom:0;left: 0;right:0;margin: 0 1vh 3vh 1vh;border-radius: 0.9vh;transition: background-color 0.7s linear;padding: 1vh 0;}
+.menu .block span{display:block;width: 100%;position:absolute;top: 15vh;z-index:0;text-align:center;font-size: 2vh;padding: 1vh;color:#fff;right: 0;}
+.menu .left{padding: 0;width: 100%;position:relative;top: 0;height: initial;font-weight: 400;color:#fff;margin-top: 0vh;text-align:center;font-size: 1.5vh;margin-top: 0vh;}
+.menu .right{position:relative;color:#ffffff00;margin-left:0;width: 100%;z-index:1;height: 188px;margin-top:-11px;text-align:center;border-radius:0;top: -133px;font-size:10pt;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: inherit;border-radius: 5px;display: none;}
+.menu .right:hover{/* background-color:#000 */}
+.menu h1{height: auto;width: 100%;font-weight: 400;font-size: 3vh;text-shadow: 0 0 2vh #1e1e1e00;color:#fff;text-align:center;border-bottom: 0.5vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;padding-top: 15vh;}
+.menu .exit{position: absolute;font-size: 3vh;color: #e42d2d;border-radius: 0.4vh;text-align: center;z-index: 999;margin: 0 auto;width: 7vh;cursor: pointer;right: 20%;top: 15.3%;bottom: inherit;}
+.menu .exit:hover{background: none !important;border: none !important;}
+.menu img.png {position:relative;display:block;top: 0vh;margin: 0;padding: 0 0;width: 100%;}
+.prices {position: absolute;top: 1vh;right: 2vh;font-size: 1.5vh;}
+.money { position: absolute;right: 2%;text-align: right;top: 15%;}
+.money::after {content: " ";position: absolute;background: #e42d2d;border-radius: 0;width: 5vh;height: 0.3vh;bottom: -1.3vh;-webkit-box-shadow: 0 0 20px rgb(0 162 246);box-shadow: 0 0 20px rgb(0 162 246);right: 0;}
+.money span {font-size: 2.3vh;font-weight: 500;}
+.money p {margin: 0;font-size: 1.4vh;padding-top: 0.4vh;font-weight: 400;}
+
+
+.menu#garage .block span{display:none}
+.menu#garage {display:none;position: absolute;width: 121vh;height: 68vh;color: #fff;left: 0;top: 15%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 2.5vh;border: 1.5vh solid #000;}
+.menu#garage .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#garage .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 60vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#garage .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#garage .block{display: block;width: 21.5vh;padding: 0.6vh 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: 8vh;float: left;transition: none;margin: 0.74vh;}
+.menu#garage .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#garage .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 1vh 0vh;height: inherit;line-height: normal;}
+.menu#garage .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#garage .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#garage .right:hover{/* background-color:#000 */}
+.menu#garage h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 5vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#garage .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#garage .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#garage img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#garagearmy .block span{display:none}
+.menu#garagearmy {display:none;position: absolute;width: 121vh;height: 68vh;color: #fff;left: 0;top: 15%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 2.5vh;border: 1.5vh solid #000;}
+.menu#garagearmy .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#garagearmy .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 60vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#garagearmy .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#garagearmy .block{display: block;width: 21.5vh;padding: 0.6vh 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: 8vh;float: left;transition: none;margin: 0.74vh;}
+.menu#garagearmy .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#garagearmy .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 1vh 0vh;height: inherit;line-height: normal;}
+.menu#garagearmy .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#garagearmy .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#garagearmy .right:hover{/* background-color:#000 */}
+.menu#garagearmy h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 5vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#garagearmy .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#garagearmy .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#garagearmy img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#fracauto .block span{display:none}
+.menu#fracauto {display:none;position: absolute;width: 121vh;height: 68vh;color: #fff;left: 0;top: 15%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 2.5vh;border: 1.5vh solid #000;}
+.menu#fracauto .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#fracauto .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 60vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#fracauto .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#fracauto .block{display: block;width: 21.5vh;padding: 0.6vh 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: 8vh;float: left;transition: none;margin: 0.74vh;}
+.menu#fracauto .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#fracauto .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 1vh 0vh;height: inherit;line-height: normal;}
+.menu#fracauto .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#fracauto .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#fracauto .right:hover{/* background-color:#000 */}
+.menu#fracauto h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 5vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#fracauto .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#fracauto .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#fracauto img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#container .block span{display:none}
+.menu#container {display:none;position: absolute;width: 121vh;height: 68vh;color: #fff;left: 0;top: 15%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 2.5vh;border: 1.5vh solid #000;}
+.menu#container .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#container .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 60vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#container .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#container .block{display: block;width: 21.5vh;padding: 0.6vh 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: 8vh;float: left;transition: none;margin: 0.74vh;}
+.menu#container .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#container .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 1vh 0vh;height: inherit;line-height: normal;}
+.menu#container .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#container .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#container .right:hover{/* background-color:#000 */}
+.menu#container h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 5vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#container .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#container .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#container img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+
+.menu#lspd .block span{display:none}
+.menu#lspd {display:none;position: absolute;width: 30vh;height: 49vh;color: #fff;left: 0;top: 25%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 1.5vh;border: 1vh solid #000;}
+.menu#lspd .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#lspd .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 42.5vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#lspd .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#lspd .block{display: block;width: 100%;padding: 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: auto;float: none;transition: none;margin: 0;margin-bottom: 0.5vh;}
+.menu#lspd .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#lspd .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 0vh 0vh;height: auto;line-height: normal;}
+.menu#lspd .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#lspd .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#lspd .right:hover{/* background-color:#000 */}
+.menu#lspd h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 2vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#lspd .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#lspd .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#lspd img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#fib .block span{display:none}
+.menu#fib {display:none;position: absolute;width: 30vh;height: 49vh;color: #fff;left: 0;top: 25%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 1.5vh;border: 1vh solid #000;}
+.menu#fib .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#fib .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 42.5vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#fib .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#fib .block{display: block;width: 100%;padding: 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: auto;float: none;transition: none;margin: 0;margin-bottom: 0.5vh;}
+.menu#fib .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#fib .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 0vh 0vh;height: auto;line-height: normal;}
+.menu#fib .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#fib .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#fib .right:hover{/* background-color:#000 */}
+.menu#fib h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 2vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#fib .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#fib .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#fib img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#army .block span{display:none}
+.menu#army {display:none;position: absolute;width: 30vh;height: 49vh;color: #fff;left: 0;top: 25%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 1.5vh;border: 1vh solid #000;}
+.menu#army .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#army .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 42.5vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#army .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#army .block{display: block;width: 100%;padding: 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: auto;float: none;transition: none;margin: 0;margin-bottom: 0.5vh;}
+.menu#army .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#army .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 0vh 0vh;height: auto;line-height: normal;}
+.menu#army .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#army .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#army .right:hover{/* background-color:#000 */}
+.menu#army h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 2vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#army .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#army .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#army img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#gov .block span{display:none}
+.menu#gov {display:none;position: absolute;width: 30vh;height: 49vh;color: #fff;left: 0;top: 25%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 1.5vh;border: 1vh solid #000;}
+.menu#gov .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#4695ed;left:15px;top:0;background-size:230px}
+.menu#gov .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 42.5vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#gov .block:hover{background: #0092de;border: 0px solid #003d64;}
+.menu#gov .block{display: block;width: 100%;padding: 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: auto;float: none;transition: none;margin: 0;margin-bottom: 0.5vh;}
+.menu#gov .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#gov .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 0vh 0vh;height: auto;line-height: normal;}
+.menu#gov .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#gov .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#gov .right:hover{/* background-color:#000 */}
+.menu#gov h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 2vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#gov .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#gov .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#gov img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#gang .block span{display:none}
+.menu#gang {display:none;position: absolute;width: 30vh;height: 49vh;color: #fff;left: 0;top: 25%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 1.5vh;border: 1vh solid #000;}
+.menu#gang .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#gang .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 42.5vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#gang .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#gang .block{display: block;width: 100%;padding: 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: auto;float: none;transition: none;margin: 0;margin-bottom: 0.5vh;}
+.menu#gang .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#gang .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 0vh 0vh;height: auto;line-height: normal;}
+.menu#gang .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#gang .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#gang .right:hover{/* background-color:#000 */}
+.menu#gang h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 2vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#gang .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#gang .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#gang img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#mafia .block span{display:none}
+.menu#mafia {display:none;position: absolute;width: 30vh;height: 49vh;color: #fff;left: 0;top: 25%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 1.5vh;border: 1vh solid #000;}
+.menu#mafia .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#mafia .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 42.5vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#mafia .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#mafia .block{display: block;width: 100%;padding: 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: auto;float: none;transition: none;margin: 0;margin-bottom: 0.5vh;}
+.menu#mafia .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#mafia .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 0vh 0vh;height: auto;line-height: normal;}
+.menu#mafia .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#mafia .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#mafia .right:hover{/* background-color:#000 */}
+.menu#mafia h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 2vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#mafia .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#mafia .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#mafia img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#mwc .block span{display:none}
+.menu#mwc {display:none;position: absolute;width: 30vh;height: 49vh;color: #fff;left: 0;top: 25%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 1.5vh;border: 1vh solid #000;}
+.menu#mwc .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#mwc .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 42.5vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#mwc .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#mwc .block{display: block;width: 100%;padding: 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: auto;float: none;transition: none;margin: 0;margin-bottom: 0.5vh;}
+.menu#mwc .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#mwc .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 0vh 0vh;height: auto;line-height: normal;}
+.menu#mwc .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#mwc .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#mwc .right:hover{/* background-color:#000 */}
+.menu#mwc h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 2vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#mwc .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#mwc .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#mwc img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#nac .block span{display:none}
+.menu#nac {display:none;position: absolute;width: 30vh;height: 49vh;color: #fff;left: 0;top: 25%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 1.5vh;border: 1vh solid #000;}
+.menu#nac .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#nac .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 42.5vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#nac .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#nac .block{display: block;width: 100%;padding: 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: auto;float: none;transition: none;margin: 0;margin-bottom: 0.5vh;}
+.menu#nac .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#nac .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 0vh 0vh;height: auto;line-height: normal;}
+.menu#nac .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#nac .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#nac .right:hover{/* background-color:#000 */}
+.menu#nac h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 2vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#nac .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#nac .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#nac img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#container .block span{display:none}
+.menu#container {display:none;position: absolute;width: 30vh;height: 49vh;color: #fff;left: 0;top: 25%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 1.5vh;border: 1vh solid #000;}
+.menu#container .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#container .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 42.5vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#container .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#container .block{display: block;width: 100%;padding: 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: auto;float: none;transition: none;margin: 0;margin-bottom: 0.5vh;}
+.menu#container .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#container .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 0vh 0vh;height: auto;line-height: normal;}
+.menu#container .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#container .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#container .right:hover{/* background-color:#000 */}
+.menu#container h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 2vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#container .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#container .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#container img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+.menu#fishshop .block span{display:none}
+.menu#fishshop {display:none;position: absolute;width: 30vh;height: 49vh;color: #fff;left: 0;top: 25%;background: #1f2427cc;right: 0;margin: 0 auto;border-radius: 1.5vh;border: 1vh solid #000;}
+.menu#fishshop .maglogo{display:none;position:absolute;width:230px;height:230px;font-family:'Open Sans',sans-serif;border-radius:0;color:#e42d2d;left:15px;top:0;background-size:230px}
+.menu#fishshop .elements{margin-left: 0;position: relative;top: 0%;padding: 1vh;padding-left: 1vh;padding-right: 1vh;height: 42.5vh;width: auto;margin-bottom: 1vh;overflow: hidden;overflow-y: auto;border-radius: 1vh;margin: 0 auto;text-align: center;}
+.menu#fishshop .block:hover{background: #e42d2d;border: 0px solid #640000;}
+.menu#fishshop .block{display: block;width: 100%;padding: 1vh;margin: 0;vertical-align: top;text-align: left;background: #00000099;margin-bottom: 1vh;border-radius: 0.6vh;height: auto;float: none;transition: none;margin: 0;margin-bottom: 0.5vh;}
+.menu#fishshop .block span{display:block;position: relative;top: 0;z-index:0;text-align: center;font-size: 1.5vh;padding: 0;color:#fff;right: 0;background: #000;padding: 0.5vh 1vh;}
+.menu#fishshop .left{padding: 0;width: 100%;position:relative;top: 0vh;font-weight: 500;color:#fff;margin-top: 0;text-align: center;font-size: 1.3vh;padding: 0vh 0vh;height: auto;line-height: normal;}
+.menu#fishshop .left b {font-weight: bold;display: block;margin-top: 1vh;}
+.menu#fishshop .right{position:relative;color: #65535300;margin-left:0;width: initial;z-index:1;height: auto;margin-top: 0;text-align: right;border-radius:0;top: -6.8vh;font-size: inherit;cursor:pointer;text-transform:uppercase;background-color:#ffffff00;padding:0;left: inherit;right: 0;border-radius: 0;float: right;display: none;}
+.menu#fishshop .right:hover{/* background-color:#000 */}
+.menu#fishshop h1{margin:0;height: auto;width: 100%;padding: 1vh;font-weight:600;font-size: 2vh;text-shadow: 0 0 1vh #1e1e1e00;color:#fff;text-align:center;text-transform: initial;border-radius: 0;border-bottom: 0vh solid #32323200;margin: 0 auto;z-index: 999;position: relative;border-bottom-right-radius: 0;border-bottom-left-radius: 0;top: 0;padding: 0;padding: 1.5vh 2vh;background: #f2f2f2;border-top-left-radius: 1vh;border-top-right-radius: 1vh;color: #000;text-align: left;}
+.menu#fishshop .exit{background-color: inherit;position: absolute;font-size: 2vh;width: 4vh;border-radius: 0;color: #000000;border-radius: 0.5vh;right: 1%;text-align: center;top: 2%;z-index: 999;}
+.menu#fishshop .exit:hover{background-color: #e42d2d;color: #e42d2d;}
+.menu#fishshop img.png {position:relative;display:block;width:90px;height:90px;top:40px;margin:0 auto;/* opacity: 0; */display: none;}
+
+::-webkit-scrollbar{width: 2px;display:block;border-radius: 0;}
+::-webkit-scrollbar-track{background: #ffffff20;}
+::-webkit-scrollbar-thumb{background-color: #c92c2c6b;border-radius: 0;}

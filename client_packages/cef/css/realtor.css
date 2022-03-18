@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed',sans-serif
+}
+
+.container {
+    position: fixed;
+    right: 0;
+    transform: translate(0%,0%);
+    border-radius: 3px;
+    padding-bottom: 5px;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    max-width: 30vh;
+    z-index: 999;
+}
+
+header {
+    display: block;
+    align-items: center;
+    /* width: 100%; */
+    padding: 3vh 10px;
+    /* max-width: 80vh; */
+    margin: 0 auto;
+    position: relative;
+    top: 2%;
+    text-align: center;
+}
+
+header h1 {
+    text-shadow: 0 0 0 black,0 0 1em #000;
+    color: #fff;
+    font-size: 2.5vh;
+    position: relative;
+    text-align: center;
+}
+header span {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 2vh;
+}
+h1 {
+    font-size: 25px;
+    color: #260000;
+    position: absolute
+}
+
+.fa-briefcase {
+    font-size: 1.8em;
+    color: #e42d2d;
+    margin-top: 3px;
+    margin-right: 10px
+}
+
+span {
+    display: flex;
+    align-items: center;
+    color: rgba(255,255,255,.65);
+    margin-left: auto;
+}
+
+.fa-times-circle-o {
+    color: red;
+    font-size: 4vh!important;
+    margin-left: 0;
+    transition: .15s;
+    cursor: pointer;
+}
+
+.fa-times-circle-o:hover {
+    color: #c73e3e
+}
+
+.container .main {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    padding: 10px;
+    overflow: hidden;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.main .modal-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    padding: 10px 20px;
+    background: #202126;
+    border-top: 1px solid #4d4848;
+    color: rgba(255,255,255,.65);
+    font-size: .9em;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    display: flex;
+    align-items: center;
+    z-index: 999
+}
+
+.modal-filter input {
+    color: rgba(255,255,255,.65);
+    background: #18191D;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none
+}
+
+.modal-filter input[type="number"]:first-child {
+    margin-right: auto;
+    width: 135px
+}
+
+.modal-filter input[type="number"] {
+    text-align: center;
+    margin-right: 0;
+    width: 135px
+}
+
+.main .houseClass {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.houseClass div {
+    position: relative;
+    height: 38%;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #131316;
+    margin: auto;
+    padding: 8px;
+    color: #81838E;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 6px -1px rgba(0,0,0,1);
+    -moz-box-shadow: 0 1px 6px -1px rgba(0,0,0,1);
+    box-shadow: 0 1px 6px -1px rgba(0,0,0,1)
+}
+
+.houseClass div span {
+    position: relative;
+    display: flex
+}
+
+.houseClass div span h1 {
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.7em;
+    text-align: center
+}
+
+.houseClass div span i {
+    position: absolute;
+    right: -20px;
+    font-size: .9em
+}
+
+.houseClass div span i:hover {
+    color: #e42d2d
+}
+
+.houseClass div p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center
+}
+
+.main .slct-class {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 0
+}
+
+.slct-class .homefade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 5
+}
+
+.slct-class div {
+    width: 100%;
+    padding: 2vh 1vh;
+    position: relative;
+    background: rgba(34,33,35,0.7);
+    border-radius: .92593vh 0 0 .92593vh;
+    top: .64815vh;
+    transform: skewY(-3deg);
+    min-height: 9.25926vh;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1vh;
+}
+
+.slct-class div:last-child {
+    margin-bottom: 0
+}
+
+.slct-class div h2 {
+    font-size: 3vh;
+    color: #fff;
+    position: relative;
+    left: 1vh;
+    top: 0;
+    transform: skewY(-1deg);
+}
+
+div.button.btnGreen {
+    background: none;
+    padding: 0;
+    width: 17vh;
+    min-width: 17vh;
+    /* max-width: 17vh170px; */
+    position: absolute;
+    right: 0vh;
+    top: 0.9vh;
+    max-width: 17vh;
+}
+
+.button.btnGps {
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    align-items: inherit;
+    justify-content: inherit;
+    display: block;
+    width: 15vh;
+    min-width: 15vh;
+    max-width: 15vh;
+    background: #343436e6;
+    border-radius: 0 .92593vh .92593vh 0;
+    padding-right: 2vh;
+    padding-left: 2vh;
+    -moz-transform: initial;
+    -webkit-transform: initial;
+    -o-transform: initial;
+    -ms-transform: initial;
+    transform: initial;
+    transform: skewY(-3deg);
+    right: 0;
+    top: 0;
+    font-size: 2vh;
+    line-height: 2vh;
+}
+
+.button:hover {
+    opacity: .8
+}
+
+.button a {
+    text-align: center;
+    font-size: 1.5vh;
+    padding: 1vh;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    align-items: inherit;
+    justify-content: inherit;
+    display: block;
+    width: 17vh;
+    min-width: 17vh;
+    max-width: 17vh;
+    background: rgba(34,33,35,0.7);
+    border-radius: .92593vh 0 0 .92593vh;
+    transform: skewY(2deg);
+    padding-right: 1vh;
+    padding-left: 1vh;
+}
+
+.button a span {
+    font-size: 2vh;
+    font-weight: 700;
+    line-height: 2vh;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+.btnGreen {
+    font-size: .85em;
+    align-self: center;
+}
+
+::-webkit-scrollbar {
+    width: 0
+}
+
+::-webkit-scrollbar-track {
+    background: #1d202700
+}
+
+::-webkit-scrollbar-thumb {
+    background: #06619314;
+    border-radius: 0
+}
+
+.modal-window {
+    position: absolute;
+    display: block;
+    margin: 0;
+    z-index: 999;
+    top: 15%;
+    width: 25vh;
+    height: auto;
+}
+
+.classModal {
+    top: 35%;
+    width: 300px;
+    height: 200px;
+    margin: 0;
+    position: absolute
+}
+
+.modal-window div {
+    padding: 25px 10px;
+    padding-bottom: 0;
+    padding-left: 0
+}
+
+.modal-window div p {
+    color: #f9f9f9;
+    width: 100%;
+    padding: 2vh;
+    position: relative;
+    background: rgba(34,33,35,0.7);
+    border-radius: 0 .92593vh .92593vh 0;
+    top: .64815vh;
+    transform: skewY(-3deg);
+    min-height: 9.25926vh;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1vh;
+    font-size: 1.8vh;
+}
+
+.modal-window div p span {
+    color: #fff;
+    display: block;
+    font-weight: 600;
+    margin-left: 0;
+    padding-left: .7vh
+}
+
+.modal-window div p:last-child {
+    margin-bottom: 0
+}
+
+.modal-window div p i {
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+    color: #e42d2d
+}
+
+.modal-window header,.modal-window footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 35px 31px;
+    color: #fff;
+    background-image: none,url(../images/rea.png);
+    background-size: contain
+}
+
+.modal-window header .stars {
+    margin-left: auto;
+    font-size: 1.3em;
+    color: #bd9d4b
+}
+
+.modal-window header .fa-home,.modal-window header .fa-info-circle {
+    font-size: 1.5em;
+    color: #e42d2d;
+    margin-right: 10px;
+    display: none
+}
+
+.modal-window header h2 {
+    font-size: 1.1em
+}
+
+.modal-window footer {
+    position: relative;
+    display: block;
+    padding: 0;
+    padding-bottom: 0;
+    background: none;
+    margin-top: 2vh;
+}
+
+.btnGps {
+    right: 45px;
+    top: 19px;
+    padding: 13px 0;
+    text-align: center;
+    -moz-transform: rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    font-weight: 700;
+    line-height: normal;
+    height: auto;
+    background-image: none,url(../images/rea.png)
+}
+
+.btnCancel {
+    filter: hue-rotate(150deg)
+}
+
+.mg-center {
+    margin: 0 auto
+}
+
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh
+}
+
+.modal-enter-active,.modal-leave-active {
+    transition: transform .5s ,opacity .3s
+}
+
+.modal-enter,.modal-leave-to {
+    opacity: 0;
+    transform: translateY(-300px)
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}

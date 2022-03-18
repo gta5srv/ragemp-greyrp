@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="main-calls" v-if="active">
+        <div class="container">
+            <div class="main-content">
+                <h1 class="main-content__title">Список активных вызовов: EMS</h1>
+                <h1 class="main-content__close" @click="close">X</h1>
+                <div class="main-content__wrapper">
+                    <div class="main-content__inner">
+                        <div class="main-item" v-for="(item, i) in calls" :key="item[0]">
+                            <div class="main-item__content">
+                                <div class="main-item__text-wrapper">
+                                    <p class="main-item__title">Код</p>
+                                    <p class="main-item__title">Отправил</p>
+                                </div>
+                                <div class="main-item__text-wrapper">
+                                    <p class="main-item__text">{{item[1]}}</p>
+                                    <p class="main-item__text">{{item[2]}}</p>
+                                </div>
+                            </div>
+                            <div class="main-item__content">
+                                <div class="main-item__text-wrapper">
+                                    <p class="main-item__title">Расстояние</p>
+                                    <p class="main-item__title">Номер телефона</p>
+                                </div>
+                                <div class="main-item__text-wrapper">
+                                    <p class="main-item__text">{{item[3]}} км</p>
+                                    <p class="main-item__text">{{item[4]}}</p>
+                                </div>
+                            </div>
+                            <div class="main-content__btn" @click="call(item[0])">Принять</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main class="main" v-if="active">
+        <div class="container">
+            <div class="game-inf">
+                <div class="game-top" v-if="start">
+                    <p class="game-top__text">У вас {{me}}, У диллера {{diller}}</p>
+                </div>
+                <div class="game-main" v-if="!start">
+                    <div class="game-main__item">
+                        <p class="game-main__text">Эта ставка:</p>
+                        <span class="game-main__span">{{currBet}}$</span>
+                    </div>
+                    <div class="game-main__item">
+                        <p class="game-main__text">Мин.Ставка:</p>
+                        <span class="game-main__span">{{minBet}}$</span>
+                    </div>
+                </div>
+                <div class="game-time" v-if="start">
+                    <p class="game-time__text">Время:</p><span class="game-time__span">{{min}}:{{sec}}</span>
+                </div>
+                <div class="btns">
+                    <div class="music">
+                        <audio class="audio" preload="auto">
+                                <source src="./click.mp3" type="audio/mp3"/>
+                        </audio>
+                    </div>
+                    <div class="btns__wrapper" v-if="!start" id="btnsOne">
+                        <div class="btn">
+                            <span class="btn__text">Сделать ставку </span>
+                            <div class="btn__img">
+                                <img src="img/arR.svg" alt="" class="btn-img btn-r">
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <span class="btn__text">Уменьшить ставку</span>
+                            <div class="btn__img">
+                                <img src="img/Arrow.svg" alt="" class="btn-img">
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <span class="btn__text">Увеличить ставку</span>
+                            <div class="btn__img">
+                                <img src="img/Arrow.svg" alt="" class="btn-img btn-img-t">
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <span class="btn__text">Выход</span>
+                            <div class="btn__img">
+                                <span>E</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btns__wrapper" v-if="start" id="btnsTwo">
+                       
+                        <div class="btn">
+                            <span class="btn__text">Достаточно</span>
+                            <div class="btn__img">
+                                <img src="img/space.svg" alt="" class="btn-img btn-s">
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <span class="btn__text">Ещё</span>
+                            <div class="btn__img">
+                                <img src="img/arR.svg" alt="" class="btn-img btn-r">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../../js/vue.js"></script>
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/u.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

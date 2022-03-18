@@ -1,0 +1,476 @@
+﻿@import url('../fonts/Acrom/stylesheet.css');
+@import url('../fonts/TTNorms/stylesheet.css');
+@import url('../fonts/Montserrat/stylesheet.css');
+@import url('../fonts/Geometria/stylesheet.css');
+@import url('../fonts/Roboto/stylesheet.css');
+@import url('../fonts/Comic/stylesheet.css');
+@import url('../fonts/Gilroy/stylesheet.css');
+@import url('../fonts/GothamPro/stylesheet.css');
+body {
+    margin: 0 auto;
+    font-family: Uni Neue;
+    font-weight: normal;
+    font-size: 1.4vh;
+    color: #fff;
+    font-family: "TT Norms",sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: rgba(167, 167, 167, 0.5);
+    font-family: "TT Norms",sans-serif;
+    overflow: hidden;
+}
+
+.ticketfull {width: 95vh;margin: 0 auto;position: relative;top: 10%;}
+
+.imglogo {
+    position: absolute;
+    background: url(..images/img/rd.png);
+    width: 360px;
+    height: 92px;
+    left: 780px;
+    top: 127px;
+    display: none;
+}
+
+.swglogo {
+    position: absolute;
+    right: -5vh;
+    top: -7vh;
+}
+.swglogo p {
+    margin: 0;
+}
+
+#buttonswgclose {
+    width: 4vh;
+    height: 4vh;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.buttonone, .buttononek, #buttonclose {
+    cursor: pointer;
+}
+
+button.buttonone:focus {
+    background: #ff0000;
+}
+
+button.buttononek:focus {
+    background: #ff0000;
+}
+
+button:hover svg {
+    transform: scale(1.1);
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+svg {
+    outline: none;
+    transition: transform 0.3s linear;
+}
+
+.ticketinside {
+    height: 73vh;
+    margin-top: 0;
+    display: flex;
+    padding: 0 0;
+}
+
+.report {
+    width: 42vh;
+    height: 72vh;
+}
+
+    .report p.reporttext {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.2vh;
+        margin: 2vh 0;
+    }
+
+.onereport {
+    width: 41.5vh;
+    height: auto;
+    background: #e42d2d;
+    cursor: pointer;
+    border-radius: 0.9vh;
+    margin: 0 auto 0;
+    margin-bottom: 0.5vh;
+    position: relative;
+}
+
+.reportinfo {
+    display: block;
+    margin-left: 2vh;
+}
+
+    .reportinfo p {
+        margin-right: 0;
+        font-weight: bold;
+        display: inline-flex;
+        font-size: 1.3vh;
+    }
+
+p.tasknumber {
+    color: #e42d2d;
+}
+
+p.taskuser {
+    color: #ffffff;
+    margin-right: 1vh;
+    display: inline-flex;
+    float: right;
+    font-size: 1.3vh;
+}
+
+.reporttasks {padding: 0 2vh;padding-bottom: 4vh;}
+
+    .reporttasks p {
+        text-align: left;
+        letter-spacing: 0;
+        margin: 0;
+        font-size: 1.3vh;
+    }
+
+.adminname {
+    padding-right: 1vh;
+}
+
+    .adminname p {
+        color: #ffffff;
+        font-weight: bold;
+        text-align: right;
+        font-size: 1vh;
+        margin: 0;
+        position: absolute;
+        right: 1vh;
+        bottom: 1vh;
+    }
+
+.blockadmins {
+    position: static;
+    margin-top: -107px;
+    margin-left: 391px;
+    display: none;
+}
+
+.boxes {
+    height: 71vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.boxreports {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: auto;
+}
+
+.answer {
+    margin-left: 7vh;
+    width: 42vh;
+    height: 72vh;
+}
+
+    .answer p.reporttext {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.2vh;
+    margin: 2vh 0;
+    }
+
+.answertoquestion {
+    width: 42vh;
+    height: 20vh;
+    position: relative;
+    top: 0;
+    background: rgba(107, 107, 107, 0.6);
+    border-radius: 0.9vh;
+}
+
+.textquestion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user {
+    border: none;
+}
+textarea::placeholder {color:#fff;}
+textarea {
+    border-style: none;
+    background: rgba(58, 58, 58, 0.0);
+    width: 40vh;
+    height: 18vh;
+    resize: none;
+    font-size: 1.3vh;
+    font-family: "TT Norms",sans-serif;
+}
+
+    textarea:focus, input:focus {
+        outline: none;
+    }
+
+    textarea.user {
+        color: white;
+        padding: 0;
+    }
+
+.buttonquestion {
+    display: flex;
+}
+
+.buttonone {
+    width: 15vh;
+    height: 5vh;
+    border-radius: 0.9vh;
+    border: none;
+    color: #fff;
+    background: #e42d2d;
+    font-size: 1.4vh;
+}
+.buttonone:hover,.buttononek:hover {background:#cc1212;}
+.buttononek {
+    width: 15vh;
+    height: 5vh;
+    border-radius: 0.9vh;
+    border: none;
+    color: #fff;
+    background: #e42d2d;
+    margin-left: 1vh;
+    font-size: 1.4vh;
+}
+
+.butabs {
+    position: relative;
+}
+
+.butabr {
+    position: relative;
+}
+
+.template {
+    width: 400px;
+    height: 730px;
+    margin-left: 50px;
+    background: rgba(29, 29, 29, 0.9);
+    border-radius: 0px 0px 4px 4px;
+    position: relative;
+    z-index: 10;
+    display: none;
+}
+
+    .template p.reporttext {
+        text-align: center;
+        font-weight: bold;
+    }
+
+.templ {
+    width: 400px;
+    height: 30px;
+    background: rgba(58, 58, 58, 0.9);
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+
+.boxestempl {
+    height: 500px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.boxtemplates {
+    width: 100%;
+    height: 100%;
+    padding: 0 25px 0 0;
+    overflow: auto;
+}
+
+.templ {
+    display: flex;
+    align-items: center;
+}
+
+    .templ p {
+        text-align: center;
+    }
+
+.templtext {
+    width: 400px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close p button {
+    width: 30px;
+    height: 30px;
+    background: #A33C3C url(../images/img/cancel.png) no-repeat;
+    border: none;
+    background-size: 12px 12px;
+    background-position: center;
+    display: none;
+}
+
+#buttonclose:focus {
+    background: rgba(122, 45, 45, 0.9) url(../images/img/cancel.png) no-repeat;
+    background-size: 12px 12px;
+    background-position: center;
+}
+
+.templ:hover .close p button {
+    display: block;
+}
+
+.templopen{
+    width: 100px;
+    height: 51px;
+    border-radius: 0.9vh;
+    border: none;
+    text-align: center;
+    padding: 2px;
+    color: #fff;
+    background: #e42d2d;
+    margin-left: 1vh;
+    font-size: 1.4vh;
+    margin-top: 14px;
+}
+
+.templopen:hover{
+    background:#cc1212;
+}
+
+.texttemplbg {
+    width: 400px;
+    height: 400px;
+    background: rgba(58, 58, 58, 0.9);
+    border-radius: 10px 10px 10px 10px;
+    z-index: 5;
+    position: absolute;
+    justify-content: center;
+    margin-top: 200px;
+    margin-left: 980px;
+    font-size: 11px;
+}
+
+.exittemple{
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    padding: 1px;
+    background: rgb(255, 65, 75);
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 84px;
+    margin-left: 15px;
+}
+
+.texttempl h2{
+    margin-left: 150px;
+    color: #e42d2d;
+}
+
+.texttempl1 h4{
+    margin-top: 10px;
+    height: 35px;
+    width: 125px;
+    text-align: center;
+    padding: 13px;
+    border-radius: 4px 4px 4px 4px;
+    background: #e42d2d;
+    margin-left: 40px;
+}
+
+.texttempl2 h4{
+    margin-top: 10px;
+    height: 35px;
+    width: 125px;
+    text-align: center;
+    padding: 13px;
+    border-radius: 4px 4px 4px 4px;
+    background: #e42d2d;
+    margin-left: 40px;
+}
+.texttempl3 h4{
+    margin-top: -151px;  
+    height: 35px;
+    width: 125px;
+    text-align: center;
+    padding: 13px;
+    border-radius: 4px 4px 4px 4px;
+    background: #e42d2d;
+    margin-left: 210px;
+}
+
+.texttempl4 h4{
+    margin-top: 10px;
+    height: 35px;
+    width: 125px;
+    text-align: center;
+    padding: 13px;
+    border-radius: 4px 4px 4px 4px;
+    background: #e42d2d;
+    margin-left: 210px;
+}
+
+.texttempl5 h4{
+    margin-top: 10px;
+    height: 35px;
+    width: 125px;
+    text-align: center;
+    padding: 13px;
+    border-radius: 4px 4px 4px 4px;
+    background: #e42d2d;
+    margin-left: 40px;
+}
+
+.texttempl6 h4{
+    margin-top: -75px;
+    height: 35px;
+    width: 125px;
+    text-align: center;
+    padding: 13px;
+    border-radius: 4px 4px 4px 4px;
+    background: #e42d2d;
+    margin-left: 210px;
+}
+
+.textquestion form {}
+.textquestion p {
+    margin: 1vh;
+}
+
+.infotempltxt {
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    opacity: 0.2;
+}
+.answer .boxes {
+    height: 27vh;
+}
+::-webkit-scrollbar {
+    width: 0.2vh;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background-color: #e42d2d;
+}

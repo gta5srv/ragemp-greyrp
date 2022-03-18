@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FiveUP - Capt</title>
+    <link rel="stylesheet" type="text/css" href="css/capt.css">
+	<script src="js/vue.js"></script>
+
+</head>
+<body>
+<div v-if="active" class="bizWarInfoBlock">
+        <img src="images/capt.png" style="height: calc(50px * 0.8); width: calc(1084px * 0.8);">
+        <div class="menu-text menu-color-red b-elem">Атака</div>
+        <div class="menu-text f-m menu-color-red b-elem" style="left: 125px;">{{att}}</div>
+        <div class="menu-text menu-color-green b-elem" style="">Защита</div>
+        <div class="menu-text f-m menu-color-green b-elem" style="right: 130px;">{{def}}</div>
+       
+        
+        <div class="b-elem d-flex" style="left: 50%; transform: translateX(-50%);">
+            <div class="time-bg">
+                <span class="menu-text f-m time-char">{{min}}</span>
+                <span class="menu-text f-m time-char">{{sec}}</span>
+            </div>
+        </div>
+      
+    </div>
+	
+		<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/gangzone.js"></script>
+</body>
+
+
+</html>

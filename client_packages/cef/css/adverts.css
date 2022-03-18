@@ -1,0 +1,345 @@
+﻿@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 300;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/300/UniNeueLight.woff2') format('woff2'), url('../fonts/UniNeue/300/UniNeueLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 400;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/400/UniNeueRegular.woff2') format('woff2'), url('../fonts/UniNeue/400/UniNeueRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 700;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/700/UniNeueBold.woff2') format('woff2'), url('../fonts/UniNeue/700/UniNeueBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 800;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/800/UniNeueHeavy.woff2') format('woff2'), url('../fonts/UniNeue/800/UniNeueHeavy.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 900;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/900/UniNeueBlack.woff2') format('woff2'), url('../fonts/UniNeue/900/UniNeueBlack.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src: local('Roboto'), url('../fonts/Roboto/400/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto/400/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+    src: local('Roboto'), url('../fonts/Roboto/500/Roboto-Medium.woff2') format('woff2'), url('../fonts/Roboto/500/Roboto-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    src: local('Roboto'), url('../fonts/Roboto/700/Roboto-Bold.woff2') format('woff2'), url('../fonts/Roboto/700/Roboto-Bold.woff') format('woff');
+}
+body {
+    margin: 0 auto;
+    font-family: Uni Neue;
+    font-weight: normal;
+    font-size: 14px;
+    color: #fff;
+}
+
+.wrapper {
+    /* width: 1920px; */
+    height: 955px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticketfull {height: 800px;display: flex;background-image: none, url(../images/auth/bg_auth.png);background-size: cover;}
+
+.imglogo {
+    position: absolute;
+    width: 360px;
+    height: 92px;
+    left: 780px;
+    top: 127px;
+    display: none;
+}
+
+.swglogo {
+    position: relative;
+    right: -13px;
+    top: -28px;
+}
+
+#buttonswgclose {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.buttonone, .buttononek, #buttonclose {
+    cursor: pointer;
+}
+
+button.buttonone:focus {
+    background: #8a1c1c;
+}
+
+button.buttononek:focus {
+    background: #8a1c1c;
+}
+
+button:hover svg {
+    transform: scale(1.1);
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+svg {
+    outline: none;
+    transition: transform 0.3s linear;
+}
+
+.ticketinside {height: 730px;margin-top: 0;display: flex;padding: 0 25px;}
+
+.advert {width: 400px;height: 580px;padding-top: 30px;}
+
+    .advert p.adverttext {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    }
+
+.oneadvert {
+    width: 400px;
+    height: 100px;
+    background: #e42d2d;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.advertinfo {
+    display: flex;
+    margin-left: 21px;
+}
+
+    .advertinfo p {
+        margin-right: 5px;
+        letter-spacing: 0.03em;
+        font-weight: bold;
+    }
+
+p.tasknumber {
+    color: #e42d2d;
+}
+
+p.taskuser {
+    color: #ffffff;
+}
+
+.adverttasks {
+    margin-left: 21px;
+    max-width: 380px;
+    margin-top: -20px;
+}
+
+    .adverttasks p {
+        text-align: left;
+        letter-spacing: 0.03em;
+    }
+
+.adminname {
+    padding-right: 26px;
+}
+
+    .adminname p {
+        color: #ffffff;
+        font-weight: bold;
+        text-align: right;
+    }
+
+.blockadmins {
+    position: static;
+    margin-top: -107px;
+    margin-left: 391px;
+    display: none;
+}
+
+.boxes {height: 190px;width: 400px;overflow: hidden;}
+
+.boxadverts {
+    width: 100%;
+    height: 100%;
+    padding: 0 25px 0 0;
+    overflow: auto;
+}
+
+.answer {width: 400px;height: 580px;margin-left: 60px;padding-top: 30px;}
+
+    .answer p.adverttext {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    }
+
+.answertoquestion {width: 400px;height: 190px;position: absolute;top: 435px;background: rgba(133, 8, 8, 0.5);border-radius: 10px;}
+
+.textquestion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user {
+    border: none;
+}
+textarea::placeholder {color:#fff;}
+textarea {
+    border-style: none;
+    background: rgba(58, 58, 58, 0.0);
+    width: 370px;
+    height: 160px;
+    resize: none;
+    font-family: Uni Neue;
+    font-size: 14px;
+}
+
+    textarea:focus, input:focus {
+        outline: none;
+    }
+
+    textarea.user {
+        color: white;
+    }
+
+.buttonquestion {
+    display: flex;
+}
+
+.buttonone:hover, .buttononek:hover {
+    background: ;
+}
+
+.buttonone {width: 191px;height: 50px;border-radius: 10px;border: none;color: #fff;font-family: Uni Neue;background: #e42d2d;}
+
+.buttononek {width: 191px;height: 50px;border-radius: 10px;border: none;color: #fff;font-family: Uni Neue;background: #e42d2d;}
+
+.butabs {position: absolute;margin-left: 0;margin-top: -12px;}
+
+.butabr {position: absolute;right: 0;margin-top: -12px;}
+
+.template {
+    width: 400px;
+    height: 730px;
+    margin-left: 50px;
+    background: rgba(29, 29, 29, 0.9);
+    border-radius: 0px 0px 4px 4px;
+    position: relative;
+    z-index: 10;
+    display: none;
+}
+
+    .template p.adverttext {
+        text-align: center;
+        font-weight: bold;
+    }
+
+.templ {
+    width: 400px;
+    height: 30px;
+    background: rgba(58, 58, 58, 0.9);
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+
+.boxestempl {
+    height: 500px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.boxtemplates {
+    width: 100%;
+    height: 100%;
+    padding: 0 25px 0 0;
+    overflow: auto;
+}
+
+.templ {
+    display: flex;
+    align-items: center;
+}
+
+    .templ p {
+        text-align: center;
+    }
+
+.templtext {
+    width: 400px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close p button {
+    width: 30px;
+    height: 30px;
+    background: #A33C3C url(..images/img/cancel.png) no-repeat;
+    border: none;
+    background-size: 12px 12px;
+    background-position: center;
+    display: none;
+}
+
+#buttonclose:focus {
+    background: rgba(122, 45, 45, 0.9) url(..images/img/cancel.png) no-repeat;
+    background-size: 12px 12px;
+    background-position: center;
+}
+
+.templ:hover .close p button {
+    display: block;
+}
+
+.texttempl {
+    width: 400px;
+    height: 85px;
+    background: rgba(58, 58, 58, 0.9);
+    border-radius: 0px 0px 4px 4px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.infotempltxt {
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    opacity: 0.2;
+}

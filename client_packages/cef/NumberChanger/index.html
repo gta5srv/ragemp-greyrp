@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Change Number Grey</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="./bebas-neue/stylesheet.css">
+</head>
+<style>
+	[v-cloak] {
+		display: none;
+	}
+</style>
+<body style="background: none">
+<div id="app" v-cloak>
+	<div class="container" v-if="active">
+		<div v-if="style == 0" @click="exit()" class="exit">
+				<a>X</a>ВЫЙТИ
+		</div>
+		<div class="mainpage" v-if="style == 0">
+			<div class="text">Выберите вид номерного знака</div>
+			<div @click="gostyle(1)" class="left">
+				<div class="bgleft_for_overflow">
+					<img src="./img/num2.png" class="num6">
+					<img src="./img/num2.png" class="num7">
+					<img src="./img/num.png" class="num8">
+					<img src="./img/num.png" class="num9">
+				</div>
+				<div class="nametype">Обычный</div>
+				<div class="namedesc">номерной знак</div>
+				<div class="filter_hover_shadow_blue"></div>
+				<div class="filter_shadow"></div>
+				<img src="./img/num2.png" class="num10">
+			</div>
+			<div @click="gostyle(2)" class="right">
+				<div class="nametype">Заказной</div>
+				<div class="namedesc">номерной знак</div>
+				<div class="filter_hover_shadow_red"></div>
+				<div class="filter_shadow"></div>
+				<div class="bgright_for_overflow">
+					<div class="carbg"><img src="./img/car2.png" class="carbg"></div>
+					<img src="./img/num.png" class="num5">
+				</div>
+				<img src="./img/num.png" class="num1">
+				<div class="num1_shadow"></div>
+				<img src="./img/num.png" class="num2">
+				<img src="./img/num.png" class="num3">
+				<img src="./img/num.png" class="num4">
+			</div>
+		</div>
+		
+		<div class="standartnum" v-if="style == 1">
+			<div @click="gostyle(0)" class="exit">
+				<a><</a>НАЗАД
+			</div>
+			<div class="light_left"></div>
+			<img src="./img/num2.png" class="num11">
+			<img src="./img/num2.png" class="num12">
+			<div class="ordermenu">
+				<div class="namepage">
+					ОКНО РЕГИСТРАЦИИ
+				</div>
+				<div class="desclist">
+					ОБЫЧНЫЕ НОМЕРНЫЕ ЗНАКИ
+				</div>
+				<div class="list">
+					<div @click="randomnumber8(1)" v-bind:class="{ active: btns[1] }" id="block" class="block">
+						<div class="nb">Установить рандомный номер</div>
+						<div class="np">300.000$</div>
+					</div>
+				</div>
+				<div class="bottomline"></div>
+				<div class="warning">Покупка нового номерного знака преведет к замене текущего</div>
+				<div @click="change()" class="btnbuynum">ОФОРМИТЬ</div>
+			</div>
+			<div class="setka">
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+			</div>
+			<div class="setka">
+				<div class="gorizontal"></div>
+				<div style="margin-left: 8vh;" class="gorizontal"></div>
+				<div style="margin-left: 12vh;" class="gorizontal"></div>
+				<div style="margin-left: 16vh;" class="gorizontal"></div>
+				<div style="margin-left: 20vh;" class="gorizontal"></div>
+				<div style="margin-left: 24vh;" class="gorizontal"></div>
+				<div style="margin-left: 28vh;" class="gorizontal"></div>
+				<div style="margin-left: 32vh;" class="gorizontal"></div>
+				<div style="margin-left: 36vh;" class="gorizontal"></div>
+				<div style="margin-left: 40vh;" class="gorizontal"></div>
+				<div style="margin-left: 44vh;" class="gorizontal"></div>
+				<div style="margin-left: 48vh;" class="gorizontal"></div>
+				<div style="margin-left: 52vh;" class="gorizontal"></div>
+				<div style="margin-left: 56vh;" class="gorizontal"></div>
+				<div style="margin-left: 60vh;" class="gorizontal"></div>
+				<div style="margin-left: 64vh;" class="gorizontal"></div>
+				<div style="margin-left: 68vh;" class="gorizontal"></div>
+				<div style="margin-left: 72vh;" class="gorizontal"></div>
+				<div style="margin-left: 76vh;" class="gorizontal"></div>
+				<div style="margin-left: 80vh;" class="gorizontal"></div>
+				<div style="margin-left: 84vh;" class="gorizontal"></div>
+				<div style="margin-left: 88vh;" class="gorizontal"></div>
+				<div style="margin-left: 92vh;" class="gorizontal"></div>
+				<div style="margin-left: 96vh;" class="gorizontal"></div>
+				<div style="margin-left: 100vh;" class="gorizontal"></div>
+				<div style="margin-left: 104vh;" class="gorizontal"></div>
+				<div style="margin-left: 108vh;" class="gorizontal"></div>
+				<div style="margin-left: 112vh;" class="gorizontal"></div>
+				<div style="margin-left: 116vh;" class="gorizontal"></div>
+				<div style="margin-left: 120vh;" class="gorizontal"></div>
+				<div style="margin-left: 124vh;" class="gorizontal"></div>
+				<div style="margin-left: 128vh;" class="gorizontal"></div>
+				<div style="margin-left: 132vh;" class="gorizontal"></div>
+				<div style="margin-left: 136vh;" class="gorizontal"></div>
+				<div style="margin-left: 140vh;" class="gorizontal"></div>
+				<div style="margin-left: 144vh;" class="gorizontal"></div>
+				<div style="margin-left: 148vh;" class="gorizontal"></div>
+				<div style="margin-left: 152vh;" class="gorizontal"></div>
+				<div style="margin-left: 156vh;" class="gorizontal"></div>
+				<div style="margin-left: 160vh;" class="gorizontal"></div>
+				<div style="margin-left: 164vh;" class="gorizontal"></div>
+				<div style="margin-left: 168vh;" class="gorizontal"></div>
+				<div style="margin-left: 172vh;" class="gorizontal"></div>
+				<div style="margin-left: 176vh;" class="gorizontal"></div>
+			</div>
+		</div>
+		<div v-if="style == 2" class="customnum">
+			<div style="z-index: 10;" @click="gostyle(0)" class="exit">
+				<a><</a>НАЗАД
+			</div>
+			<div class="shadow_car"></div>
+			<div class="shadow_car2"></div>
+			<div class="namepage2">ЗАКАЗНОЙ НОМЕР</div>
+			<div class="namedesc2">Покупка нового номерного знака преведет к замене текущего
+			ЗАПРЕЩЕНО использовать Английские буквы такие как (v,z,n,q,s,d,f,g,h и.т.д )</div>
+			<div class="buyblock">
+				<div class="pricecustom">7 500 GP</div>
+				<div @click="changecustom(2)" class="btnbuycustom">ОФОРМИТЬ</div>
+			</div>
+			<img src="./img/car3.png" class="car">
+			<input class="inputnum" placeholder="A777AA  77" value="MERUMOND" v-model="number" type="text" onBlur='this.value=this.value.replace(/[^\qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890]/ig,"");' onkeyup='this.value=this.value.replace(/[^\qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890]/ig,"");' spellcheck="false" maxlength="8">
+			<img src="./img/num3.png" class="number3">
+			<div class="setka">
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+				<div class="vertikal"></div>
+			</div>
+			<div class="setka">
+				<div class="gorizontal"></div>
+				<div style="margin-left: 8vh;" class="gorizontal"></div>
+				<div style="margin-left: 12vh;" class="gorizontal"></div>
+				<div style="margin-left: 16vh;" class="gorizontal"></div>
+				<div style="margin-left: 20vh;" class="gorizontal"></div>
+				<div style="margin-left: 24vh;" class="gorizontal"></div>
+				<div style="margin-left: 28vh;" class="gorizontal"></div>
+				<div style="margin-left: 32vh;" class="gorizontal"></div>
+				<div style="margin-left: 36vh;" class="gorizontal"></div>
+				<div style="margin-left: 40vh;" class="gorizontal"></div>
+				<div style="margin-left: 44vh;" class="gorizontal"></div>
+				<div style="margin-left: 48vh;" class="gorizontal"></div>
+				<div style="margin-left: 52vh;" class="gorizontal"></div>
+				<div style="margin-left: 56vh;" class="gorizontal"></div>
+				<div style="margin-left: 60vh;" class="gorizontal"></div>
+				<div style="margin-left: 64vh;" class="gorizontal"></div>
+				<div style="margin-left: 68vh;" class="gorizontal"></div>
+				<div style="margin-left: 72vh;" class="gorizontal"></div>
+				<div style="margin-left: 76vh;" class="gorizontal"></div>
+				<div style="margin-left: 80vh;" class="gorizontal"></div>
+				<div style="margin-left: 84vh;" class="gorizontal"></div>
+				<div style="margin-left: 88vh;" class="gorizontal"></div>
+				<div style="margin-left: 92vh;" class="gorizontal"></div>
+				<div style="margin-left: 96vh;" class="gorizontal"></div>
+				<div style="margin-left: 100vh;" class="gorizontal"></div>
+				<div style="margin-left: 104vh;" class="gorizontal"></div>
+				<div style="margin-left: 108vh;" class="gorizontal"></div>
+				<div style="margin-left: 112vh;" class="gorizontal"></div>
+				<div style="margin-left: 116vh;" class="gorizontal"></div>
+				<div style="margin-left: 120vh;" class="gorizontal"></div>
+				<div style="margin-left: 124vh;" class="gorizontal"></div>
+				<div style="margin-left: 128vh;" class="gorizontal"></div>
+				<div style="margin-left: 132vh;" class="gorizontal"></div>
+				<div style="margin-left: 136vh;" class="gorizontal"></div>
+				<div style="margin-left: 140vh;" class="gorizontal"></div>
+				<div style="margin-left: 144vh;" class="gorizontal"></div>
+				<div style="margin-left: 148vh;" class="gorizontal"></div>
+				<div style="margin-left: 152vh;" class="gorizontal"></div>
+				<div style="margin-left: 156vh;" class="gorizontal"></div>
+				<div style="margin-left: 160vh;" class="gorizontal"></div>
+				<div style="margin-left: 164vh;" class="gorizontal"></div>
+				<div style="margin-left: 168vh;" class="gorizontal"></div>
+				<div style="margin-left: 172vh;" class="gorizontal"></div>
+				<div style="margin-left: 176vh;" class="gorizontal"></div>
+			</div>
+		</div>
+		<!-- <div class="bomjnum" v-if="style == 0"> -->
+			<!-- <div class="buyblock"> -->
+				<!-- <div class="infob"> -->
+					<!-- <div class="text">Купить номер</div> -->
+					<!-- <div class="price">20.000$</div> -->
+				<!-- </div> -->
+				<!-- <div @click="change(2, 1)" class="purchase">Наличные</div>  -->
+				<!-- <div @click="change(2, 2)" class="purchase">Картой</div>  -->
+				<!-- <div @click="randomnumber()" class="purchase2">Сгенерировать рандомный</div>  -->
+				<!-- <div @click="gostyle(1)" class="purchase3">Сделать кастомный номер</div>  -->
+			<!-- </div> -->
+			<!-- <div class="number"> -->
+				<!-- <div class="dec">DEC</div> -->
+				<!-- <div class="state">SAN ANDREAS</div> -->
+				<!-- <div class="redblock"></div> <!-- Не ебу зачем это в номер -->
+				<!-- <div class="numberborder"></div> -->
+				<!-- <input placeholder="NUMBER" v-model="number" type="text" onBlur='this.value=this.value.replace(/[^\qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890]/ig,"");' onkeyup='this.value=this.value.replace(/[^\qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890]/ig,"");' class="title" maxlength="8" spellcheck="false" readonly> -->
+			<!-- </div> -->
+		<!-- </div> -->
+		<!-- <div class="customnum" v-if="style == 1"> -->
+			<!-- <div class="buyblock"> -->
+				<!-- <div class="infob"> -->
+					<!-- <div class="text">Купить номер</div> -->
+					<!-- <div class="price">500.000$</div> -->
+				<!-- </div> -->
+				<!-- <div @click="change(1, 1)" class="purchase">Наличные</div>  -->
+				<!-- <div @click="change(1, 2)" class="purchase">Картой</div>  -->
+				<!-- <div @click="gostyle(0)" class="purchase3">Сделать случайный номер</div>  -->
+			<!-- </div> -->
+			<!-- <div class="number"> -->
+				<!-- <div class="dec">DEC</div> -->
+				<!-- <div class="state">SAN ANDREAS</div> -->
+				<!-- <div class="redblock"></div> <!-- Не ебу зачем это в номер -->
+				<!-- <div class="numberborder"></div> -->
+				<!-- <input placeholder="NUMBER" v-model="number" type="text" onBlur='this.value=this.value.replace(/[^\qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890]/ig,"");' onkeyup='this.value=this.value.replace(/[^\qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890]/ig,"");' class="title" spellcheck="false" maxlength="8"> -->
+			<!-- </div> -->
+		<!-- </div> -->
+	</div>
+</div>
+
+<script src="js/changer.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/inventory.css">
+	<link rel="stylesheet" type="text/css" href="css/circle.css">
+  <style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+</head>
+
+
+<body v-cloak style="display: none">
+<div id="inventory" class="board" v-if="active" @click.right.prevent="context" @click="hide">
+
+<div class="inventory_block">
+<div class="header">Ваш инвентарь</div>
+<div class="items_list_block">
+<h3>Личные вещи</h3>
+<div class="items_list">
+                    <item
+                    v-for="(item, index) in items" v-if="!(savedFast[0] != undefined && savedFast[0][0] == item[0] && savedFast[0][1] == item[1]) && !(savedFast[1] != undefined && savedFast[1][0] == item[0] && savedFast[1][1] == item[1]) && !(savedFast[2] != undefined && savedFast[2][0] == item[0] && savedFast[2][1] == item[1]) && !(savedFast[3] != undefined && savedFast[3][0] == item[0] && savedFast[3][1] == item[1]) && !(savedFast[4] != undefined && savedFast[4][0] == item[0] && savedFast[4][1] == item[1])"
+						:key="key"
+						:id="item[0]"
+						:index="index"
+						:count="item[1]"
+						:isactive="item[2]"
+						:subdata="item[3]"
+                    type="inv"/>
+                    </div>
+</div>
+
+<div class="person_items">
+<h3>Ваш персонаж</h3>
+                <img src="images/inventory/buy.png" class="boy" alt="">
+                <div class="item_line" style="margin-top: 2vh;">
+                    <div class="item_position" data-index="5"></div>                 
+                    <div class="item_position" data-index="13"></div>
+                </div>
+                <div class="item_line">
+                    <div class="left">
+                        <div class="item_position" data-index="0"></div>                 
+                        <div class="item_position" data-index="10"></div>
+                        <div class="item_position" data-index="11"></div>
+                    </div>
+                    <div class="center">
+                        <div class="item_position" data-index="6"></div>       
+                        <div class="item_position" data-index="2"></div>
+                        <div class="item_position" data-index="7"></div>
+                        <div class="item_position" data-index="8"></div>
+                    </div>
+                    <div class="right">
+                        <div class="item_position" data-index="9"></div>
+                        <div class="item_position" data-index="1"></div>
+                        <div class="item_position" data-index="12"></div>                                          
+                    </div>
+                </div>
+            </div>
+<div class="items_list_block out" v-if="outside">
+<h3>Внешние вещи</h3>
+<div class="items_list">
+     <item
+                    v-for="(item, index) in outitems"
+						:key="key"
+						:id="item[0]"
+						:index="index"
+						:count="item[1]"
+						:subdata="item[3]"
+                    type="out" />
+                    </div>
+<h2 class="predmet3">Название предмета:</h2>
+<h2 class="predmet4">Количество:</h2>
+</div>
+
+<div class="fast_block">
+					
+					<div v-if="!savedFast[0]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(0)"></div>
+					<div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[0][0] && item[1] == savedFast[0][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
+					<div v-if="!savedFast[1]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(1)"></div>
+					<div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[1][0] && item[1] == savedFast[1][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
+					<div v-if="!savedFast[2]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(2)"></div>
+					<div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[2][0] && item[1] == savedFast[2][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
+					<div v-if="!savedFast[3]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(3)"></div>
+					<div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[3][0] && item[1] == savedFast[3][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
+					<div v-if="!savedFast[4]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(4)"></div>
+					<div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[4][0] && item[1] == savedFast[4][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
+					<div style="overflow-y:scroll; margin: 0px 45px;">
+						<div class="items hum"></div>
+					</div>
+					
+                </div>
+<h2 class="predmet">Название предмета:</h2>
+<h2 class="predmet2">Количество:</h2>
+
+</div>
+
+
+		
+    </div>
+	
+	<nav class="context_menu" v-if="active" :style="style">
+			<ul>
+				<li v-if="type == 1" @click="btn(1)">{{men[0]}}</li>
+				<li v-if="type == 1" @click="btn(2)">{{men[1]}}</li>
+				<li v-if="type == 0" @click="btn(3)">{{men[2]}}</li>
+				<li v-if="type == 1" @click="btn(4)">{{men[3]}}</li>
+				
+				<li v-if="type == 2" @click="btn(6)">{{men[5]}}</li>
+				<li v-if="type == 1 && act" @click="btn(5)">{{men[4]}}</li>
+			</ul>
+		</nav>
+	
+	
+	
+	  <div class="circle" @mouseOut="out" v-show="active" style="opacity:0; height:22vh; width:50vh">
+			<div class="center">
+				<div class="text">{{description}}</div>
+				<div id="99" class="close-btn" @click="btn">x</div>
+			</div>
+			<div class="items-list">
+				<ul>
+					<li v-for="(item, id) in items">
+						<div :id="id" class="contents" :class="icons[id]" @click="btn">{{item}}</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<script src='js/vue.js'></script>
+	<script src='js/inventory.js'></script>
+	<script src="js/circle.js"></script>
+	<script src="js/move.min.js"></script>
+	<script> window.onload = function() {		document.getElementsByTagName('body')[0].style.display = "block";} </script>
+
+</body></html>

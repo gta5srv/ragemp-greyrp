@@ -1,0 +1,13 @@
+.market-item{display:flex;width:22vh;height:28.3vh;background:#ffffff10;border:2px solid #ff0f2000; border-radius: 0.5vh;}
+.market-item.empty{position:relative}
+.market-item.empty:before{content:"";display:block;width:19.3vh;height:16.4vh;background: #404040;background-image:url(../img/empty-item.642fa20d.png);background-size:cover;position:absolute;top:3.3vh;left:1.2vh}
+.market-item.empty:after{content:"Нет товара";display:flex;width:100%;height:6.4vh;justify-content:center;color:rgba(255,255,255,.38);font-family:Montserrat Bold,sans-serif;font-size:2.4vh;position:absolute;bottom:0;left:0}
+.market-item>div{display:flex;width:22vh;height:28.3vh;flex-direction:column;padding-top:2.1vh}
+.market-item>div>.header,.market-item>div>.price{display:flex;width:100%;height:auto;justify-content:center}
+.market-item>div>.header>span,.market-item>div>.price>span{color:#fff;font-family:Montserrat;font-size:2.2vh;font-weight:300}
+.market-item>div>.buy,.market-item>div>.preview{display:flex;width:100%;height:12vh;justify-content:center;margin-top:0.3vh}
+.market-item>div>.price{margin-top:1vh}
+.market-item>div>.buy{height:4.5vh;margin-top:0.5vh}
+.market-item>div>.buy>button{width:18vh;height:5.5vh;background:#ffffff10;color:#fff;font-family:Montserrat Normal,sans-serif;font-size:1.8vh;border: 2px solid #ffffff30; border-radius: 0.3vh; transition: all 0.33s;}
+.market-item>div>.buy>button:hover{background:#ff0f20; transition: all 0.33s; box-shadow: 0px 0px 40px 10px #ff0f2050;}
+.market-item>div>.buy>button:focus{outline:none}

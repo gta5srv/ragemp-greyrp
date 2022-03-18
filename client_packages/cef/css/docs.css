@@ -1,0 +1,285 @@
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 300;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/300/UniNeueLight.woff2') format('woff2'), url('../fonts/UniNeue/300/UniNeueLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 400;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/400/UniNeueRegular.woff2') format('woff2'), url('../fonts/UniNeue/400/UniNeueRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 700;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/700/UniNeueBold.woff2') format('woff2'), url('../fonts/UniNeue/700/UniNeueBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 800;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/800/UniNeueHeavy.woff2') format('woff2'), url('../fonts/UniNeue/800/UniNeueHeavy.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-weight: 900;
+    font-style: normal;
+    src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'), url('../fonts/UniNeue/900/UniNeueBlack.woff2') format('woff2'), url('../fonts/UniNeue/900/UniNeueBlack.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src: local('Roboto'), url('../fonts/Roboto/400/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto/400/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+    src: local('Roboto'), url('../fonts/Roboto/500/Roboto-Medium.woff2') format('woff2'), url('../fonts/Roboto/500/Roboto-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    src: local('Roboto'), url('../fonts/Roboto/700/Roboto-Bold.woff2') format('woff2'), url('../fonts/Roboto/700/Roboto-Bold.woff') format('woff');
+}
+
+.ydovgov{position:absolute;width:500px;height: 760px;left:50%;top: 35%;margin: -240px 0 0 -250px;background-image: url(../images/res/ydov/gov.png);background-repeat:no-repeat;background-size:contain;font-size:20px;font-weight:400;font-family: 'Uni Neue';color: #000;}
+.ydovgov p{margin:0;font-size:12pt}
+.ydovgov #number{font-size:24pt;margin-top:270px;margin-bottom:138px;margin-left:50px}
+.ydovgov #firstname{font-size: 19px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 113px;left: 200px;padding: 0 13px;}
+.ydovgov #lastname{font-size: 19px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 145px;left: 200px;padding: 0 13px;}
+.ydovgov #date{margin-left:300px;margin-bottom:16px;display: none;}
+.ydovgov #gender{margin-left:195px;margin-bottom:14px;display: none;}
+.ydovgov #member{font-size: 19px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 180px;left: 200px;padding: 0 13px;}
+.ydovgov #work{margin-left:220px}
+.ydovgov #number{font-size: 16px;margin-top: 0;margin-bottom: 0;margin-left: 0;/* background: #cddef0; */position: absolute;top: 212px;left: 172px;padding: 0 13px;}
+.ydovgov #exit {width:30px;height:30px;border-radius:20px;cursor:pointer;background-image:url(../images/res/exit.svg);background-position:center;background-repeat:no-repeat;background-size:15px;position: absolute;right: 4px;}
+
+.ydovpolice{position:absolute;width: 840px;height: 310px;left:50%;top:50%;margin: -240px 0 0 -430px;background-image: url(../images/res/ydov/police.png);background-repeat:no-repeat;background-size:contain;font-size:20px;font-weight:400;font-family: 'Uni Neue';color: #000;}
+.ydovpolice p{margin:0;font-size:12pt}
+.ydovpolice #number{font-size:24pt;margin-top:270px;margin-bottom:138px;margin-left:50px}
+.ydovpolice #firstname{font-size: 15px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 115px;left: 132px;padding: 0 13px;}
+.ydovpolice #lastname{font-size: 15px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 141px;left: 160px;padding: 0 13px;}
+.ydovpolice #date{margin-left:300px;margin-bottom:16px;display: none;}
+.ydovpolice #gender{margin-left:195px;margin-bottom:14px;display: none;}
+.ydovpolice #member{font-size: 15px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 166px;left: 176px;padding: 0 13px;}
+.ydovpolice #work{margin-left:220px}
+.ydovpolice #number{font-size: 15px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 200px;left: 72px;padding: 0 13px;}
+.ydovpolice #exit {width:30px;height:30px;border-radius:20px;cursor:pointer;background-image:url(../images/res/exit.svg);background-position:center;background-repeat:no-repeat;background-size:15px;position: absolute;right: 30px;top: 15px;}
+
+.ydovems{position:absolute;width: 493px;height: 310px;left:50%;top:50%;margin: -240px 0 0 -280px;background-image: url(../images/res/ydov/ems.png);background-repeat:no-repeat;background-size:contain;font-size:20px;font-weight:400;font-family: 'Uni Neue';color: #000;}
+.ydovems p{margin:0;font-size:12pt}
+.ydovems #number{font-size:24pt;margin-top:270px;margin-bottom:138px;margin-left:50px}
+.ydovems #firstname{font-size: 20px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 131px;left: 200px;padding: 0 13px;}
+.ydovems #lastname{font-size: 20px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 195px;left: 200px;padding: 0 13px;}
+.ydovems #date{margin-left:300px;margin-bottom:16px;display: none;}
+.ydovems #gender{margin-left:195px;margin-bottom:14px;display: none;}
+.ydovems #member{font-size: 20px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 262px;left: 200px;padding: 0 13px;}
+.ydovems #work{margin-left:220px}
+.ydovems #number{font-size: 15px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 270px;left: 10px;padding: 0 13px;}
+.ydovems #exit {width:30px;height:30px;border-radius:20px;cursor:pointer;background-image:url(../images/res/exit.svg);background-position:center;background-repeat:no-repeat;background-size:15px;position: absolute;right: 2px;top: 34px;}
+
+
+.ydovfib{position:absolute;width: 493px;height: 730px;left:50%;top:50%;margin: -385px 0 0 -242px;background-image: url(../images/res/ydov/fib.png);background-repeat:no-repeat;background-size:contain;font-size:20px;font-weight:400;font-family: 'Uni Neue';}
+.ydovfib p{margin:0;font-size:12pt}
+.ydovfib #number{font-size:24pt;margin-top:270px;margin-bottom:138px;margin-left:50px}
+.ydovfib #firstname{font-size: 20px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 95px;left: 245px;padding: 0 13px;color: #000;}
+.ydovfib #lastname{font-size: 20px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 142px;left: 300px;padding: 0 13px;color: #000;}
+.ydovfib #date{margin-left:300px;margin-bottom:16px;display: none;}
+.ydovfib #gender{margin-left:195px;margin-bottom:14px;display: none;}
+.ydovfib #member{font-size: 20px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 216px;left: 184px;padding: 0 13px;color: #000;}
+.ydovfib #work{margin-left:220px}
+.ydovfib #number{font-size: 20px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 415px;padding: 0 13px;right: 70px;color: #fff;}
+.ydovfib #exit {width:30px;height:30px;border-radius:20px;cursor:pointer;background-image:url(../images/res/exit.svg);background-position:center;background-repeat:no-repeat;background-size:15px;position: absolute;right: 8px;top: 3px;}
+
+.ydovarmy{position:absolute;width: 375px;height: 570px;left:50%;top:50%;margin: -320px 0 0 -215px;background-image: url(../images/res/ydov/army.png);background-repeat:no-repeat;background-size:contain;font-size:20px;font-weight:400;color: #000;font-family: 'Uni Neue';}
+.ydovarmy p{margin:0;font-size:12pt}
+.ydovarmy #number{font-size:24pt;margin-top:270px;margin-bottom:138px;margin-left:50px}
+.ydovarmy #firstname{font-size: 20px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 300px;left: 115px;padding: 0 13px;}
+.ydovarmy #lastname{font-size: 20px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 335px;left: 115px;padding: 0 13px;}
+.ydovarmy #date{margin-left:300px;margin-bottom:16px;display: none;}
+.ydovarmy #gender{margin-left:195px;margin-bottom:14px;display: none;}
+.ydovarmy #member{font-size: 20px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 375px;left: 115px;padding: 0 13px;}
+.ydovarmy #work{margin-left:220px}
+.ydovarmy #number{font-size: 17px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 519px;padding: 0 29px;right: 30px;color: #000;background: #f7f7f7;}
+.ydovarmy #exit {width:30px;height:30px;border-radius: 0;cursor:pointer;background-image:url(../images/res/exit.svg);background-position:center;background-repeat:no-repeat;background-size:15px;position: absolute;right: 8px;top: 3px;background-color: #d9b84d;}
+
+.ydovnews{position:absolute;width: 550px;height: 350px;left:50%;top:50%;margin: -320px 0 0 -275px;background-image: url(../images/res/ydov/news.png);background-repeat:no-repeat;background-size:contain;font-size:20px;font-weight:400;font-family: 'Uni Neue';color: #000;}
+.ydovnews p{margin:0;font-size:12pt}
+.ydovnews #number{font-size:24pt;margin-top:270px;margin-bottom:138px;margin-left:50px}
+.ydovnews #firstname{font-size: 15px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 165px;left: 277px;padding: 0 13px;}
+.ydovnews #lastname{    font-size: 15px;    margin-top: 0;    margin-bottom: 0;    margin-left: 0;    position: absolute;    top: 216px;    left: 277px;    padding: 0 13px;}
+.ydovnews #date{margin-left:300px;margin-bottom:16px;display: none;}
+.ydovnews #gender{margin-left:195px;margin-bottom:14px;display: none;}
+.ydovnews #member{    font-size: 15px;    margin-top: 0;    margin-bottom: 0;    margin-left: 0;    position: absolute;    top: 275px;    left: 277px;    padding: 0 13px;}
+.ydovnews #work{margin-left:220px}
+.ydovnews #number{font-size: 17px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 516px;padding: 0 29px;right: 36px;color: #000;background: #f7f7f7;display: none;}
+.ydovnews #exit {width:30px;height:30px;border-radius: 0;cursor:pointer;background-image:url(../images/res/exit.svg);background-position:center;background-repeat:no-repeat;background-size:15px;position: absolute;right: 8px;top: 46px;}
+
+.ydovmws{position:absolute;width: 840px;height: 310px;left:50%;top:50%;margin: -240px 0 0 -430px;background-image: url(../images/res/ydov/mws.png);background-repeat:no-repeat;background-size:contain;font-size:20px;font-weight:400;color: #000;font-family: 'Uni Neue';}
+.ydovmws p{margin:0;font-size:12pt}
+.ydovmws #number{font-size:24pt;margin-top:270px;margin-bottom:138px;margin-left:50px}
+.ydovmws #firstname{font-size: 17px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 57px;left: 130px;padding: 0 13px;}
+.ydovmws #lastname{font-size: 17px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 101px;left: 160px;padding: 0 13px;}
+.ydovmws #date{margin-left:300px;margin-bottom:16px;display: none;}
+.ydovmws #gender{margin-left:195px;margin-bottom:14px;display: none;}
+.ydovmws #member{font-size: 17px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 147px;left: 176px;padding: 0 13px;}
+.ydovmws #work{margin-left:220px}
+.ydovmws #number{font-size: 15px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 210px;left: 65px;padding: 0 13px;}
+.ydovmws #exit {width:30px;height:30px;border-radius:20px;cursor:pointer;background-image:url(../images/res/exit.svg);background-position:center;background-repeat:no-repeat;background-size:15px;position: absolute;right: 30px;top: 15px;}
+
+.ydovgr6{position:absolute;width: 840px;height: 310px;left:50%;top:50%;margin: -240px 0 0 -430px;background-image: url(../images/res/ydov/gr6.png);background-repeat:no-repeat;background-size:contain;font-size:20px;font-weight:400;font-family: 'Uni Neue';color: #000;}
+.ydovgr6 p{margin:0;font-size:12pt}
+.ydovgr6 #number{font-size:24pt;margin-top:270px;margin-bottom:138px;margin-left:50px}
+.ydovgr6 #firstname{font-size: 17px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 57px;left: 130px;padding: 0 13px;}
+.ydovgr6 #lastname{font-size: 17px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 101px;left: 160px;padding: 0 13px;}
+.ydovgr6 #date{margin-left:300px;margin-bottom:16px;display: none;}
+.ydovgr6 #gender{margin-left:195px;margin-bottom:14px;display: none;}
+.ydovgr6 #member{font-size: 17px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 147px;left: 176px;padding: 0 13px;}
+.ydovgr6 #work{margin-left:220px}
+.ydovgr6 #number{font-size: 15px;margin-top: 0;margin-bottom: 0;margin-left: 0;position: absolute;top: 210px;left: 65px;padding: 0 13px;}
+.ydovgr6 #exit {width:30px;height:30px;border-radius:20px;cursor:pointer;background-image:url(../images/res/exit.svg);background-position:center;background-repeat:no-repeat;background-size:15px;position: absolute;right: 30px;top: 15px;}
+
+
+.centtt {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.license,.passport,.plastic {
+  width: 61.6vh;
+  height: 36.5vh;
+  border-radius: 2.4vh;
+  background-color: #e0e0e0;
+  position: absolute;
+  left: 32%;
+  top: 25%;
+}
+.plastic .passport__num {
+    font-size: 3vh;
+}
+.passport__title {
+  position: relative;
+  background-color: #cd2424;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6vh;
+  line-height: normal;
+  height: 4vh;
+  margin-top: 4vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.passport__subtitle {
+  position: relative;
+  height: 4vh;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.4vh;
+  line-height: normal;
+  background: #720e0e;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 18vh;
+  margin-bottom: 1vh;
+}
+.passport__p {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.7vh;
+  line-height: 2.4vh;
+  color: #000000;
+  margin-left: 21vh;
+  margin-bottom: 0.6vh;
+}
+.passport__p-r {
+  font-weight: lighter;
+}
+.passport__num {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 6vh;
+  line-height: 8vh;
+  color: #720e0e;
+  text-align: right;
+  padding-right: 1vh;
+  z-index: 2;
+}
+.passport__close {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 6vh;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: -6vh;
+}
+.passport__pic1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+}
+.passport__pic2 {
+  position: absolute;
+  left: 3vh;
+  top: 8vh;
+  z-index: 1;
+  width: 15vh;
+}
+.passport__pic3 {
+  position: absolute;
+  left: 0;
+  top: 20vh;
+  z-index: 1;
+  width: 9vh;
+}
+.passport__pic4 {
+  position: absolute;
+  left: 1vh;
+  top: 25vh;
+  z-index: 2;
+  width: 17vh;
+}
+.passport__pic5 {
+  position: absolute;
+  right: 1vh;
+  top: 13vh;
+  z-index: 2;
+  width: 19vh;
+}
+.passport__pic6 {
+  position: absolute;
+  right: 1vh;
+  top: 23vh;
+  z-index: 2;
+  width: 12vh;
+}

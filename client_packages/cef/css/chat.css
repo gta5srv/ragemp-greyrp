@@ -1,0 +1,46 @@
+@font-face{font-family:'Uni Neue';font-weight:300;font-style:normal;src:local('Uni Neue'),local(Uni_Neue),local(Uni-Neue),url(../fonts/UniNeue/300/UniNeueLight.woff2) format("woff2"),url(../fonts/UniNeue/300/UniNeueLight.woff) format("woff")}
+@font-face{font-family:'Uni Neue';font-weight:400;font-style:normal;src:local('Uni Neue'),local(Uni_Neue),local(Uni-Neue),url(../fonts/UniNeue/400/UniNeueRegular.woff2) format("woff2"),url(../fonts/UniNeue/400/UniNeueRegular.woff) format("woff")}
+@font-face{font-family:'Uni Neue';font-weight:700;font-style:normal;src:local('Uni Neue'),local(Uni_Neue),local(Uni-Neue),url(../fonts/UniNeue/700/UniNeueBold.woff2) format("woff2"),url(../fonts/UniNeue/700/UniNeueBold.woff) format("woff")}
+@font-face{font-family:'Uni Neue';font-weight:800;font-style:normal;src:local('Uni Neue'),local(Uni_Neue),local(Uni-Neue),url(../fonts/UniNeue/800/UniNeueHeavy.woff2) format("woff2"),url(../fonts/UniNeue/800/UniNeueHeavy.woff) format("woff")}
+@font-face{font-family:'Uni Neue';font-weight:900;font-style:normal;src:local('Uni Neue'),local(Uni_Neue),local(Uni-Neue),url(../fonts/UniNeue/900/UniNeueBlack.woff2) format("woff2"),url(../fonts/UniNeue/900/UniNeueBlack.woff) format("woff")}
+@font-face{font-family:'Roboto';font-weight:400;font-style:normal;src:local(Roboto),url(../fonts/Roboto/400/Roboto-Regular.woff2) format("woff2"),url(../fonts/Roboto/400/Roboto-Regular.woff) format("woff")}
+@font-face{font-family:'Roboto';font-weight:500;font-style:normal;src:local(Roboto),url(../fonts/Roboto/500/Roboto-Medium.woff2) format("woff2"),url(../fonts/Roboto/500/Roboto-Medium.woff) format("woff")}
+@font-face{font-family:'Roboto';font-weight:700;font-style:normal;src:local(Roboto),url(../fonts/Roboto/700/Roboto-Bold.woff2) format("woff2"),url(../fonts/Roboto/700/Roboto-Bold.woff) format("woff")}
+body {margin: 0;}
+#chat{
+                      left: 0.5vh;
+                      top: 0.5vh;
+                      border-radius: 0.9vh;
+                      position: absolute;
+                      color: #fff;
+                      }
+#chat ul#chat_messages{height: 17vh;font-size: 1.3vh;overflow-y: scroll;font-family:'Uni Neue';margin: 0;padding: 0 1vh;padding-bottom: 1vh;padding: 1vh;background: #22212399;width: 40vh;border-radius: .5vh;}
+#chat ul#chat_messages > li{list-style-type:none;margin-top: 0;padding: 0 0;border-radius: 0;font-weight: 600;}
+#chat input#chat_msg{color: #fff;outline:none;border:none;line-height: 2vh;width: 27vh;padding: 0 0 0 0.9vh;display:inline-block;font-family: 'Uni Neue';background: none;font-size: 1.2vh;font-family: 'Uni Neue';}
+#chat_channels li {float: left; border: 1px solid black;list-style-type: none;padding: 5px 15px;margin: 5px 5px 0px 0px;text-transform: uppercase;font-size: 13px;text-shadow: none;}
+#chat_channels li#active {color: rgb(255,122,0);}
+.qwe {padding: .5vh 1vh;margin-top: 0vh;position: relative;border-top: 0.3vh solid #9c9c9c29;background: #22212399;top: 0.7vh;border-radius: 0.5vh;padding-left: 1vh;}
+.qwe:before {content: "";background: #e42d2d;width: 0.1vh;height: 1vh;display: block;border-radius: 0.1vh;position: absolute;top: 1vh;}
+.text {font-size: 10px;padding: 0 0;padding-top: 6px;position: relative;z-index: 999;margin-top: 15px;}
+.text span {margin-right: 0;padding: 0 7.6px;border-bottom: 2px solid #00000000;cursor: pointer;padding-bottom: 5px;}
+.text span:hover {border-bottom: 2px solid #e42d2d;color: #e42d2d;}
+.text span:active {border-bottom: 2px solid #e42d2d;color: #e42d2d;}
+input#chat_msg::-webkit-input-placeholder {color:#fff;}
+input#chat_msg::-moz-placeholder          {color:#fff;}
+input#chat_msg:-moz-placeholder           {color:#fff;}
+input#chat_msg:-ms-input-placeholder      {color:#fff;}
+::-webkit-scrollbar {width: 3px;}
+::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 0%); border-radius: 10px;}
+::-webkit-scrollbar-thumb { border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 8%);}
+.qwe .img {cursor: pointer;border: none;background: url(../images/chatsend.png) no-repeat;background-position: center;width: 5vh;background-size: contain;position: absolute;margin: -0.1vh 0;padding: 1vh 0;right: 0vh;-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);}
+.qwe .img:hover {border: none;/* background: url(../images/chatsendh.png) no-repeat; */background-size: contain;background-position: center;/* opacity: 0.7; */}
+#chat ul#chat_messages > li b.name {font-weight: 900;color: #fff;}
+#chat ul#chat_messages > li span.tip {font-weight: 400;padding: 0 5px 0 0;}
+a:active, a:focus { outline: none; }
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+textarea {resize:none;}
+textarea {resize:vertical;}
+textarea {resize:horizontal;}
+#chat {-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}

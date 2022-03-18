@@ -1,0 +1,60 @@
+var infos = {
+	1: "Информация какая-то типа",
+	114: "Ревальвер это"
+
+
+};
+
+Vue.component('item', {
+    template: '<div class="item draggable" :class="items" :id="ids" :data-type="typ" :data-active="ativ" @click.right.prevent="select">\
+    <img :src="src"><span>{{count}} Шт</span></div>',
+    props: ['id', 'index', 'count', 'isactive', 'type', 'subdata'],
+    data: function () {
+        return {
+            src: './assets/images/icons/items/' + this.id + '.png',
+            name: itemsData[this.id],
+            ids: this.index,
+            typ: this.type,
+            ativ: (this.isactive == 1) ? `active` : 0,
+            items: `i${this.id}a${this.isactive}`,
+        }
+    },
+    methods: {
+        select: function (event) {
+            if(board.sType == (this.type == 'inv') ? 1 : 0){
+                if(board.sIndex == this.index){
+                    context.hide()
+                }else{
+                    board.sType = (this.type == 'inv') ? 1 : 0;
+                    board.sID = this.id;
+                    board.sIndex = this.index;
+                    context.type = (this.type == 'inv') ? 1 : 0;
+					
+					let text = ""
+					text += infos[this.id] == undefined ? "Нет информации" : infos[this.id];
+					if (this.subdata)
+						text += " [" + this.subdata + "]"
+					
+                    board.context(event, itemsData[this.id], text)
+                }
+            }else{
+                board.sType = (this.type == 'inv') ? 1 : 0;
+                board.sID = this.id;
+                board.sIndex = this.index;
+                context.type = (this.type == 'inv') ? 1 : 0;
+				
+				let text = ""
+				text += infos[this.id] == undefined ? "Нет информации" : infos[this.id];
+				if (this.subdata)
+					text += " [" + this.subdata + "]"
+				
+                board.context(event, itemsData[this.id], text)
+            }
+            // console.log(`====================`)
+            // console.log(`index ${this.index}`)
+            // console.log(`contype ${context.type}`)
+            // console.log(`type ${this.type}`)
+            // console.log(`====================`)
+        }
+    }
+})

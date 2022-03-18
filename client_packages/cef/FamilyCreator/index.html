@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/family.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <title>FamilyManager</title>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <div class="container" v-if="active">
+        <header>
+		<h1>{{header}}</h1><span @click="closeMenu()">X</span>
+        </header>
+		<div class="infos">
+		<a :class="{btnActive: page == 1}" class="button" @click="changePage(1)">Создать семью</a>
+		<a :class="{btnActive: page == 2}" class="button" @click="changePage(2)">Список семей</a>
+		<h3>Цена: <b>${{price}}</b></h3><h3>Требуемый уровень: <b :class="{'lvlfail': playerlvl < needlvl}">{{needlvl}}</b></h3><h3>Всего семей в штате: <b>{{familycount}}</b></h3>
+		</div>
+
+        <div class="main pageCreate" v-if="page == 1">
+          <h2>Создание семьи</h2>
+          <div class="items">
+            <div class="item">
+              <input v-model="createname"  type="text" placeholder="Укажите название">
+              <p>
+                Укажите название вашей семьи. Оно будет видно для всех участников вашей семьи. И его нельзя будет поменять. Только за донатную валюту
+              </p>
+            </div>
+            <div class="item">
+              <div>
+                <span>
+                  <input v-model="createcount" @change="changeRad(0)" value="15" type="radio" name="count" id="rad_1">
+                  <label for="rad_1">15 человек</label>
+                </span>
+                <span>
+                  <input v-model="createcount" @change="changeRad(1)" value="20" type="radio" name="count" id="rad_2">
+                  <label for="rad_2">20 человек</label>
+                </span>
+                <span>
+                  <input v-model="createcount" @change="changeRad(2)" value="25" type="radio" name="count" id="rad_3">
+                  <label for="rad_3">25 человек</label>
+                </span>
+                <span>
+                  <input v-model="createcount" @change="changeRad(3)" value="30" type="radio" name="count" id="rad_4">
+                  <label for="rad_4">30 человек</label>
+                </span>
+              </div>
+              <p>Выберите количество участников для вашей семьи. Каждые последующие прибавки 5 участников стоят <b>${{multiplier}}</b>.</p>
+            </div>
+            <div class="item">
+              <span class="imgurl">
+                <img :src="familyurl" @load="imgupload = false" @error="imgupload = true" alt="Ошибка загрузки">
+              </span>
+              <span class="imgurl">
+                <label for="imgurl">Укажите ссылку на изображение</label>
+                <input id="imgurl" v-model="familyurl" @blur="replaceImg()"  type="text" placeholder="Данное изображение будет вашим логотипом">
+              </span>
+			  <p>Запрещено использование изображений порнографического харрактера, а так же изображения нарушающие правила штата.</p>
+            </div>
+          </div>
+          <a class="btnBuy" @click="createFamily()">Создать за ${{allprices}}</a>
+        </div>
+        <div class="main pageList" v-if="page == 2">
+          <h2>Список семьей в штате</h2>
+          <div class="items">
+            <div class="item" v-for="(item, index) in families">
+              <img :src="item[4]" alt="">
+			  <div class="fam">
+              <p>Название семьи: {{item[0]}}</p>
+			  <p>Лидер семьи: {{item[1]}}</p>
+              <p>Участников: {{item[3]}}/{{item[2]}}</p>
+			  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/creator.js"></script>
+  </body>
+</html>

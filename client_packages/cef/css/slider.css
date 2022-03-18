@@ -1,0 +1,79 @@
+.rangeslider,.rangeslider__fill {
+    display: block;
+    border-radius: 1.1vh;
+}
+
+.rangeslider {
+    background: #131929;
+    position: relative;
+    width: 211px;
+}
+
+.rangeslider--horizontal {
+    height: 0.4vh;
+    width: 25vh;
+    border-radius: 0;
+}
+.control .rangeslider--horizontal {
+    height: 0.4vh;
+    width: 18vh;
+    border-radius: 0;
+}
+.control .rangeslider--horizontal.rangeslider--active {
+    height: 0.4vh;
+    width: 18vh;
+    border-radius: 0;
+}
+.rangeslider--vertical {
+    width: 20px;
+    min-height: 150px;
+    max-height: 100%
+}
+
+.rangeslider--disabled {
+    filter: alpha(Opacity=40);
+    opacity: .4
+}
+
+.rangeslider__fill {
+    background: #e42d2d;
+    position: absolute;
+}
+
+.rangeslider--horizontal .rangeslider__fill {
+    top: 0;
+    height: 0.4vh;
+}
+
+.rangeslider--vertical .rangeslider__fill {
+    bottom: 0;
+    width: 100%
+}
+
+.rangeslider__handle {
+    border: 1px solid #e42d2d;
+    cursor: pointer;
+    display: inline-block;
+    width: 2vh;
+    height: 1.5vh;
+    position: absolute;
+    border-radius: 0.7vh;
+    background: #e42d2d;
+}
+.rangeslider--horizontal .rangeslider__handle {
+    top: -0.7vh;
+    touch-action: pan-y;
+    -ms-touch-action: pan-y;
+}
+
+.rangeslider--vertical .rangeslider__handle {
+    left: -10px;
+    touch-action: pan-x;
+    -ms-touch-action: pan-x
+}
+
+input[type=range]:focus+.rangeslider .rangeslider__handle {
+    -moz-box-shadow: 0 0 8px rgba(255,0,255,.9);
+    -webkit-box-shadow: 0 0 8px rgba(255,0,255,.9);
+    box-shadow: 0 0 8px rgba(255,0,255,.9)
+}

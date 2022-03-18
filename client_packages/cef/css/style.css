@@ -1,0 +1,311 @@
+@import url("../fonts/Acrom/stylesheet.css");
+@import url("../fonts/TTNorms/stylesheet.css");
+@import url("../fonts/Montserrat/stylesheet.css");
+@import url("../fonts/Geometria/stylesheet.css");
+@import url("../fonts/Roboto/stylesheet.css");
+@import url("../fonts/Comic/stylesheet.css");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  font-size: 1.2963vh;
+  letter-spacing: 0.27778vh;
+  height: 4.16667vh;
+  padding: 0 5.18519vh;
+  text-transform: uppercase;
+  max-width: 50%;
+  border-radius: 0.92593vh;
+  cursor: pointer;
+  color: #0c101b;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.btn:hover {
+  letter-spacing: 0.46296vh;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.btn.default {
+  background: #f8b90f;
+  color: #ffffff;
+}
+
+.group_form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.group_form .input_form {
+  width: 47%;
+}
+
+.input_form {
+  width: 100%;
+  margin-bottom: 2.31481vh;
+}
+
+.input_form .label {
+  width: 100%;
+  font-size: 1.48148vh;
+  color: #212121;
+  margin-bottom: 0.46296vh;
+  letter-spacing: 0.06944vh;
+}
+
+.input_form .nice-select {
+  width: 100%;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  position: relative;
+  z-index: 2;
+  height: 4.44444vh;
+  border-radius: 0.92593vh;
+  padding: 0 1.2963vh;
+  background: #fff;
+  border: none;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2963vh;
+  color: #212121;
+  letter-spacing: 0.06944vh;
+}
+
+.input_form .nice-select:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.input_form .nice-select span {
+  font-size: 1.2963vh;
+  color: #212121;
+  letter-spacing: 0.09259vh;
+}
+
+.input_form .nice-select .list {
+  width: 100%;
+  z-index: 3;
+}
+
+.input_form .list_arrows {
+  width: 100%;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  height: 4.44444vh;
+  border-radius: 0.92593vh;
+  padding: 0 1.2963vh;
+  background: #fff;
+  font-size: 1.2963vh;
+  color: #212121;
+  letter-spacing: 0.06944vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.input_form .list_arrows input {
+  display: none;
+}
+
+.input_form .list_arrows:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.input_form .list_arrows .text {
+  font-size: 1.48148vh;
+}
+
+.input_form .list_arrows .arrow {
+  cursor: pointer;
+}
+
+.input_form .list_arrows .arrow.left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.input_form .list_arrows .arrow img {
+  width: 1.38889vh;
+}
+
+.input_form .slider {
+  border-radius: 0.92593vh;
+  padding: 0.92593vh 1.2963vh;
+  background: #fff;
+}
+
+.input_form .slider .footer {
+  margin-top: 0.92593vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.11111vh;
+  color: #212121;
+  font-weight: 500;
+}
+
+.input_form .slider input {
+  padding: 0;
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 0.46296vh;
+  /* Specified height */
+  background: #edeef0;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.input_form .slider input:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+
+.input_form .slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 1.85185vh;
+  /* Set a specific slider handle width */
+  height: 1.85185vh;
+  /* Slider handle height */
+  background: url(/images/slider_thumb.png);
+  background-size: 100%;
+  background-position: center;
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.input_form .slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #4CAF50;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.input_form input {
+  width: 100%;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  height: 4.44444vh;
+  border-radius: 0.92593vh;
+  padding: 0 1.2963vh;
+  background: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.2963vh;
+  color: #212121;
+  letter-spacing: 0.06944vh;
+}
+
+.input_form input:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.input_form input::-webkit-input-placeholder {
+  font-size: 1.2963vh;
+  color: #212121;
+  letter-spacing: 0.09259vh;
+}
+
+.input_form input:-ms-input-placeholder {
+  font-size: 1.2963vh;
+  color: #212121;
+  letter-spacing: 0.09259vh;
+}
+
+.input_form input::-ms-input-placeholder {
+  font-size: 1.2963vh;
+  color: #212121;
+  letter-spacing: 0.09259vh;
+}
+
+.input_form input::placeholder {
+  font-size: 1.2963vh;
+  color: #212121;
+  letter-spacing: 0.09259vh;
+}
+/*# sourceMappingURL=style.css.map */

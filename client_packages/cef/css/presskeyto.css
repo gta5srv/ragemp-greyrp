@@ -1,0 +1,20 @@
+.press-key-to {
+    position: absolute;
+    bottom: 13%;
+    left: 40%;
+}
+
+.press-key-to-text {
+    color: white;
+    text-shadow: 0px 0px 1px black,0px 0px 1px black,0px 0px 1px black,0px 0px 1px black;
+    font-size: 1vw;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.press-key-to-text span:first-child {
+    background: rgba(0, 0, 0, .4);
+    padding: 0.2vw;
+    border-radius: 4px;
+    margin-right: 2px;
+}

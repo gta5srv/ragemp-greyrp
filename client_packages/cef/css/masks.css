@@ -1,0 +1,199 @@
+﻿.masks{
+    position: absolute;
+    text-align: center;
+    margin-top: 0;
+    height: 57vh;
+    width: 23vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #fff;
+    border-radius: 0;
+    right: 1vh;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(34 33 35 / 74%);
+    font-family: "TT Norms",sans-serif;
+}
+.masks .head {
+    padding: inherit;
+    background: inherit;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    color: inherit;
+    font-size: inherit;
+    height: inherit;
+    border-radius: inherit;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    width: inherit;
+    position: inherit;
+    left: inherit;
+}
+.masks .right{width: 100%;}
+.masks .left{
+    height: 100%;
+    width: 50px;
+    display: none;
+    padding-top: 62px;
+    float: left;
+}
+.masks i{font-style: normal;cursor: pointer;color: #fff;border-radius: 0;padding: 0vh;background: #e42d2d;box-shadow: 0 0px 9px 1px #dd7373;padding: 1vh;}
+table td {
+    width: 12vh;
+    font-size: 1.5vh;
+}
+.bbl tr:last-child {
+    border-bottom: 0;
+}
+.bbl tr {
+    line-height: 2vh;
+    border-bottom: 0.1vh solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 0.8vh 0 0.8vh 2vh;
+}
+.bbl tr.fiveup {
+    color: #fff;
+    border-radius: 0;
+    background: #e42d2d;
+}
+.bbl table td .back {
+    padding: 0 0;
+}
+thead {}
+thead tr {
+    background: none !important;
+    border-bottom: none !important;
+}
+thead tr th {
+    font-size: 1.6vh !important;
+    font-weight: 700;
+    width: 10vh !important;
+}
+.bbl tr:hover {background: #e42d2d;}
+.masks i:hover{/* background-color: #006c9f; *//* padding: 5px; */}
+.masks .list div{width: 12.7vh;text-align: center;color: #fff;border-radius: 0;display: inline-table;}
+tbody {
+    text-align: left;
+}
+thead tr th {
+    padding: 0;
+    padding-bottom: 0;
+    font-size: 1.5vh;
+    width: 10vh;
+    text-align: left;
+}
+.bbl {
+    padding: 1vh 0vh;
+    /* height: 27vh; */
+    margin-bottom: 0;
+    background: rgb(95 93 97);
+}
+.bbl table {
+    width: 100%;
+    display: block;
+}
+.bbl table.ow {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 22vh;
+    display: block;
+}
+.menuexit {
+    cursor: pointer;
+    font-style: normal;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0;
+    padding: 0;
+    font-size: 2.5vh;
+    top: 1.5vh;
+    right: 2vh;
+    font-weight: 600;
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    bottom: inherit;
+    background: #e42d2d;
+    box-shadow: inherit;
+    padding: 0.2vh 0.3vh;
+}
+.menuexit i {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+.masks h1{
+    font-size: 2vh;
+    text-align: left;
+    font-weight: 600;
+    padding: 2vh 2vh;
+    background: rgb(34 33 35 / 46%);
+    margin: 0;
+}
+.masks .left-arrow{
+    float: left;
+}
+.masks .right-arrow{
+    float: right;
+}
+.masks .list{font-weight: 600;color: #fff;padding: 0;position: relative;font-size: 1.7vh;width: auto;border-top: 0vh solid #57474720;border-block-end: 0px solid #57575720;text-align: left;padding-left: 0;margin-top: 1.5vh;padding: 0 1vh;}
+.masks .items{
+    height: 200px;
+}
+.masks .list span {
+    color: #000;
+    position: relative;
+    right: 0;
+    display: block;
+    background: rgb(34 33 35 / 21%);
+    margin-top: 2vh;
+    padding: 1.5vh 1vh;
+}
+.masks .btn{
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid;
+    cursor: pointer;
+    margin: 10px;
+}
+.masks .buy{background: linear-gradient(#e42d2d, #db820d);font-size: 1.5vh;width: auto;font-weight: 600;box-shadow: 0 0px 9px 1px #e42d2d;border: none;margin: 0 1vh;margin-top: 2vh;}
+.masks .exit{
+    background-color: #e53935;
+    font-size: 25px;background-color: rgba(0,0,0,0.3);border:2px solid red;border-radius:20px;
+}
+.masks .buy:hover{
+    background: #e42d2d;
+}
+.masks .exit:hover{
+    background-color: #c62828;
+}
+.masks .icon{
+    height: 50px;
+    background-color: #e53935;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 35px;
+}
+.masks .icon.active{
+    background-color: #d32f2f;
+}
+.masks .icon:hover{
+    background-color: #c62828;
+}
+.masks p{
+    color: #ffffff;
+    font-size: 1.5vh;
+    font-weight: 600;
+    text-align: left;
+    margin: 2vh auto 1vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 0 1vh;
+}
+.masks p span{color: #fff;font-size: 2.5vh;position: relative;margin-top: 0;display: inline-block !important;font-weight: 600 !important;margin-left: 1vh;}

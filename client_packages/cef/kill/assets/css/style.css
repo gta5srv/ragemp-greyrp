@@ -1,0 +1,85 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+
+.wrapper {
+  position: absolute;
+  right: .5vh;
+  top: 25vh;
+  font-family: 'Inter', sans-serif;
+  width: 33vh;
+}
+
+.wrapper__block {
+  width: 100%;
+  height: 4.2vh;
+  margin-bottom: 1vh;
+  color: #fff;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.12);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper__block span {
+  padding: 1vh;
+}
+
+.wrapper__block .fraction1 {
+  color: #048100;
+}
+
+.wrapper__block .fraction2 {
+  color: #7312d4;
+}
+
+.wrapper__block .fraction3 {
+  color: #FAFF00;
+}
+
+.wrapper__block .fraction4 {
+  color: #2ab1ff;
+}
+
+.wrapper__block .fraction5 {
+  color: #a00000;
+}
+
+.killImg{
+  width: 3.2vh;
+  height: 3.2vh;
+  margin: .3vh;
+  position: absolute;
+  margin-left: 150px;
+  fill: #fff;
+}
+
+.gunImg{
+  width: 4vh;
+  height: 4vh;
+  margin: .05vh;
+  fill: #fff;
+}

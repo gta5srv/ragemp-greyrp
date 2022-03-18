@@ -1,0 +1,222 @@
+.menu #btn4{padding:10px;border-radius:5px;border:2px solid;cursor:pointer;border-color:#da0000;background:#da0000;color:#fff;display:block;margin:10px auto;font-family:'Conv_UniSans'}
+.menu .btn:hover{background: #772d2d;color:#fff;border-color: #772d2d;}
+.menu .income{font-family:'Conv_UniSans';display:block;text-align:left;padding:10px 0 10px 10px;background:#fff}
+.menu .price{font-family:'Conv_UniSans';display:block;text-align:left;margin-top:15px;background:#fff;padding:10px 0 10px 10px}
+.biznes .btn:hover{background:#333;color:#fff;border-color:#333}
+.biznes .income{font-family:'Conv_UniSans';display:block;text-align:left;padding:10px 0 10px 10px;background:#fff}
+.biznes .price{font-family:'Conv_UniSans';display:block;text-align:left;margin-top:15px;background:#fff;padding:10px 0 10px 10px}
+.biznes .btn{padding:10px;border-radius:5px;border:2px solid;cursor:pointer;border-color:#da0000;background:#da0000;color:#fff;display:block;margin:10px auto;font-family:'Conv_UniSans'}
+.biznes{color:#000;max-width:200px;margin:0 auto;display:block;clear:both;padding-top:20px;text-align:center}
+.petrol .biznes{position:absolute;width:400px;left:21.5%;max-width:initial;top:111px;text-align:center}
+.petrol .biznes .btn:hover{background:#333;color:#fff;border-color:#333}
+.petrol .biznes .income{font-family:'Conv_UniSans';display:block;text-align:left;padding:10px 0 10px 10px;text-align:center}
+.petrol .biznes .price{font-family:'Conv_UniSans';display:block;text-align:left;margin-top:15px;padding:10px 0 10px 10px;text-align:center}
+.petrol .biznes .btn{padding:10px;border-radius:5px;border:2px solid;cursor:pointer;border-color:#da0000;background:#da0000;color:#fff;display:block;margin:10px auto;font-family:'Conv_UniSans';width:AUTO;height:auto}
+.body{background-repeat:no-repeat;background-size:contain;position:absolute;margin-top:-290px;height:540px;width:370px;top:50%;color:#000}
+.weapons_buy{height: 47vh;width: 85vh;/* position:absolute; *//* right: 37%; *//* top: 20%; *//* margin-top: 0; */background: #424242b4;padding: 0 1vh;right: 15%;}
+.weapons_buy .elements{height: 30vh;overflow:hidden;overflow-y:scroll;background:none;}
+.weapons_buy .biznes{background:#ffffffd9;max-width:100%;border-left:80px solid #7d2b2b;padding-top:0}
+.weapons_buy .biznes .btn,.weapons_buy .biznes .income,.weapons_buy .biznes .price{max-width:200px;margin:0 auto;background:none}
+.weapons_buy .block .btn{float:right;padding:5px;color:#fff;border: #e42d2d88;border-radius: 0.8vh;cursor:pointer;background: #e42d2d88;padding: 1vh;background-image: #e42d2d88;box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.41), inset 0px 2px 3px 0px rgba(255, 255, 255, 0.1);margin-top: 1vh;position: relative;}
+.weapons_buy .exit{border-bottom-left-radius:0;float:none;margin:0 auto;padding: 1vh!important;border-radius:5px;border: 0px solid;cursor:pointer;border-color: #e42d2d6c;margin-bottom: 1vh;background: #e42d2d88;color:#fff;display:block;margin:0 auto 0;/* font-family:'Conv_UniSans'; */width:auto;border-top:0;font-family: 'Uni Neue';}
+.weapons_buy .buttons{border-bottom-left-radius:0}
+.weapons_buy .block span{float:left;width:100%;padding-left: 0;color: #fff;margin-top: -2.8vh;}
+.weapons_buy .right{background: none;}
+.weapons_buy .slider output{display:inline;font-size: 1.5vh;float:right;margin-right: 0;background-color: #e42d2d88;padding: 1vh;border-radius: 0.8vh;color:#fff;background-image: #e42d2d88;box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.41), inset 0px 2px 3px 0px rgba(255, 255, 255, 0.1);margin-top: -3vh;}
+.weapons_buy .block .btn:hover{background: #e42d2d88;color:#fff;border-color: #e42d2d88;background-image:red;box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.41), inset 0px 2px 3px 0px rgba(255, 255, 255, 0.1);}
+.weapons_buy .exit:hover{background: #e42d2d88;color:#fff;border-color: #e42d2d88;background-image: #e42d2d88;box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.41), inset 0px 2px 3px 0px rgba(255, 255, 255, 0.1);}
+.biznes #btn4:hover{background:#333;color:#fff;border-color:#333}
+.body .biznes{background:#fff;max-width:100%}
+.body .biznes .btn{max-width:220px}
+.body .biznes .price{max-width:220px;margin:0 auto;text-align:center}
+.body .biznes .income{max-width:220px;margin:0 auto;text-align:center}
+.joblist .box{width: 420px;height: 395px;border-radius:4px;position:absolute;top:50%;transform:translateY(-50%);background:none;color:#000;border-radius:10px;background-repeat:no-repeat;background-size:100% 100%;border-radius:20px;font-family: 'Uni Neue';}
+.joblist .buttongetsettledred p {
+    margin: 0;
+    width: 100%;
+}
+.weapons_buy .buttons {
+    top: 0px;
+    height: auto;
+    width: 80vh;
+    margin: 2vh auto 0;
+    left: 0;
+    text-align: left;
+}
+.joblist .buttongetsettled p {
+    margin: 0px;
+}
+.joblist .buttongetsettledred{width: 90%;/* height:30px; */margin-top: 25px;/* justify-content:center; *//* align-items:center; *//* display:flex; */color:#fff;cursor:pointer;border-radius: 0;padding:5px 0;background-image: url(../images/joblist/btnn.png);background-size: cover;background-color: #fff0;position: relative;left: 5px;/* width: auto; */line-height: normal;height: auto;padding-left: 20px;font-size: 14px;line-height: 22px;background-size: contain;background-repeat: no-repeat;}
+.joblist .buttongetsettled{
+    width: 90%;
+    /* height: 30px; */
+    margin-top: 25px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* display: flex; */
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0;
+    padding: 5px 0;
+    background-image: url(../images/joblist/btnn.png);
+    background-size: cover;
+    background-color: #fff0;
+    position: relative;
+    left: 5px;
+    /* width: auto; */
+    line-height: normal;
+    height: auto;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.weapons_buy .right {
+    width: 84vh;
+    height: 39vh;
+}
+.weapons_buy .elements {
+    height: 35vh;
+    margin-top: 2vh;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+}
+.weapons_buy .block label {
+    float: none;
+    display: block;
+    font-size: 1.5vh;
+    text-align: center;
+}
+.weapons_buy .block {
+    display: inline-block;
+    width: 18.5vh;
+    padding: 0.7vh;
+    background: #ffffff;
+    margin-bottom: 2vh;
+    vertical-align: top;
+    margin: 0 1vh 2vh;
+    border-radius: 1vh;
+    background: linear-gradient(to bottom, rgba(124, 57, 57, 0.61), rgba(77, 77, 77, 0.185));
+    box-shadow: 2px 2px 2px 2px rgba(94, 94, 94, 0.418);
+}
+.weapons_buy .slider label {
+    text-align: center;
+    font-size: 1.5vh;
+    padding: 2vh;
+}
+.weapons_buy .slider input {
+    float: none;
+    display: inline-block;
+    margin: 0 auto 1vh;
+    width: 10vh;
+    background: none;
+    border: none;
+    color: #fff;
+    margin-left: 0;
+    font-weight: bold;
+    font-size: 1.5vh;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0 1vh;
+    position: relative;
+    top: 0vh;
+}
+.weapons_buy .slider output {
+    display: block;
+    float: none;
+    margin-top: 0;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1vh 0;
+    margin-bottom: 0;
+    font-size: inherit;
+    width: 11vh;
+    display: inline-block;
+    margin-top: 1vh;
+    margin-left: 1vh;
+}
+.weapons_buy .slider span {
+    display: inline-block;
+    font-size: 1.5vh;
+    text-align: left;
+    width: 21vh;
+}
+.weapons_buy .slider span:last-child {
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    width: 21vh;
+}
+.weapons_buy .slider  {
+    display: inline-block;
+    width: 25.5vh;
+    padding: 1vh;
+    margin-bottom: 2vh;
+    vertical-align: top;
+    margin: 0 1vh 2vh;
+    border-radius: 1vh;
+    background-image: linear-gradient(to bottom, rgba(124, 57, 57, 0.61), rgba(77, 77, 77, 0.185));
+    box-shadow: 3px 3px 3px 3px rgba(51, 51, 51, 0.144);
+    height: auto;
+}
+.weapons_buy .block:nth-child(8) {
+    margin-left: 8.7px;
+}
+.imm {display:none;}
+.weapons_buy .head {
+    display: none;
+}
+.weapons_buy .block:nth-child(1) .imm {display: block;background-image: url(../images/items/100.png);height: 5.3vh;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 0.6vh 0;}
+.weapons_buy .block:nth-child(2) .imm {display: block;background-image: url(../images/items/101.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy .block:nth-child(3) .imm {display: block;background-image: url(../images/items/104.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy .block:nth-child(4) .imm {display: block;background-image: url(../images/items/111.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy .block:nth-child(5) .imm {display: block;background-image: url(../images/items/107.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy .block:nth-child(6) .imm {display: block;background-image: url(../images/items/143.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;/* background-size: 60px; */}
+.weapons_buy .block:nth-child(7) .imm {display: block;background-image: url(../images/items/119.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;/* background-size: 60px; */}
+.weapons_buy .block:nth-child(8) .imm {display: block;background-image: url(../images/items/116.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+
+.weapons_buy .block:nth-child(9) .imm {display: block;background-image: url(../images/items/182.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy .block:nth-child(10) .imm {display: block;background-image: url(../images/items/184.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy .block:nth-child(11) .imm {display: block;background-image: url(../images/items/185.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy .block:nth-child(12) .imm {display: block;background-image: url(../images/items/188.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy .block:nth-child(13) .imm {display: block;background-image: url(../images/items/195.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy .block:nth-child(14) .imm {display: block;background-image: url(../images/items/183.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy .block:nth-child(15) .imm {display: block;background-image: url(../images/items/189.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy .block:nth-child(16) .imm {display: block;background-image: url(../images/items/180.png);height: 50px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 5px 0;}
+.weapons_buy 
+.weapons_buy .block label {
+    float: none;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+}
+.weapons_buy .block span {
+    float: none;
+    display: block;
+    padding: 0;
+    margin-top: 0;
+    font-size: 1.5vh;
+    text-align: center;
+}
+.weapons_buy .block .btn {
+    float: none;
+    text-align: center;
+    width: 13vh;
+    margin: 1vh auto 0;
+    padding: 1vh;
+    font-size: 1.5vh;
+}
+
+
+.joblist .buttongetsettledred:hover{/* background: #0098fd; *//* color:#fff; *//* border-color: #0098fd; */opacity: 0.6;}
+.joblist .buttongetsettled:active{/* background:#333; *//* color:#fff; *//* border-color:#333; */}
+.joblist .buttongetsettled:hover{/* background: #0092dea8; *//* color:#fff; *//* border-color: #0092dea8; */opacity: 0.6;}
+.lift{position:absolute;background-image: url(../images/res/lift/lift2.png);background-repeat:no-repeat;background-size:contain;height: 51vh;width: 43vh;left: 35%;top: 25%;font-family: 'Uni Neue';margin: 0;}
+.lift h1{text-align:center;color:#fff;height: 4vh;width: 22vh;font-size: 2vh;margin: 11.8vh auto 0;}
+.lift #btn-down{margin-left: 8vh;height: 13vh;width: 14vh;margin-top: 3vh;}
+.lift #btn-up{margin-left: 0vh;height: 13vh;width: 14vh;margin-top: 3vh;}
+.lift #btn-stop{margin-left: 8vh;height: 13vh;width: 14vh;margin-top: 0vh;}
+.lift #btn-start{margin-left: 0;height: 13vh;width: 14vh;margin-top: 0vh;}
+.lift div{float:left;cursor:pointer}
+@font-face{font-family:'Conv_UniSans';src:url(../fonts/UniSans.eot);src:local(),url(../fonts/UniSans.woff) format("woff"),url(../fonts/UniSans.ttf) format("truetype"),url(../fonts/UniSans.svg) format("svg");font-weight:400;font-style:normal}

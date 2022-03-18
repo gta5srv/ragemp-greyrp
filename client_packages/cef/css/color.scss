@@ -1,0 +1,9 @@
+$color_black: #222123;
+
+$color_global: #00a5fb;
+
+
+
+@function pxtovh($pxsize) {
+    @return $pxsize / (1080 * 0.01)+vh;
+}

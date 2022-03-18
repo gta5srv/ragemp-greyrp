@@ -1,0 +1,1117 @@
+@import "../fonts/Acrom/stylesheet.css";
+@import "../fonts/TTNorms/stylesheet.css";
+@import "../fonts/Montserrat/stylesheet.css";
+@import "../fonts/Geometria/stylesheet.css";
+@import "../fonts/Roboto/stylesheet.css";
+@import "../fonts/Comic/stylesheet.css";
+@import "../fonts/Gilroy/stylesheet.css";
+@import "../fonts/GothamPro/stylesheet.css";
+@import "https://fonts.googleapis.com/css?family=Roboto:300,700";
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@font-face{font-family:'Uni Neue';font-weight:300;font-style:normal;src:local('Uni Neue'),local(Uni_Neue),local(Uni-Neue),url(../fonts/UniNeue/300/UniNeueLight.woff2) format("woff2"),url(../fonts/UniNeue/300/UniNeueLight.woff) format("woff")}
+@font-face{font-family:'Uni Neue';font-weight:400;font-style:normal;src:local('Uni Neue'),local(Uni_Neue),local(Uni-Neue),url(../fonts/UniNeue/400/UniNeueRegular.woff2) format("woff2"),url(../fonts/UniNeue/400/UniNeueRegular.woff) format("woff")}
+@font-face{font-family:'Uni Neue';font-weight:700;font-style:normal;src:local('Uni Neue'),local(Uni_Neue),local(Uni-Neue),url(../fonts/UniNeue/700/UniNeueBold.woff2) format("woff2"),url(../fonts/UniNeue/700/UniNeueBold.woff) format("woff")}
+@font-face{font-family:'Uni Neue';font-weight:800;font-style:normal;src:local('Uni Neue'),local(Uni_Neue),local(Uni-Neue),url(../fonts/UniNeue/800/UniNeueHeavy.woff2) format("woff2"),url(../fonts/UniNeue/800/UniNeueHeavy.woff) format("woff")}
+@font-face{font-family:'Uni Neue';font-weight:900;font-style:normal;src:local('Uni Neue'),local(Uni_Neue),local(Uni-Neue),url(../fonts/UniNeue/900/UniNeueBlack.woff2) format("woff2"),url(../fonts/UniNeue/900/UniNeueBlack.woff) format("woff")}
+@font-face{font-family:'Roboto';font-weight:400;font-style:normal;src:local(Roboto),url(../fonts/Roboto/400/Roboto-Regular.woff2) format("woff2"),url(../fonts/Roboto/400/Roboto-Regular.woff) format("woff")}
+@font-face{font-family:'Roboto';font-weight:500;font-style:normal;src:local(Roboto),url(../fonts/Roboto/500/Roboto-Medium.woff2) format("woff2"),url(../fonts/Roboto/500/Roboto-Medium.woff) format("woff")}
+@font-face{font-family:'Roboto';font-weight:700;font-style:normal;src:local(Roboto),url(../fonts/Roboto/700/Roboto-Bold.woff2) format("woff2"),url(../fonts/Roboto/700/Roboto-Bold.woff) format("woff")}
+@font-face{font-family:'Acrom';src:url(../fonts/invent.ttf)}
+@font-face{font-family:'Conv_UniSans';src:url(../fonts/poppins/Poppins-Regular.ttf)}
+@font-face{font-family:Poppins-Bold;src:url(../fonts/poppins/Poppins-Bold.ttf)}
+@font-face{font-family:Poppins-Medium;src:url(../fonts/poppins/Poppins-Medium.ttf)}
+@font-face{font-family:Montserrat-Bold;src:url(../fonts/montserrat/Montserrat-Bold.ttf)}
+@font-face{font-family:'Conv_UniSans';src:url(../fonts/UniSans.eot);src:local(),url(../fonts/UniSans.woff) format("woff"),url(../fonts/UniSans.ttf) format("truetype"),url(../fonts/UniSans.svg) format("svg");font-weight:400;font-style:normal}
+
+
+
+.houses.HouseMenu {    position: absolute;    text-align: center;    margin-top: 0;    height: 100vh;    width: 30vh;    background-repeat: no-repeat;    background-position: bottom;    color: #fff;    border-radius: 0;    right: 0;    top: 50%;    transform: translateY(-50%);    background: linear-gradient(270deg, #292929 0%, rgba(4,13,28,0) 100%);    font-family: "TT Norms",sans-serif;    padding-bottom: 1vh;    width: 43vh;    display: flex;    justify-content: flex-end;    align-items: center;}
+.houses.HouseMenu .head{    font-size: 2vh;    text-align: left;    font-weight: 600;    padding: 2vh 2vh;    background: rgb(34 33 35 / 46%);}
+.houses.HouseMenu  .body{padding: 0;margin:0 auto;background: #001f3a00;top: 0;position:relative;height:auto;width: auto;padding-left: 15vh;}
+.houses.HouseMenu .exit{    cursor: pointer;    font-style: normal;    cursor: pointer;    color: #fff;    border-radius: 0;    padding: 0;    font-size: 2.5vh;    top: 1.5vh;    right: 2vh;    font-weight: 600;    position: absolute;    color: #fff;    margin: 0;    padding: 0;    text-align: right;    bottom: inherit;    background: none;    box-shadow: inherit;    padding: 0.2vh 0.3vh;}
+.houses.HouseMenu .left,.houses.HouseMenu .right{display:inline-block;font-size:1.5vh;color:#fff;vertical-align:top;font-weight:700}
+.houses.HouseMenu .left{    width: 100%;    float: none !important;    display: block;    text-align: left;    padding-right: 4vh;    font-weight: 400;}
+.houses.HouseMenu .left .door {    margin: 0;    position: relative;    height: auto;}
+.houses.HouseMenu .left .door img {    width: auto;    height: 2vh;    margin-right: 1vh;    position: relative;    top: 0.2vh;}
+.houses.HouseMenu .left .door .lock {font-size: 2vh;margin: 0;width: 100%;}
+.houses.HouseMenu .left .houseblock {    width: 100%;    margin: inherit;    padding: 1vh 0;    border-bottom: 0.1vh solid #ccc;    padding-bottom: 1.5vh;    color: #d2d2d2;}
+.houses.HouseMenu .left .houseblock p {}
+.houses.HouseMenu .left .houseblock p span {    font-size: 2vh;    display: block;    margin-top: 1.4vh;}
+.houses.HouseMenu .right{    width: 100%;    float: none !important;    display: block;    margin-top: 5vh;}
+.houses.HouseMenu .left p span{display: inline-block;color:#fff;font-size: 2.7vh;margin-top: 0;font-weight:300;margin-top: 2vh;}
+.houses.HouseMenu .right p span{    display: block;    color: #fff;    font-size: 2.7vh;    margin-top: 0;    font-weight: 300;    margin-left: 0;    margin-top: 2vh;}
+.houses.HouseMenu .btns{width:auto;overflow:hidden;border:none;display:block;margin: 5vh auto 0;padding: 0 0;text-align: left;margin-left: 3vh;}
+.houses.HouseMenu .btns div{display:inline-block;color:#fff;text-align:center;font-size:20px;padding:10px 20px;font-weight:400;width:20vh;margin:0 1vh;cursor:pointer;position: relative;top: 0;right: 0;float: inherit;height: auto;display: inline-block;color: #fff;text-align: center;font-size: 2vh;padding: 1vh 0;font-weight: 400;width: 20vh;margin: 0 0;cursor: pointer;position: relative;top: 0;left: 0;float: inherit;height: auto;background-color: #3d3d3d;border-radius: 0.5vh;margin-bottom: 1vh;}
+.houses.HouseMenu .btns .buy{}
+.houses.HouseMenu .btns .interior{}
+.houses.HouseMenu .body .left p{text-align:left;font-size: 2vh;margin: 0;width: 100%;margin-left: 0;padding: 0;padding-left: 0;}
+.houses.HouseMenu .body .right p{text-align: left;font-size: 2.6vh; margin: 0; width: auto; margin-left: 0; padding: 1vh 2vh; padding-left: 0;}
+
+.control{/* font-family:'Uni Neue'; */position:absolute;top:1%;right:1%;width:20vh;text-align:center;padding: 1vh;color:#fff;background: rgb(34 33 35 / 74%);font-family: "TT Norms",sans-serif;}
+.control p{/* font-family:'Uni Neue'; */font-size:1.5vh;margin:1vh 0;text-align:left;display:block;width:auto;}
+.control output{/* font-family:'Uni Neue'; */margin-top:0;display:block;width:auto;text-align:right;position:relative;margin-top: -2vh;margin-bottom: 1vh;font-size:1.4vh;}
+
+#death_window *{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;text-transform:none;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+#death_window{position:absolute;bottom:0;left:50%;margin-right:0;transform:translate(-50%,-50%);font-family:'Acrom';width:34vh;height:auto;background:url(../images/death_window/bg.png);background-size:cover;background-position:inherit;background-repeat:no-repeat;border-radius:.9vh;padding-top:2vh;padding-bottom:1.5vh}
+#death_window.active{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:100%;height:100%;position:relative;font-family:'Acrom';color:#fff}
+#death_window .block_bg{top:0;width:315px;height:auto;position:absolute;background:url(../images/death_window/bg.png);background-size:cover;background-position:inherit;background-repeat:no-repeat;border-radius:5px;display:none}
+#death_window .text_block{font-size: 1.5vh;color:#fff;font-weight:300;position:relative;top:0;text-align:center;display:block;width:100%;margin-bottom: 0.5vh;padding: 0 1vh;line-height: normal;font-weight: 600;}
+#death_window .time{font-size:2.5vh;position:relative;color:#fff;width:100%;text-align:center;font-weight:700;padding:1vh}
+#death_window .desc{font-size: 1.3vh;font-weight:300;top:0;position:relative;color:#fff;text-align:center;}
+#death_window .death_window_buttons{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:0 2vh}
+#death_window .death_window_buttons .death_window_button{cursor:pointer;width:29vh;height:6.5037vh;background:url(../images/death_window/btn_1.png);background-size:100%;background-position:center;background-repeat:no-repeat;margin-right:1vh}
+#death_window .death_window_buttons .death_window_button.two{background:url(../images/death_window/btn_2.png);background-size:100%;background-position:center;background-repeat:no-repeat}
+.death_window .loading {
+    width: 60vh;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 50vh;
+    }
+  
+.death_window .loading svg {    width: 100%;    height: 100%;  }
+.death_window .loading #pulsar{
+    stroke-dasharray:281;
+    -webkit-animation: dash 2.5s infinite linear forwards;
+  }
+
+  @-webkit-keyframes dash{ from{stroke-dashoffset:814;} to {stroke-dashoffset:-814;}}
+
+@keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+}
+
+
+
+
+
+
+.JobStatsInfo{background: rgba(34,33,35,0.7);border-radius: .92593vh 0 0 .92593vh;position: absolute;transform: skewY(-3deg);min-height: 6.25926vh;right: 0;display: flex;align-items: center;justify-content: flex-end;top: 20vh;}
+.JobStatsInfo .na {text-align: center;padding: 0.5vh 0;font-size: 1.85185vh;font-weight: 700;color: #fff;padding-top: 0;}
+.JobStatsInfo .naq {padding: 0 1vh;font-weight: 500;text-align: center;font-size: 1.4vh;margin: 0;}
+.JobStatsInfo .naq p {margin: 0;color: #e42d2d;font-size: 1.2963vh;font-weight: 700;}
+
+.LicMenu{user-select:none;-moz-user-select:none;-webkit-user-select:none;margin:0;height:100vh;font-family:"TT Norms",sans-serif;font-weight:700}
+.LicMenu::-webkit-scrollbar{width:2px}
+.LicMenu::-webkit-scrollbar-track{background:#555}
+.LicMenu::-webkit-scrollbar-thumb{background:#ddd}
+.LicMenu{
+    position: absolute;
+    text-align: center;
+    margin-top: 0;
+    height: auto;
+    width: 38vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #fff;
+    border-radius: 0;
+    right: 1vh;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(34 33 35 / 74%);
+    font-family: "TT Norms",sans-serif;
+}
+.LicMenu .header{
+    font-size: 2vh;
+    text-align: left;
+    font-weight: 600;
+    padding: 2vh 2vh;
+    background: rgb(34 33 35 / 46%);
+}
+.LicMenu .content{padding: 2vh;position:relative;margin:0 auto;text-align: left;background: none;height: auto;padding-bottom: 0;}
+.LicMenu .content h3{margin:25px 0}
+.LicMenu .content p{margin:0;display:block;margin-bottom: 2vh;clear:both;position: relative;}
+.LicMenu .content p span{color:#fff;margin-right:2.3vh}
+.LicMenu .footer{padding:0;font-size:1.8vh;font-weight:700;position:absolute;bottom:5%;margin:0 auto;text-align:center;width:100%}
+.LicMenu .footer div{display:inline-block;background:#e42d2d;cursor:pointer}
+.LicMenu .footer div:hover{background:#e42d2d}
+.LicMenu .nocup,.LicMenu .cup{background:none!important}
+.LicMenu .content p span.nm{display: block;font-size: 1.5vh;margin: 0;margin-bottom: 1vh;}
+.LicMenu .content p span.pr{display: block;font-size: 1.5vh;margin: 0;font-weight: 500;margin-bottom: 1vh;}
+.LicMenu .content p span.enter{cursor:pointer;position: absolute;right: 0;top: 0;background: #e42d2d;font-size: 1.5vh;width: auto;font-weight: 600;box-shadow: 0 0px 9px 1px #e42d2d;border: none;margin: 0;margin-top: 0;padding: 1vh;border-radius: 0.5vh;}
+.LicMenu .content p span.enter:hover{background: #e42d2d;}
+.LicMenu #cancel{
+    cursor: pointer;
+    font-style: normal;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0;
+    padding: 0;
+    font-size: 2.5vh;
+    top: 1.5vh;
+    right: 2vh;
+    font-weight: 600;
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    bottom: inherit;
+    background: #e42d2d;
+    box-shadow: inherit;
+    padding: 0.2vh 0.3vh;
+}
+
+
+.mats{position:absolute;height:8vh;width:55vh;left:30%;top:35%}
+.mats .img{background-repeat:no-repeat;background-size:contain;height:20vh;width:25vh;background-position:center;margin:-12vh auto 0}
+.mats .army{background-image:url(../images/res/matsarmy.png)}
+.mats .gang{background-image:url(../images/res/matsgang.png)}
+.mats .weed{background-image:url(../images/res/weedgang.png)}
+.mats .hkit{background-image:url(../images/res/hkit.png)}
+.mats .btns{height:auto;width:100%;padding:1vh}
+.mats .btn-succ{border-bottom-left-radius:1vh;border-top-left-radius:1vh;background-color:#2f2f2f;cursor:pointer;height:100%;float:left;width:45%}
+.mats .btn-cancel{border-bottom-right-radius:1vh;border-top-right-radius:1vh;background-color:#a0000e;cursor:pointer;height:100%;float:left;width:45%}
+.mats .btn-cancel:hover{background-color:#b83030}
+.mats .btn-succ:hover{background-color:#0c0c0c}
+.mats .btns div{text-align:center;padding-top:1vh;font-size:1.5vh;color:#fff;line-height:normal;display:inline-block;padding-bottom:1vh}
+
+.petrol{position:absolute;background-repeat:no-repeat;background-size:contain;height: 26.5vh;width: 50vh;bottom: 1vh;font-family:"TT Norms",sans-serif;background: #000000cc;left: 0;right: 0;margin: 0 auto;font-family: 'Uni Neue';border-radius: 0.5vh;height: max-content;}
+.petrol .logos{text-align:center;position:relative;top:.7vh;color:#fff;width:12vh;margin:0 auto;background:#e42d2d;left:0;font-weight:700;border-radius:.2vh;line-height:3vh}
+.petrol .logos p{font-size:1.6vh}
+.petrol input{text-align: left;font-size: 2vh;border:none;height: 2vh;width: auto;background: #cccccca8;border-radius: 0.6vh;padding: 1vh;}
+.petrol .btns{height:13vh;width:26.4vh;float:none;position:absolute;top:36.7vh;left:25.8vh}
+.petrol .btn:hover{color:#e42d2d!important}
+.petrol .btn{cursor:pointer;height:auto;font-weight:700;font-size:1.5vh}
+.petrol .btn.gov{width:100%;display:block;color:#fff;text-align:center;text-transform:uppercase;margin-bottom:.6vh;margin-top:0;background:#545454;padding:1vh 0}
+.petrol .btn.full{width:100%;display:block;color:#fff;text-align:center;text-transform:uppercase;margin-bottom:.6vh;margin-top:0;background:#545454;padding:1vh 0}
+.petrol .btn.no:hover{color:#fff!important;background:#e42d2d}
+.petrol .btn.yes{width:16.8vh;height:10vh;margin:0 auto;position:absolute;top:16.3vh;left:4.7vh}
+.petrol .btn.no{width:100%;display:block;text-align:center;text-transform:uppercase;padding:1vh 0;color:#fff!important;background:#e42d2d}
+.petrol .no{margin-top:0;color: #000;font-size: 1.5vh;position: absolute;right: 1vh;font-weight: bold;}
+.petrol input[type='number']{-moz-appearance:textfield}
+.petrol input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance:none}
+.petrol input{outline:none}
+.petrol input::-moz-placeholder{color:#fff}
+.petrol input::-webkit-input-placeholder{color:#fff}
+.petrol :-ms-input-placeholder{color:#fff}
+.petrol input::-ms-input-placeholder{color:#fff}
+.petrol input::placeholder{color:#fff}
+.petrol .header {background: #ffffff;padding: 1vh;border-top-left-radius: 0.5vh;border-top-right-radius: 0.5vh;margin-top: -1vh;}
+.petrol .z {
+    display: table-cell;
+    padding: 0 2vh;
+    vertical-align: bottom;
+    color: #000;
+}
+.petrol .z img {position: relative;top: -0.5vh;width: 4.5vh;}
+.petrol .z h3 {
+    font-size: 1.7vh;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: initial;
+}
+.petrol .z p {
+    font-size: 1.2vh;
+    line-height: normal;
+    margin: 0;
+    letter-spacing: initial;
+}
+.petrol .content .obem {background: #848484bf;display: inline-block;padding: 2vh 1vh;border-radius: 0;cursor: pointer;margin-top: 0;width: 15vh;text-align: center;margin-right: 0;font-size: 1.2vh;border-top-left-radius: 1.5vh;border-bottom-right-radius: 1.5vh;margin: 0;letter-spacing: initial;}
+.petrol .content {
+    padding: 1vh;
+    padding-top: 2vh;
+    margin: 0;
+    letter-spacing: initial;
+    max-width: inherit;
+    border-radius: 0;
+    height: auto;
+}
+#content {
+    position: relative;
+    top: 1vh;
+    margin: 0;
+    letter-spacing: initial;
+}
+.petrol .content .yk {
+    display: inline-block;
+    margin-right: 0;
+}
+.petrol .content input {background: #8484848c;padding: 2vh 1vh;color: #fff;width: 47.7vh;font-size: 1.2vh;border-radius: 0;border-top-left-radius: 1.5vh;border-bottom-right-radius: 1.5vh;}
+.petrol .content .full {
+    background: #848484bf;
+    display: inline-block;
+    padding: 2vh 1vh;
+    border-radius: 0;
+    cursor: pointer;
+    margin-top: 0;
+    width: 15vh;
+    text-align: center;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    font-size: 1.2vh;
+    border-top-left-radius: 1.5vh;
+    border-bottom-right-radius: 1.5vh;
+}
+.petrol .content .gov {
+    background: #848484bf;
+    display: inline-block;
+    padding: 2vh 1vh;
+    border-radius: 0;
+    cursor: pointer;
+    margin-top: 0vh;
+    width: 15vh;
+    text-align: center;
+    margin-left: 0;
+    font-size: 1.2vh;
+    border-top-left-radius: 1.5vh;
+    border-bottom-right-radius: 1.5vh;
+}
+.petrol .content .gov:hover, .petrol .content .full:hover, .petrol .content .obem:hover {background: #e42d2d;opacity: 0.8;}
+.petrol .content .oks {
+    margin-top: 2.5vh;
+    font-weight: 400;
+}
+.petrol .content .gg {
+    display: inline-block;
+    margin-right: 1vh;
+    font-size: 1.5vh;
+    font-weight: 300;
+}
+.petrol .content .gg span {}
+.petrol .content .gg .yes {
+    background: #e42d2d;
+    padding: 2.5vh 3vh;
+    border-radius: 0;
+    font-size: 1.7vh;
+    border-top-left-radius: 1.5vh;
+    border-bottom-right-radius: 1.5vh;
+}
+.petrol .content .gg .yes:hover {
+    opacity: 0.7;
+}
+.petrol .content .gg:first-child {
+    display: block;
+    margin-bottom: 2vh;
+}
+.petrol .content div.gg {
+    margin-right: 0;
+    position: absolute;
+    right: 1.5vh;
+    bottom: 0.5vh;
+    cursor: pointer;
+}
+.petrol .content .gg input {
+    background: #8484848c;
+    padding: 0.8vh;
+    width: auto;
+    height: auto;
+    border: none;
+    font-size: 1.5vh;
+    border-radius: 0.2vh;
+    margin-top: 0;
+    margin-left: 0.5vh;
+}
+.petrol .active {background: #ff3a3a !important;opacity: 1;}
+
+body .lift{position:absolute;background-image: url(../images/res/lift/lift2.png);background-repeat:no-repeat;background-size:contain;height: 51vh;width: 43vh;left: 35%;top: 25%;font-family: 'Uni Neue';margin: 0;}
+body .lift h1{text-align:center;color:#fff;height: 4vh;width: 22vh;font-size: 2vh;margin: 11.8vh auto 0;}
+body .lift #btn-down{margin-left: 8vh;height: 13vh;width: 14vh;margin-top: 3vh;}
+body .lift #btn-up{margin-left: 0vh;height: 13vh;width: 14vh;margin-top: 3vh;}
+body .lift #btn-stop{margin-left: 8vh;height: 13vh;width: 14vh;margin-top: 0vh;}
+body .lift #btn-start{margin-left: 0;height: 13vh;width: 14vh;margin-top: 0vh;}
+body .lift div{float:left;cursor:pointer}
+
+body .infobox{width:70vh;height:40vh;left:50%;margin-left:-30vh;top:50%;margin-top:-20vh;max-height:40vh;overflow:hidden;background-size:cover;background-repeat:no-repeat;font-family:'Uni Neue';background-position:bottom;background:rgba(34,33,35,0.7);border-radius:.92593vh 0 0 .92593vh;position:absolute;/* transform:skewY(-3deg) */}
+body .infobox .header{width:100%;background-color:#e42d2d;height:5vh;border-top-left-radius:0;border-top-right-radius:0;margin:0 auto}
+body .infobox .content{margin:1vh;height:32vh;overflow:hidden;overflow-y:scroll;color:#fff;background: none;max-width: initial;border: none;}
+body .infobox .content p{margin:0;margin-bottom:8px}
+body .infobox .header i{float:right;font-family:icons;font-size:1.5vh;margin:2vh;cursor:pointer;font-style:normal;color:#fff}
+body .infobox .header h1{color:#fff;margin:0;font-size:2.5vh;text-align:center;padding-top:1vh;padding-bottom:1vh}
+
+body .dial .help {
+    position: absolute;
+    color: #fff;
+    left: 1vh;
+    top: 43vh;
+    width: 38vh;
+    padding: 2vh;
+    background: #222123bd;
+    font-family: "TT Norms",sans-serif;
+    line-height: normal;
+    letter-spacing: initial;
+}
+body .dial .help p {
+    font-size: 1.5vh;
+    margin: 0;
+    margin-bottom: 0.5vh;
+}
+body .dial{display:none;position:absolute;left: 0;top: 0;}
+body .dial .img{background-repeat:no-repeat;background-size:contain;position:fixed;top: 0;left: 0;right: 0;bottom: 0;margin: 0 auto;height: 100vh;}
+body .dial .base{background-image:url(../images/img/lock_back.png);background-position: center;background-size: 28.3vh;}
+body .dial .num{background-image:url(../images/img/lock_scroll.png);background-position:center;background-size: 26vh;}
+body .dial .center{background-image:url(../images/res/s3.png);z-index:999;background-size:14vh;background-position:8.1vh center}
+@keyframes shake {
+0%{transform:translate(1px,1px)}
+10%{transform:translate(-1px,-1px)}
+20%{transform:translate(-1px,0px)}
+30%{transform:translate(0px,1px)}
+40%{transform:translate(1px,-1px)}
+50%{transform:translate(-1px,1px)}
+60%{transform:translate(-1px,1px)}
+70%{transform:translate(1px,1px)}
+80%{transform:translate(-1px,-1px)}
+90%{transform:translate(1px,1px)}
+100%{transform:translate(1px,-1px)}
+}
+body .dial.shake1{animation-name:shake;animation-duration: 2s;transform-origin: 10% 10%;animation-iteration-count:infinite;animation-timing-function:linear;position: fixed;top: 0;left: 0;right: 0;bottom: 0;margin: 0 auto;height: 100vh;}
+body .dial.shake2{animation-name:shake;animation-duration: 3s;transform-origin: 10% 10%;animation-iteration-count:infinite;animation-timing-function:linear;margin: 0 auto;position: fixed;top: 0;left: 0;right: 0;bottom: 0;margin: 0 auto;height: 100vh;}
+body .dial.shake3{animation-name:shake;animation-duration: 2s;transform-origin: 10% 10%;animation-iteration-count:infinite;animation-timing-function:linear;position: fixed;top: 0;left: 0;right: 0;bottom: 0;margin: 0 auto;height: 100vh;}
+body .dial.shake4{animation-name:shake;animation-duration: 2s;transform-origin: 10% 10%;animation-iteration-count:infinite;animation-timing-function:linear;}
+body .dial.shake1,body .dial.shake2,body .dial.shake3,body .dial.shake4{display:inline-block;}
+
+body .dialog p{margin:0}
+body .dialog{
+    position: absolute;
+    text-align: center;
+    margin-top: 0;
+    height: auto;
+    width: 45vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #fff;
+    border-radius: 0;
+    right: 35%;
+    top: 93%;
+    transform: translateY(-50%);
+    background: rgb(34 33 35 / 74%);
+    font-family: "TT Norms",sans-serif;
+}
+body .dialog .field_ques{display:block;justify-content:center;align-items:center;width:100%;height:auto;border-top-right-radius:inherit;text-align:center;}
+body .dialog .question{
+    font-size: 1.5vh;
+    text-align: left;
+    font-weight: 600;
+    padding: 2vh 2vh;
+    background: rgb(34 33 35 / 46%);
+}
+body .dialog .question p{}
+body .dialog .buttons{
+    padding: 2vh 0;
+}
+body .dialog button{border-style:none;width:15vh;height:5vh}
+body .dialog .yes:hover{background:#e42d2d;color:#fff}
+body .dialog .no:hover{background:#e42d2d;color:#fff}
+body .dialog .yes{
+    cursor: pointer;
+    position: relative;
+    background: #e42d2d;
+    font-size: 1.5vh;
+    width: 15vh;
+    font-weight: 600;
+    box-shadow: 0 0px 9px 1px #e42d2d;
+    border: none;
+    margin: 0;
+    margin-top: 0;
+    padding: 1vh;
+    border-radius: 0.5vh;
+    color: #fff;
+    height: inherit;
+    margin-right: 1vh;
+}
+body .dialog .no{
+    cursor: pointer;
+    position: relative;
+    background: #636363a8;
+    font-size: 1.5vh;
+    width: 15vh;
+    font-weight: 600;
+    box-shadow: 0 0px 9px 1px #e42d2d;
+    border: none;
+    margin: 0;
+    margin-top: 0;
+    padding: 1vh;
+    border-radius: 0.5vh;
+    color: #fff;
+    height: inherit;
+    margin-left: 1vh;
+}
+
+body .joblist{color:#fff}
+body .joblist .boxtop{display:flex;align-items:center;justify-content:center}
+body .joblist .box{width: 43vh;height: auto;border-radius: 0;position:absolute;top:50%;transform:translateY(-50%);background: none;color:#000;}
+body .joblist .header{width:100%;height:54px;display:flex;margin:0;height:auto;border-top-left-radius: 0;border-top-right-radius: 0;color:#fff;margin-bottom: 0;background:#e42d2d;border-radius: 0;background:none;}
+body .joblist .workbox{width:auto;height: 34vh;display:flex;flex-wrap:wrap;flex-direction:row;margin:0 auto;}
+body .joblist .boxes2column{margin-left:10px}
+body .joblist .arrow{width: 4vh;height: 4vh;background:url(https://avatanplus.com/files/resources/original/5968a2c8f2ed115d40bbe123.png);margin-top:0;margin-left: 0;cursor:pointer;top: 0.5vh;right: 0.7vh;left:inherit;position:absolute;background-color:#e42d2d;background-size: 3vh;background-repeat:no-repeat;background-position:center;border-bottom-left-radius:0;border-top-right-radius: 1vh;border-bottom-right-radius:0;z-index:999;}
+body .joblist .arrow:hover{opacity:.8}
+body .joblist .txtheader{font-size:24px;line-height:normal;margin:0;padding:10px 0;width:85%;text-align:center;font-weight:700;top:0;display:none}
+body .joblist .workboxes{position:relative;width:100%;height: auto;margin: 0 0.5vh;background-size:contain;}
+body .joblist .block{opacity:.3;position:absolute}
+body .joblist .blocktxt{opacity:.3}
+body .joblist .electro{background-image:url(../images/joblist/electro.png);background-repeat:no-repeat;background-size:contain}
+body .joblist .taxi{background-image:url(../images/joblist/taxi.png);background-repeat:no-repeat;background-size:contain}
+body .joblist .gazon{background-image:url(../images/joblist/gazon.png);background-repeat:no-repeat;background-size:contain}
+body .joblist .traktorist{background-image:url(../images/joblist/traktorist.png);background-repeat:no-repeat;background-size:contain}
+body .joblist .inkos{background-image:url(../images/joblist/inca.png);background-repeat:no-repeat}
+body .joblist .pochta{background-image:url(../images/joblist/pochta.png);background-repeat:no-repeat;background-size:contain}
+body .joblist .bus{background-image:url(../images/joblist/bus.png);background-repeat:no-repeat;background-size:contain}
+body .joblist .truck{background-image:url(../images/joblist/truck.png);background-repeat:no-repeat;background-size:contain}
+body .joblist .snow{background-image:url(../images/joblist/const.png);background-repeat:no-repeat;background-size:contain}
+body .joblist .trashcar{background-image:url(../images/joblist/trashcar.png);background-repeat:no-repeat;background-size:contain}
+body .joblist .mechanic{display:none;background-image:url(../images/joblist/mechanic.png);background-repeat:no-repeat}
+body .joblist .inkoslvl{position:absolute;width:90%;height: 3vh;margin-top:0;left: 1vh;top: 10vh;border-radius:0;background-image:url(../images/joblist/btnn.png);background-size:contain;background-repeat:no-repeat;}
+body .joblist .workboxes:hover .inkoslvl{opacity:1;transition:1s}
+body .joblist .textlvl{font-size: 1.5vh;position:absolute;width:auto;height:auto;margin-top:0;left: 2vh;text-align:center;top: 0.8vh;margin-bottom:0;color:#fff;}
+body .joblist .textlvl2{font-size: 1.5vh;position:absolute;width:auto;height:auto;margin-left:0;margin-top:0;left: 6vh;text-align:center;top: 0.8vh;margin-bottom:0;color:#fff;}
+body .joblist .inkoslvl:hover{display:block}
+body .joblist .textboxwork{font-size: 1.5vh;margin-left:0;position:absolute;width:90%;height:32px;margin-top:0;left:5px;top:50px;border-radius:0;background-image:url(../images/joblist/btnn.png);background-size:cover;color:#fff;padding-left:20px;padding-top:5px;background-size:contain;background-repeat:no-repeat;}
+body .joblist .workimg{margin-left:158px;margin-top:-4px;position:absolute;display:none}
+body .joblist .worktextopen{font-size:10px;margin-left:6px;margin-top:-31px;font-size:15px;position:relative;top:6px;padding:2px 3px;border-radius:5px;text-align:left;font-weight:700;color:#fff;top:95px}
+body .joblist .worktoptxt{height: 9vh;margin-top: 8vh;margin-left:0;}
+body .joblist .buttongetsettledred:focus{outline:none}
+body .joblist .buttongetsettledred:active{background:#D44D47}
+body .joblist .buttongetsettled:focus{outline:none}
+body .joblist .buttontxtgetsettled{font-size:15px}
+body .jobstatus{margin-top:20px}
+
+body .stock{display:none;width: 62vh;margin: 0 auto;position: absolute;top: 25%;/* left: 25%; */font-family: "TT Norms",sans-serif;position: absolute;text-align: center;margin-top: 0;background-repeat: no-repeat;background-position: bottom;color: #fff;border-radius: 0;background: rgb(34 33 35 / 0.55);right: 1vh;}
+body .stock .center{text-align:center;width:40vh;margin:15vh auto 0}
+body .stock .title{margin: 0;padding: 0;font-size: 1.5vh;color: #fff;display: inline-block;font-weight: 600;margin-right: 4vh;margin-top: 1.2vh;text-align: left;width: 19vh;}
+body .stock .count{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5vh;
+    color: #fff;
+    margin-right: 3vh;
+    display: inline-block;
+}
+body .stock .exit {
+    font-style: normal;
+    cursor: pointer;
+    border-radius: 0;
+    font-size: 2.5vh;
+    top: 2vh;
+    right: 2vh;
+    font-weight: 600;
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    text-align: right;
+    bottom: inherit;
+    background: #e42d2d;
+    box-shadow: inherit;
+    padding: 0.2vh 0.3vh;
+}
+body .stock .title span{cursor:pointer}
+body .stock .title #L{float:left;font-family:"icons";color:#fff}
+body .stock .title #R{float:right;font-family:"icons"}
+body .stock .btn:hover{background-color:#e42d2d}
+body .stock .btn{background-color:#fff;margin: 0 0.5vh;padding: 1vh;font-size: 1.5vh;color:#fff;background: rgb(57 114 144);border-radius: 0.5vh;display:inline-block;float: right;}
+body .stock .weaponsstock{background-image:url(../images/res/weapstock.png);background-size: contain;background-position: left;background-repeat: no-repeat;margin-bottom: 0;padding: 2vh 0;padding-left: 0;background: none;text-align: left;padding-bottom: 1vh;}
+body .stock .weapons{background-image:url(../images/res/weap.png);background-size: contain;background-position: left;background-repeat: no-repeat;margin-bottom: 0;padding: 2vh 0;padding-left: 0;background: none;text-align: left;padding-bottom: 1vh;}
+body .stock .weed{background-image:url(../images/res/weed.png);background-size: contain;background-position: left;background-repeat: no-repeat;margin-bottom: 0;padding: 2vh 0;padding-left: 0;background: none;text-align: left;padding-bottom: 1vh;}
+body .stock .healkit{background-image:url(../images/res/hkit.png);background-size: contain;background-position: left;background-repeat: no-repeat;margin-bottom: 0;padding: 2vh 0;padding-left: 0;background: none;text-align: left;padding-bottom: 1vh;}
+body .stock .cash{background-image:url(../images/res/cash.png);background-size: contain;background-position: left;background-repeat: no-repeat;margin-bottom: 0;padding: 2vh 0;padding-left: 0;background: none;text-align: left;padding-bottom: 1vh;}
+body .stock .armor{background-image:url(../images/res/armor.png);background-size: contain;background-position: left;background-repeat: no-repeat;margin-bottom: 0;padding: 2vh 0;padding-left: 0;background: none;text-align: left;padding-bottom: 1vh;}
+body .stock .koks{background-image:url(../images/res/koks.png);background-size: contain;background-position: left;background-repeat: no-repeat;margin-bottom: 0;padding: 2vh 0;padding-left: 0;background: none;text-align: left;padding-bottom: 1vh;}
+body .stock .obl {padding: 2vh;padding-top: 0vh;}
+body .stock h1 {
+    position: relative;
+    top: 0;
+    font-size: 3vh;
+    font-weight: 500;
+    display: block;
+    padding: 2vh;
+    background: rgb(34 33 35 / 0.54);
+    text-align: left;
+}
+
+
+body .bsearch{background-image:url(../images/police_arrest_bg.png);background-repeat:no-repeat;background-size:cover;position:absolute;color:#fff;height:50vh;width:40vh;font-family:'Uni Neue';top:50%;left:50%;transform:translateX(-50%) translateY(-50%);background-size:contain}
+body .bsearch h2{color:#000;text-align:center;padding-top:7vh;font-size:2vh}
+body .bsearch .list{padding:2vh 3vh;overflow:hidden;overflow-y:scroll;margin:0 auto;color:#000;height:33vh}
+body .bsearch .btns{padding:1vh;width:37vh;margin:0 auto}
+body .bsearch p{margin-left:0;font-weight:700;font-size:1.8vh;margin-bottom:1vh}
+body .bsearch .btn{background-color:#e42d2d;cursor:pointer;font-size:1.5vh;padding:1vh;margin:0;width:35%;display:inline-block;font-weight:700;text-align:center;border-radius:.5vh;font-family:'Uni Neue';background-image:linear-gradient(0deg,#000 0%,#010000 100%);box-shadow:0 3px 5px 0 rgba(0,0,0,0.41),inset 0 2px 3px 0 rgba(255,255,255,0.1)}
+body .bsearch .btn:hover{background-color:rgba(0,0,0,0.7)}
+body .bsearch .btn-close{background-color:#e42d2d;cursor:pointer;font-size:1.5vh;padding:1vh;margin:0;width:26%;display:inline-block;font-weight:700;text-align:center;border-radius:.5vh;font-family:'Uni Neue';background-image:linear-gradient(0deg,#000 0%,#010000 100%);box-shadow:0 3px 5px 0 rgba(0,0,0,0.41),inset 0 2px 3px 0 rgba(255,255,255,0.1)}
+
+body .input{
+    position: absolute;
+    text-align: center;
+    margin-top: 0;
+    height: auto;
+    width: 30vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #fff;
+    border-radius: 0;
+    right: 1vh;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(34 33 35 / 74%);
+    font-family: "TT Norms",sans-serif;
+}
+body .input textarea{border-radius: 0;height: 10vh!important;width: 27vh;background: rgb(34 33 35 / 0.60);outline:none;color:#fff;padding:1vh;border:none!important;margin-top: 2vh;font-family: "TT Norms",sans-serif;}
+body .input p{
+    font-size: 1.5vh;
+    text-align: left;
+    font-weight: 600;
+    padding: 2vh 2vh;
+    background: rgb(34 33 35 / 0.60);
+    padding-right: 6vh;
+}
+body .input input{z-index:1;font-size:15px!important;line-height:1.5;color:#666!important;display:block!important;width:100%;background:#fff;height:50px;border-radius:5px;padding:0 30px;border:none;background-color:transparent;border:2px solid #e42d2d;border-radius:5px;background:#002a4899}
+body .input button{
+    cursor: pointer;
+    position: relative;
+    right: 0;
+    top: 0;
+    background: #e42d2d;
+    font-size: 1.5vh;
+    width: auto;
+    font-weight: 600;
+    box-shadow: 0 0px 9px 1px #e42d2d;
+    border: none;
+    margin: 0;
+    margin-top: 1vh;
+    padding: 1vh;
+    border-radius: 0.5vh;
+    font-family: "TT Norms",sans-serif;
+    color: #fff;
+    margin-bottom: 2vh;
+}
+body .input button:hover{
+    background: #fd0000;
+}
+body .input #cancel{
+    cursor: pointer;
+    font-style: normal;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0;
+    padding: 0;
+    font-size: 2.5vh;
+    top: 1.5vh;
+    right: 2vh;
+    font-weight: 600;
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    bottom: inherit;
+    background: #e42d2d;
+    box-shadow: inherit;
+    padding: 0.2vh 0.3vh;
+}
+
+body .atm{position: absolute;height: 40vh;width: 90vh;left:0;bottom: 0;text-align:center;background-size:cover;font-family: 'Uni Neue';margin: 0 auto;right: 0;}
+body .atm .left{width:70vh;background:none;display:block;position:relative;margin-block-end:1vh;text-align:center;color:#fff;top:25%;margin:0 auto;height:14vh}
+body .atm .left div{width:23vh;height:14vh;display:inline-block}
+body .atm h1{display:block;color:#fff;font-weight:400;position:relative;top:20%;font-size:2.7vh;margin:0}
+body .atm .right{width:100%;height:50vh;text-align:center;position:relative;padding-top:30vh}
+.bank__buttons-block .sc {
+    margin-bottom: 2vh;
+}
+.bank__buttons-block.vv .sc {
+    display: inline-block;
+    width: 18vh;
+    margin: 0 1vh;
+    margin-bottom: 2vh;
+}
+body .atm .block{
+    margin-right: 0.78125vw;
+    display: inline-block;
+    max-width: 19vh;
+    width: 100%;
+    font-weight: 400;
+    font-size: 1.5vh;
+    color: #FFFFFF;
+    height: auto;
+    background: rgba(132,132,132,0.4);
+    border-radius: 0.6vh;
+    padding: 1.5vh 0;
+}
+body .atm .block img {
+    height: 1.5vh;
+    width: 1.5vh;
+    margin-right: .7vh;
+    position: relative;
+    top: 0.2vh;
+    }
+body .atm .block:hover{/* opacity:.6; */background: #e42d2d;}
+body .atm .block1{border-radius:.9vh;width:18vh;padding:1vh;height:10vh;background:linear-gradient(to top,#eb00005c,#eb000014,#eb000008,#eb000000);margin:0 1vh;display:inline-block}
+body .atm .block1:hover{opacity:.6}
+body .atm .block2{border-radius:.9vh;width:18vh;padding:1vh;height:10vh;background:linear-gradient(to top,#eb00005c,#eb000014,#eb000008,#eb000000);margin:0 1vh;display:inline-block}
+body .atm .block2:hover{opacity:.6}
+body .atm .block3{border-radius:.9vh;width:18vh;padding:1vh;height:10vh;background:linear-gradient(to top,#eb00005c,#eb000014,#eb000008,#eb000000);margin:0 1vh;display:inline-block;display:inline-block}
+body .atm .block3:hover{opacity:.6}
+body .atm .block4{border-radius:.9vh;width:18vh;padding:1vh;height:10vh;background:linear-gradient(to top,#eb00005c,#eb000014,#eb000008,#eb000000);margin:0 1vh;display:inline-block}
+body .atm .block4:hover{opacity:.6}
+body .atm .block5 p{padding:1vh!important;font-size:1.8vh!important}
+body .atm .block5{width:20vh;color:#fff;text-align:center;position:relative;border-radius:1vh;top:0;font-weight:700;margin:0 auto;margin-top:2vh;margin-bottom:2vh}
+body .atm .block5:hover{opacity:.6}
+body .atm .block6{width:17vh;color:#000;text-align:center;position:relative}
+body .atm .block6:hover{opacity:.6}
+body .atm .block7{width:17vh;color:#000;text-align:center;position:relative}
+body .atm .block7:hover{opacity:.6}
+body .atm .block8{border-radius:.9vh;width:18vh;padding:1vh;height:10vh;background:linear-gradient(to top,#eb00005c,#0094eb14,#0094eb08,#0094eb00);margin:0 1vh;display:inline-block;margin-top:1vh}
+body .atm .block8:hover{opacity:.6}
+body .atm .left p.lex{font-size:1.7vh}
+body .atm .left p{position:relative;text-align:center;display:block;font-weight:500;margin:0;padding-top:1vh;font-size:1.4vh}
+body .atm .right p{text-align:center;margin:0;font-size:1.4vh}
+body .atm input{width:24vh;margin:0;top:0;left:0;font-weight: 500;position:relative;text-align:center;color:#000;font-size:1.4vh;padding:1vh;border-radius: .6vh;border:none;font-family: 'Uni Neue';outline: none;}
+body .atm p.subinfo{position: relative;font-size: 1.5vh;margin-bottom: 1vh;}
+body .atm img.png1{top:0;position:relative;width:10vh}
+body .atm img.png2{pointer-events:none;width:10vh}
+body .atm img.png3{top:.9vh;position:absolute;width:2vh;height:auto;z-index:999}
+body .atm img.png4{position:relative;width:10vh}
+body .atm .atm p.lex{text-transform:none}
+body .atm p.lex1{color:#fff!important;font-weight:600}
+body .atm .blintik{text-align:center;color:#fff;display:block;width:100%;font-weight:700}
+body .atm .blintik .sc{display:block;margin-bottom:3vh}
+body .atm .blintik p{color:#fff}
+body .atm .blintik2{text-align:center;color:#fff;width:100%;height:11vh}
+body .atm .blintik2 p{color:#fff}
+body .atm .gern{text-align:center;color:#fff;position:relative;width:27vh;height:auto;border-radius:1vh;border-top:0 solid #972626;margin-block-end:5vh;left:0;margin:0 auto 3vh}
+body .atm .gern p{color:#fff}
+body .atm .gern2{text-align:center;color:#fff;display:inline-flex;width:35vh;position:relative;margin:0 auto}
+body .atm .gern2 p{color:#fff;font-weight:700}
+body .atm .header {background: #ffffff;padding: 1vh;border-top-left-radius: 0.5vh;border-top-right-radius: 0.5vh;margin-top: -1vh;}
+body .atm .header .no{margin-top:0;color: #000;font-size: 1.5vh;position: absolute;right: 1vh;font-weight: bold;}
+body .atm  .z {display: table-cell;padding: 0 2vh;vertical-align: bottom;color: #000;text-align: left;}
+body .atm  .z img {position: relative;top: -0.5vh;width: 13vh;}
+body .atm  .z h3 {font-size: 2vh;font-weight: bold;margin: 0;letter-spacing: initial;}
+body .atm  .z p {font-size: 1.5vh;line-height: normal;margin: 0;letter-spacing: initial;}
+body .atm .content {
+    padding: 1vh;
+    padding-top: 2vh;
+    margin: 0;
+    letter-spacing: initial;
+    max-width: inherit;
+    border-radius: 0;
+    height: auto;
+    background: #000000cc;
+    border-bottom-left-radius: 0.5vh;
+    border-bottom-right-radius: 0.5vh;
+    padding-bottom: 1vh;
+}
+body .atm .content .top {
+    flex-direction: row;
+    display: -webkit-inline-box;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.8781163434903045vh;
+    margin-top: 1.878116vh;
+    }
+.bank__number-score, .bank__balance {
+    font-weight: 400;
+    font-size: 1.5vh;
+    color: #878787;
+}
+.bank__number-score {
+    margin-right: 2.34375vw;
+}
+.bank__number-score span, .bank__balance span {
+    font-size: 1.9vh;
+    color: #FFFFFF;
+    margin-left: 0.5208333333333334vw;
+}
+
+.petshop {
+    position: absolute;
+    text-align: center;
+    margin-top: 0;
+    height: 30vh;
+    width: 23vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #fff;
+    border-radius: 0;
+    right: 1vh;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(34 33 35 / 74%);
+    font-family: "TT Norms",sans-serif;
+}
+.petshop .bg2{height:387px!important;width:420px!important;left:0!important;position:relative!important;top:-60px!important}
+.petshop .right{right:10%;top:30%;position:fixed;width:350px;background:#0a0a14;border-radius:10px}
+.petshop .left{height:100%;position:fixed;display:none;width:420px;padding-top:0;background:#0a0a14;left:0}
+.petshop i.fa-cat{position:absolute;left:20px;top:15px;cursor:default}
+.petshop i{
+    font-style: normal;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0;
+    padding: 0vh;
+    background: #e42d2d;
+    box-shadow: 0 0px 9px 1px #e42d2d;
+    padding: 1vh;
+}
+.petshop .btn i{font-style:normal;cursor:pointer;color:#fff;border-radius:5px;padding:0}
+.petshop .left i{font-style:normal;cursor:pointer;margin-right:7px;border-radius:5px}
+.petshop .left i:hover{font-style:normal;margin-right:7px;border-radius:5px}
+.petshop .list1 div{width:20px;text-align:center;color:#fff;border-radius:5px;display:inline-table}
+.petshop .list div{
+    width: 12.7vh;
+    text-align: center;
+    color: #fff;
+    border-radius: 0;
+    display: inline-table;
+}
+.petshop .name1{background:#ffffff00!important;font-family:"Font Awesome 5 Free"!important}
+.petshop h1{
+    font-size: 2vh;
+    text-align: left;
+    font-weight: 600;
+    padding: 2vh 2vh;
+    background: rgb(34 33 35 / 46%);
+}
+.petshop .bg1{margin-top:0!important;padding:15px!important;font-weight:600;position:relative;color:#fff;text-align:center!important;font-size:25pt!important;background:#ffffff00!important;text-shadow:1px 1px 2px #88888890;border-top-left-radius:10px;border-top-right-radius:10px}
+.petshop .list1{font-weight:600;color:#fff;padding:30px 0 30px 11px;position:relative;font-size:17px;width:auto;border-top:1px solid #57474720;border-block-end:1px solid #57575720;text-align:left}
+.petshop .list1 span{color:#000;position:absolute;right:12px}
+.petshop .list{
+    font-weight: 600;
+    color: #fff;
+    padding: 0;
+    position: relative;
+    font-size: 1.7vh;
+    width: auto;
+    border-top: 0vh solid #57474720;
+    border-block-end: 0px solid #57575720;
+    text-align: left;
+    padding-left: 0;
+    padding: 0 1vh;
+}
+.petshop .list span{
+    color: #000;
+    position: relative;
+    right: 0;
+    display: block;
+    background: rgb(34 33 35 / 21%);
+    margin-top: 2vh;
+    padding: 1.5vh 1vh;
+}
+.petshop .items{height: 11vh;padding-top: 2vh;}
+.petshop .btn{padding: 1vh;border-radius: 0.5vh;cursor:pointer;margin:10px;}
+.petshop .buy{
+    background: #e42d2d;
+    font-size: 1.5vh;
+    width: auto;
+    font-weight: 600;
+    box-shadow: 0 0px 9px 1px #e42d2d;
+    border: none;
+    margin: 0 1vh;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+.petshop .exit{
+    font-style: normal;
+    cursor: pointer;
+    border-radius: 0;
+    font-size: 2.5vh;
+    top: 1.5vh;
+    right: 2vh;
+    font-weight: 600;
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    text-align: right;
+    bottom: inherit;
+    background: #e42d2d;
+    box-shadow: inherit;
+    padding: 0.2vh 0.3vh;
+}
+.petshop .buy:hover{background:#e42d2d}
+.petshop .exit:hover{color:#fff}
+.petshop .icon{border-block-end:2px solid #57575720;font-size:19px;width:300px;color:#787878;padding:12px;text-align:left;font-weight:600;margin-left:60px;margin-bottom:10px;background-position:center center;background-repeat:no-repeat;background-size:35px}
+.petshop .icon.active{color:#fff;border-radius:14px;background:linear-gradient(56deg,rgb(139, 91, 107) 37%,rgba(78,74,115,1) 56%)}
+.petshop .icon:hover{color:#fff;border-radius:14px;background:linear-gradient(56deg,rgb(139, 91, 91) 37%,rgba(78,74,115,1) 56%)}
+.petshop p{color:#fff;font-size:1.5vh;font-weight:600;text-align:left;padding-block-end:2vh;border-block-end:0 solid #57575720;margin-left:0!important;padding:2vh 1vh}
+.petshop .right p{color:#fff;font-size:19px;font-weight:600;text-align:center}
+.petshop .price{
+    color: #ffffff;
+    font-size: 1.5vh;
+    font-weight: 600;
+    text-align: left;
+    margin: 2vh auto 1vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 0 1vh;
+}
+.petshop p span{
+    color: #fff;
+    font-size: 2.5vh;
+    position: relative;
+    margin-top: 0;
+    display: inline-block !important;
+    font-weight: 600 !important;
+    margin-left: 1vh;
+}
+.petshop p.price:after{content:"";color:#fff;font-size:16pt;background:linear-gradient(56deg,rgba(254,67,62,1) 37%,rgba(255,99,90,1) 56%);height:3px;width:80px;border-radius:5px;position:absolute;margin-top:50px;right:130px;box-shadow:0 0 14px 0 rgba(254,67,62,1);display:none}
+.petshop .hat img{width:20px;position:relative;top:1px}
+.petshop .jacket img{width:20px;position:relative;top:1px;margin-right:5px}
+.petshop .shirt img{width:20px;position:relative;top:1px;margin-right:5px}
+.petshop .pants img{width:15px;height:20px;position:relative;top:1px;margin-right:10px}
+.petshop .shoe img{width:20px;position:relative;top:1px;margin-right:5px}
+.petshop .gloves img{width:20px;position:relative;top:1px;margin-right:5px}
+.petshop .watches img{width:20px;position:relative;top:1px;margin-right:5px}
+.petshop .glasses img{width:20px;position:relative;top:1px;margin-right:5px}
+.petshop .jewerly img{width:20px;position:relative;top:1px;margin-right:5px}
+.petshop ul{margin:12px;padding:0;list-style:none;width:100%;max-width:320px}
+.petshop ul li{margin:16px 0;position:relative}
+
+
+.infos {
+    width: 45vh;
+    background: #222123bd;
+    padding: 2vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 1vh;
+    font-family: "TT Norms",sans-serif;
+}
+.infos .header {
+    margin-bottom: 2vh;
+    font-size: 1.5vh;
+    line-height: normal;
+}
+.infos .content {
+    display: inline-flex;
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+.infos .content .yes {
+    width: 50%;
+    padding: 0.7vh 0;
+    background: #e42d2d;
+    margin-right: 0.5vh;
+    cursor: pointer;
+    font-size: 1.3vh;
+    height: auto;
+}
+.infos .content .no {
+    width: 50%;
+    padding: 0.7vh 0;
+    background: #e42d2d;
+    margin-left: 0.5vh;
+    cursor: pointer;
+    font-size: 1.3vh;
+    height: auto;
+}
+
+.infos .content .no:hover,.infos .content .yes:hover {
+    background: #e42d2d;
+}
+
+
+.remote {
+    background-image: url(../images/remote.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 1vh;
+    bottom: 1vh;
+    z-index: 999;
+    width: 42vh;
+    background-size: contain;
+    height: 22vh;
+    padding-left: 16vh;
+    padding-top: 4vh;
+    padding-right: 4vh;
+    padding-bottom: 5vh;
+    line-height: normal;
+    font-size: 1.4vh;
+}
+.remote .autoname {
+    font-size: 1.1vh;
+    border-bottom: 1px solid #e42d2d;
+    padding-bottom: 0.5vh;
+}
+.remote .autolock {cursor: pointer;padding: 0.5vh;border-radius: 0.5vh;text-align: center;background: #e42d2d;margin-top: 0.5vh;}
+.remote .autokey {
+    padding: 0.65vh 0;
+    cursor: pointer;
+    border-radius: 0.5vh;
+    text-align: center;
+    background: #e42d2d;
+    margin: 0.5vh 0;
+}
+.remote .autokey1 {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+    text-align: center;
+    background: #e42d2d;
+    font-size: 1.2vh;
+    width: 8vh;
+}
+.remote .autokey2 {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+    text-align: center;
+    background: #e42d2d;
+    font-size: 1.2vh;
+    width: 6vh;
+}
+.remote .autokey3 {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+    text-align: center;
+    background: #e42d2d;
+    font-size: 1.2vh;
+    width: 7vh;
+}
+.remote .autokey4 {
+    width: 4vh;
+    height: 4.5vh;
+    position: absolute;
+    left: 9.7vh;
+    top: 6.8vh;
+    cursor: pointer;
+    background: #7404046b;
+    border-bottom-left-radius: 1.8vh;
+    border-bottom-right-radius: 1.6vh;
+    border-top-right-radius: 0.8vh;
+    border-top-left-radius: 0.7vh;
+}
+.remote .autokey4:hover {
+    background: #0000008a;
+}
+.remote .autolock:hover,.remote .autokey:hover,.remote .autokey1:hover,.remote .autokey2:hover,.remote .autokey3:hover {
+    background: #98000085;
+}
+.houses.HouseMenu .btns div:hover {
+    transition: 0.4s;
+    background-color: rgb(0 0 0 / 70%);
+    color: #ffffffd7;
+}
+.houses.HouseMenu .left .houseblock.q p span {
+    margin-left: 1vh;
+    font-size: 2vh;
+    margin-top: 0;
+    display: inline-block;
+}
+
+.kpz {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 26.5vh;
+    width: 34vh;
+    bottom: 1vh;
+    font-family: "TT Norms",sans-serif;
+    background: #000000cc;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-family: 'Uni Neue';
+    border-radius: 0.5vh;
+    height: auto;
+}
+.kpz h2 {
+    background: #ffffff;
+    padding: 1vh;
+    border-top-left-radius: 0.5vh;
+    border-top-right-radius: 0.5vh;
+    margin-top: -1vh;
+    color: #000;
+}
+.kpz .stat {
+    padding-top: 2vh;
+    padding-left: 1vh;
+    padding-bottom: 1vh;
+    font-size: 1.5vh;
+}
+.kpz .stat input {
+    background: #ffffffa3;
+    border: none;
+    padding: 0.5vh;
+    margin-left: 1vh;
+    border-radius: 0.5vh;
+}
+.kpz .srok {
+    padding-top: 0;
+    padding-left: 1vh;
+    padding-bottom: 2vh;
+    font-size: 1.5vh;
+}
+.kpz .srok input {
+    background: #ffffffa3;
+    border: none;
+    padding: 0.5vh;
+    margin-left: 2.7vh;
+    border-radius: 0.5vh;
+}
+.kpz .bbt {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-bottom: 2vh;
+}
+.kpz .bbt .pos {
+    display: inline-block;
+    background: #e42d2d;
+    padding: 1.5vh 3vh;
+    border-radius: 0;
+    font-size: 1.5vh;
+    border-top-left-radius: 1.5vh;
+    border-bottom-right-radius: 1.5vh;
+    cursor: pointer;
+}
+.kpz .bbt .unpos {
+    display: inline-block;
+    background: #e42d2d;
+    padding: 1.5vh 3vh;
+    border-radius: 0;
+    font-size: 1.5vh;
+    border-top-right-radius: 1.5vh;
+    border-bottom-left-radius: 1.5vh;
+    cursor: pointer;
+}
+
+
+.business.BizMenu {    position: absolute;    text-align: center;    margin-top: 0;    height: 100vh;    width: 30vh;    background-repeat: no-repeat;    background-position: bottom;    color: #fff;    border-radius: 0;    right: 0;    top: 50%;    transform: translateY(-50%);    background: linear-gradient(270deg, #292929 0%, rgba(4,13,28,0) 100%);    font-family: "TT Norms",sans-serif;    padding-bottom: 1vh;    width: 43vh;    display: flex;    justify-content: flex-end;    align-items: center;}
+.business.BizMenu .head{    font-size: 2vh;    text-align: left;    font-weight: 600;    padding: 2vh 2vh;    background: rgb(34 33 35 / 46%);}
+.business.BizMenu  .body{padding: 0;margin:0 auto;background: #001f3a00;top: 0;position:relative;height:auto;width: auto;padding-left: 15vh;}
+.business.BizMenu .exit{    cursor: pointer;    font-style: normal;    cursor: pointer;    color: #fff;    border-radius: 0;    padding: 0;    font-size: 2.5vh;    top: 1.5vh;    right: 2vh;    font-weight: 600;    position: absolute;    color: #fff;    margin: 0;    padding: 0;    text-align: right;    bottom: inherit;    background: none;    box-shadow: inherit;    padding: 0.2vh 0.3vh;}
+.business.BizMenu .left,.business.BizMenu .right{display:inline-block;font-size:1.5vh;color:#fff;vertical-align:top;font-weight:700}
+.business.BizMenu .left{    width: 100%;    float: none !important;    display: block;    text-align: left;    padding-right: 4vh;    font-weight: 400;}
+.business.BizMenu .left .door {    margin: 0;    position: relative;    height: auto;}
+.business.BizMenu .left .door img {    width: auto;    height: 2vh;    margin-right: 1vh;    position: relative;    top: 0.2vh;}
+.business.BizMenu .left .door .lock {font-size: 2vh;margin: 0;width: 100%;}
+.business.BizMenu .left .houseblock {    width: 100%;    margin: inherit;    padding: 1vh 0;    border-bottom: 0.1vh solid #ccc;    padding-bottom: 1.5vh;    color: #d2d2d2;}
+.business.BizMenu .left .houseblock p {}
+.business.BizMenu .left .houseblock p span {font-size: 1.7vh;display: block;margin-top: 1.4vh;}
+.business.BizMenu .right{    width: 100%;    float: none !important;    display: block;    margin-top: 5vh;}
+.business.BizMenu .left p span{display: inline-block;color:#fff;font-size: 2.7vh;margin-top: 0;font-weight:300;margin-top: 2vh;}
+.business.BizMenu .right p span{    display: block;    color: #fff;    font-size: 2.7vh;    margin-top: 0;    font-weight: 300;    margin-left: 0;    margin-top: 2vh;}
+.business.BizMenu .btns{width:auto;overflow:hidden;border:none;display:block;margin: 5vh auto 0;padding: 0 0;text-align: left;margin-left: 3vh;}
+.business.BizMenu .btns div{display:inline-block;color:#fff;text-align:center;font-size:20px;padding:10px 20px;font-weight:400;width:20vh;margin:0 1vh;cursor:pointer;position: relative;top: 0;right: 0;float: inherit;height: auto;display: inline-block;color: #fff;text-align: center;font-size: 2vh;padding: 1vh 0;font-weight: 400;width: 20vh;margin: 0 0;cursor: pointer;position: relative;top: 0;left: 0;float: inherit;height: auto;background-color: #3d3d3d;border-radius: 0.5vh;margin-bottom: 1vh;}
+.business.BizMenu .btns .buy{}
+.business.BizMenu .btns .interior{}
+.business.BizMenu .body .left p{text-align:left;font-size: 2vh;margin: 0;width: 100%;margin-left: 0;padding: 0;padding-left: 0;}
+.business.BizMenu .body .right p{text-align: left;font-size: 2.6vh; margin: 0; width: auto; margin-left: 0; padding: 1vh 2vh; padding-left: 0;}
+.business.BizMenu .left .houseblock:last-child {}

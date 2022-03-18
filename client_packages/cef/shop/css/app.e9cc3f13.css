@@ -1,0 +1,85 @@
+@font-face{font-family:Proxima Nova Normal;src:url(../fonts/ProximaNova-Regular.7ce6760d.ttf)}
+@font-face{font-family:Proxima Nova SemiBold;src:url(../fonts/ProximaNova-Semibold.df8c6264.ttf)}
+@font-face{font-family:Proxima Nova Bold;src:url(../fonts/ProximaNova-Bold.926a08fb.ttf)}
+*{padding:0;margin:0;box-sizing:border-box}
+body{background-size:cover;-webkit-user-select: none; }
+#app{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.shop{-webkit-animation: fadeInFromNone 0.4s ease-out; -moz-animation: fadeInFromNone 0.4s ease-out; -o-animation: fadeInFromNone 0.4s ease-out; animation: fadeInFromNone 0.4s ease-out;display:flex;width:100%;height:100%;flex-direction:column;background:radial-gradient(50% 100% at 50% 50%, rgba(23, 28, 28, 0) 0%, #28282899 100%); background-color: rgba(40,40,40,.90);position:fixed; background-size: 100%, 100%;}
+.shop>.header{display:flex;width:40vh;height:13.6vh;align-items:center; margin-left: auto; margin-right: auto;position:relative}
+.shop>.header:after{content:"GREY MARKET";color:#fff;font-family:Montserrat;font-size:3.5vh;text-transform:uppercase; font-weight: 300; margin-top: 9vh;margin-left: -27.5vh;}
+.shop>.header>span{color:#fff;font-family:Montserrat;font-size:5.5vh;text-transform:uppercase; font-weight: 700;}
+.shop>.content{display:flex;width:100%;height:57vh;margin-top: 5vh;}
+.shop>.content>.sidebar{display:flex;width:45vh;height:100%;flex-direction:column;padding-top:3.5vh;position:relative}
+.shop>.content>.sidebar>.exit{width:14h;height:8vh;position:fixed;bottom: -1.5vh;left: 2vh}
+.shop>.content>.sidebar>.exit>button{width:14vh;height:4.5vh;background-color:#ffffff10;color:#fff;font-family:Montserrat;font-size:1.8vh;border:unset;transition: all 0.33s; outline: none}
+.shop>.content>.sidebar>.exit>:hover{background-color:#ffffff15;transition: all 0.33s;}
+.shop>.content>.market{display:grid;width: 70vh; position: absolute; left: 50%; transform: translate(-50%, 0%); height:80vh;grid-template-columns:repeat(3,22vh);grid-auto-rows:28vh;grid-gap:3.2vh;overflow-y:auto;overflow-x:hidden;background-color:#1d212700}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#ffffff20}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}

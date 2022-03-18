@@ -1,0 +1,235 @@
+@import url('../fonts/TTNorms/stylesheet.css');
+
+#infoped * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-transform: none;
+}
+
+#infoped {
+	display: none;
+	height: 100%;
+	width: 100%;
+	font-family: "TT Norms",sans-serif;
+    -webkit-user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#infoped.active {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center
+}
+
+#infoped .exit {
+	position: absolute;
+	right: 3.24074vh;
+	top: 3.51852vh;
+	width: 4.62963vh;
+	height: 4.62963vh;
+	border-radius: .92593vh;
+	background: #03A3F5;
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+#infoped .exit img {
+	width: 2.59259vh
+}
+
+#infoped .block_window {
+	width: 70vh;
+	height: 60vh;
+	background: rgba(34,33,35,0.7);
+	padding-top: 1.4vh;
+	padding-left: 4vh;
+	padding-right: 4vh;
+	border-radius: 0.9vh;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+}
+
+#infoped .block_window .title {
+	width: 100%;
+	padding-left: 5vh;
+}
+
+#infoped .block_window .title .text {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 2.22222vh;
+	line-height: 2.68519vh;
+	color: #FFFFFF
+}
+
+#infoped .block_window .title .line {
+	width: 17.12963vh;
+	height: .27778vh;
+	background: #00a5fb;
+	box-shadow: 0px 0px 1.75926vh #00a5fb;
+	border-radius: 1.57407vh;
+	margin-top: .64815vh;
+}
+
+#infoped .block_window .info_window {
+	position: absolute;
+	top: -2.03704vh;
+	left: -6.38889vh;
+	z-index: 2;
+	clip-path: polygon(0 6.42%, 100% 0%, 100% 93.58%, 0% 100%);
+	background: #F44336;
+	width: 18.51852vh;
+	height: 32.5vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+#infoped .block_window .info_window::after {
+	content: "";
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	opacity: 0.4;
+	clip-path: polygon(0 6.42%, 100% 0%, 100% 93.58%, 0% 100%)
+}
+
+#infoped .block_window .info_window .icon {
+	position: relative;
+	z-index: 2;
+	width: 4.62963vh;
+	height: 4.62963vh;
+	border-radius: 50%;
+	border: .18519vh solid #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+#infoped .block_window .info_window .icon img {
+	width: 1.75926vh
+}
+
+#infoped .block_window .info_window .text {
+	margin-top: 1.66667vh;
+	position: relative;
+	z-index: 3;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.66667vh;
+	line-height: 2.03704vh;
+	text-align: center;
+	color: #FFFFFF
+}
+
+#infoped .block_window .back {
+	width: 5vh;
+	height: 6vh;
+	z-index: 3;
+	position: absolute;
+	left: 0;
+	cursor: pointer;
+	background: #00a5fb;
+	border-radius: .92593vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+}
+
+#infoped .block_window .back img {
+	width: 2.03704vh;
+	transform: rotate(180deg);
+}
+
+#infoped .block_window .info {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-right: 0;
+	max-height: 49vh;
+	margin-top: 4vh;
+	overflow-y: auto;
+}
+
+#infoped .block_window .info::-webkit-scrollbar {
+	position: absolute;
+	z-index: 4;
+	width: .37037vh;
+	background: #4B4B4B;
+	border-radius: 1.57407vh
+}
+
+#infoped .block_window .info::-webkit-scrollbar-thumb {
+	border-radius: 1.57407vh;
+	background: #fff
+}
+
+#infoped .block_window .info p {
+	font-weight: normal;
+	font-size: 1.66667vh;
+	line-height: 2.59259vh;
+	color: #F0F0F0;
+	margin-bottom: .92593vh
+}
+
+#infoped .block_window .info img {
+	width: 2.91481vh
+}
+	
+	
+	
+	
+	#infoped {
+    font-family: "TT Norms",sans-serif;
+	}
+	#infoped .panel {
+	position: absolute;
+    top: 18%;
+    left: 33%;
+    background: #00000061;
+    border-radius: 1vh;
+    width: 33%;
+    height: 63%;
+	}
+	#infoped .panel .header {
+	position: absolute;
+    top: 0%;
+    left: 0%;
+    line-height: 6vh;
+    text-align: center;
+    color: white;
+    font-size: 2vh;
+    font-weight: lighter;
+    width: 100.1%;
+    height: 8%;
+	}
+	
+		@media  (max-width: 1300px)  {
+    #infoped {
+		zoom: 70%
+		}
+	}
+	@media (min-width: 1301px) and (max-width: 1400px) {
+		#infoped {zoom: 80%}
+	}
+	@media (min-width: 1401px) and (max-width: 1650px) {
+		#infoped {zoom: 80%}
+	}
+	@media (min-width: 1651px) and (max-width: 2560px) {
+		#infoped {zoom: 100%}
+	}

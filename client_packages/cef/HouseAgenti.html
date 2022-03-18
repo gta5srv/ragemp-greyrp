@@ -1,0 +1,60 @@
+<html lang="ru" dir="ltr"><head>
+  <meta charset="utf-8">
+  <title>Агентство по недвижимости</title>
+  <link rel="stylesheet" href="css/realtor.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/font-awesome2.css">  
+  <script src="js/vue.js"></script>
+  <link href="css/noty.css" rel="stylesheet">
+  <script src="js/noty.js" type="text/javascript"></script>
+  <style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+
+</head>
+
+<body>
+
+  <div v-cloak id="app" v-if="active">
+  <header>
+   <h1>Свободная недвижимость нашего штата</h1><span><i @click="cancel()" class="fa fa-times-circle-o" aria-hidden="true"></i> </span>
+	</header>
+<div class="container">
+      <div class="main">
+        <!--div class="modal-filter" v-if="modalFilter"><span>Цена от <input v-model.number="minPrice" type="number" placeholder="Мин"> до <input v-model.number="maxPrice" type="number" placeholder="Макс"> </span></div-->      
+        <div class="slct-class" v-if="pageNum == 1">
+          <!--div class="homefade" v-if="modalFilter"></div-->
+          <div v-for="(house, index) in filterHouse" v-if="filterPrice(house) == true">
+		  <h2>Дом<br>#{{house[0]}}</h2>
+		  <div class="button btnGreen">
+		  <a @click="info(house)">Получить информацию <br> <span>за {{priceInfo[selectedClass]}}$</span>
+		  </a>
+		  </div>
+		  </div>
+        </div>
+      </div>
+</div>
+    <transition name="modal">
+      <div class="modal-window" v-if="modalVisible">
+        <div>
+		<p><span>Дом<br>{{classes[house[1]].name}}</span></p>
+        <p><span>Класс дома<br>{{classes[house[1]].name}}</span></p>
+        <p><span>Улица<br> {{street}}</span></p>
+		<!--p><i class="fa fa-road" aria-hidden="true"></i> {{crossingRoad}}</p-->
+        <p><span>Гараж на<br>{{house[4]}} мест</span></p>
+        <p><span>Налог<br>{{ parseInt((house[2] / 100 * 0.013) * 24) }}$/сутки</span></p>
+        <p><span>Цена дома<br> {{house[2]}} $</span></p>
+        </div>
+        <footer>
+          <a class="button btnGps" @click="setGPS">Маршрут<br>к дому</a>
+        </footer>
+      </div>
+    </transition>
+    
+  </div>
+  <script src="https://c1dn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="js/realtor.js"></script>
+</body>
+</html>

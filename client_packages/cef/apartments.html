@@ -1,0 +1,40 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link href="css/styleapart.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+      <link href="fonts/TTNorms/stylesheet.css" rel="stylesheet" type="text/css">
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	  <script src="js/vue.js"></script>
+	  <style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+   </head>
+   <body>
+    <div v-cloak class="main" v-if="active">
+        <div class="list">
+            <h1>Список квартир</h1>
+            <div id="exit" class="exit" v-on:click="hide()"><i class="fas fa-times"></i></div>
+            <div class="scr">
+			<div class="blockkv" v-for="data in apartlist">
+			   <p class="name">Квартира №{{data[0]}}</p>
+               <p class="vl" v-if="data[1] != ''" ><small>Владелец:</small>{{data[1]}}</p>
+			   <p class="vlno" v-else ><small>Продается за:</small>{{data[2]}}</p>
+			   <div class="gm"><p>Гаражных мест: {{data[3]}}</p></div>
+			   <div class="jil"><p>Жильцов: {{data[4]}}</p></div>
+			   <div class="buy btn" v-on:click="interact(data[0])">
+					<p v-if="data[1] == ''" class="go">Купить</p>
+					<p v-else class="enter">Войти</p>
+			   </div>
+            </div>
+			</div>
+        </div>
+	</div>
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/apart.js"></script>
+		
+   </body>
+</html>

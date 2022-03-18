@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Freedom Project Petrol</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./bebas-neue/stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+<style>
+	[v-cloak] {
+		display: none;
+	}
+</style>
+<body>
+	<div v-cloak class="petrol" v-if="active">
+		<div @click="no" class="exitp">ВЫЙТИ</div>
+		<div class="petrol_center">
+			<div class="block_waves">
+				<div class="wave1"></div>
+				<div class="wave2"></div>
+			</div>
+			<!-- <input type="range" v-model.number="inputelectro" class="electro" value="0" step="1" min="0" max="120">> -->
+			<div class="petrol_name_block">
+				<div class="petrol_name">ЗАПРАВКА</div>
+				<div class="petrol_street">{{street}}</div>
+			</div>
+			<div class="petrol_info_block">
+				<div class="block_petrol_price">
+					<div class="petrol_count">{{price}}$</div>
+					<div class="petrol_price_desc">ЦЕНА ЗА ЛИТР</div>
+				</div>
+				<div style="margin-left: 20vh;" class="block_petrol_price">
+					<div class="petrol_count">{{fuel}}</div>
+					<div class="petrol_price_desc">ЛИТРОВ В БАКЕ</div>
+				</div>
+				<!-- <div style="margin-left: 40vh;" class="block_petrol_price"> -->
+					<!-- <div style="width: 30vh;" class="petrol_count">{{inputelectro}}.00 кВт</div> -->
+					<!-- <div class="petrol_price_desc">Колличество</div> -->
+				<!-- </div> -->
+			</div>
+			<div class="input_petrol_block">
+				<input placeholder="000" maxlength="3" v-model.number="input" onkeyup="this.value = this.value.replace (/[^0-9+]/, '')">
+			</div>
+			<div class="petrol_finish_block">
+				<div class="petrol_finish_name">ИТОГО</div>
+				<div class="petrol_finish_count">{{input * price}}$</div>
+			</div>
+			<div class="petrol_fast_block">
+				<div class="petrol_fast_name">БЫСТРЫЕ ДЕЙСТВИЯ</div>
+				<div @click="full" class="petrol_fblock">
+					<div class="petrol_ico"><img src="img/petrol.png" class="icop"></div>
+					<div class="pfblock_name">Полный бак</div>
+					<div class="pfblock_desc">Быстрая заправка</div>
+				</div>
+				<div @click="gov" class="petrol_fblock2">
+					<div class="petrol_ico"><img src="img/petrol.png" class="icop"></div>
+					<div class="pfblock_name">Государство</div>
+					<div class="pfblock_desc">Для гос сотрудников</div>
+				</div>
+			</div>
+			<div @click="yes" class="petrol_buy">ОПЛАТИТЬ И ЗАПРАВИТЬ</div>
+		</div>
+	</div>
+	<script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

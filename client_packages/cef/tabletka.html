@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/tablet.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<script src="js/vue.js"></script>
+<meta charset="utf-8" />
+ <style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<div v-cloak class="bgg" v-if="active">
+<div class="cont">
+<div class="head"><h2>Игровое меню</h2> <div class="name">{{nick}}</div><div class="uid">#{{stats[8]}}</div></div>
+<div class="stat">
+<div class="con">
+<div class="menue">
+ <a class="tablinks active" onclick="openCity(event, 'bl0')">Статистика</a>
+ <a class="tablinks" onclick="openCity(event, 'bl11')">Квесты</a>
+ <a class="tablinks" onclick="openCity(event, 'bl8')">Мой бизнес</a>
+ <a class="tablinks" onclick="openCity(event, 'bl9')">Поставки материалов</a>
+ <a class="tablinks" onclick="openCity(event, 'b13')">Forbes</a> 
+ <a class="tablinks" onclick="openCity(event, 'bl7')">Донат-услуги</a>
+ <!--a class="tablinks" onclick="openCity(event, 'bl14')">Магазин</a-->
+ <!--a class="tablinks" onclick="openCity(event, 'bl10')">Репорт</a-->
+ <a class="tablinks" onclick="openCity(event, 'bl12')">Настройки</a>
+</div>
+
+
+<div class="up"><i class="fas fa-coins"></i> {{donate}} GP</div>
+<div class="bank"><i class="far fa-credit-card"></i> {{bank}} $</div>
+<div class="nal"><i class="fas fa-wallet"></i> {{money}} $</div>
+</div> 
+</div> 
+<div id="bl0" class="tabcontent" style="display:block;">
+<div class="flex-popap">
+<div class="popap">     
+<h3>Игровая статистика Вашего персонажа:</h3>
+<div class="balance_block">
+<div class="bl1">
+<div class="block">
+<h4>Информация об аккаунте</h4>
+<div class="zz">Отыграно времени <b>{{stats[17]}}</b></div>
+<div class="zz">Премиум <b>{{stats[3]}}</b></div>
+</div>
+<div class="block">
+<h4>Основная статистика</h4>
+<div class="zz">Уровень <b>{{stats[0]}} [{{stats[1]}} EXP]</b></div>
+<div class="zz">Предупреждений <b>{{stats[5]}}</b></div>
+<div class="zz">Семейное положение <b>{{stats[14]}}</b></div>
+<div class="zz">Номер телефона <b>{{stats[2]}}</b></div>
+<div class="zz">Номер паспорта <b>{{stats[8]}}</b></div>
+<div class="zz">Банковский счёт <b>{{stats[9]}}</b></div>
+</div>
+</div>
+<div class="bl1">
+<div class="block">
+<h4>Колесо фортуны</h4>
+<div class="zz">У вас <b style="float: none;margin: 0;width: auto;display: inline-block;text-align: center;">{{stats[18]}}</b> прокрутов</div>
+<div class="zz">Новый прокрут через <b>{{stats[19]}}</b></div>
+</div>
+<div class="block">
+<h4>Информация о фракции</h4>
+<div class="zz">Наименование <b>{{stats[10]}}</b></div>
+<div class="zz">Ваш ранг <b>{{stats[11]}}</b></div>
+</div>
+
+</div>
+<div class="bl1">
+<div class="block">
+<h4>Жизненно важные показатели</h4>
+<div class="zz">Еда <b>{{stats[12]}} %</b></div>
+<div class="zz">Вода <b>{{stats[13]}} %</b></div>
+</div>
+<div class="block">
+<h4>Трудоустройство</h4>
+<div class="zz">Наименование <b>{{stats[15]}}</b></div>
+<div class="zz">Уровень работы <b>{{stats[16]}}</b></b></div>
+</div>
+<div class="block lica">
+<h4>Ваши лицензии</h4>
+<div class="zz">{{stats[6]}}</b></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="b13" class="tabcontent">
+  <div class="flex-popap">
+ <div class="popap">
+<h3>ТОП 30 богатейших жителей штата:</h3>
+	 <div class="fbs">
+		 <span>Место</span><span>Имя</span><span>Состояние в $</span>
+		 <ul>
+			<div v-for="data in forbes">
+				<li><span class="mes2">{{data[0]}}</span><span class="mes3">{{data[1]}} $</span></li>
+			</div>
+		</ul>
+	  </div> 
+  </div>
+</div>
+</div> 
+
+ <div id="bl7" class="tabcontent">
+ <div class="flex-popap">
+    <div class="popap"> 
+	<h3>Приобретение донат-услуг:</h3>
+	<div class="donate"> 
+<div class="center">    
+		<div class="bl1">
+<div class="block">
+<h4>Ваш персонаж</h4>
+<div class="zz">
+<h2>Изменить внешность</h2>
+<b>Вы будете перенаправлены в редактор персонажа</b>
+<div class="btns" v-if="menu == 0"><div class="btn" @click="buy(0)"><b>100 GP</b></div></div>
+</div>
+<div class="zz">
+<h2>Изменить игровой ник</h2>
+<b>Вы будете кикнуты из игры</b>
+<div class="btns" v-if="menu == 0"><input @input="onInputName" v-model="fname" placeholder="Новое Имя" maxlength="30"><input @input="onInputName" v-model="lname" placeholder="Новая Фамилия" maxlength="30"></div><div class="btns" v-if="menu == 0"><div class="btn" @click="buy(1)"><b>300 GP</b></div></div>
+</div>
+<div class="zz">
+<h2>Снять предупреждение</h2>
+<b>С Вас будет снят последний выданный варн</b>
+<b></b>
+<div class="btns" v-if="menu == 0"><div class="btn" @click="buy(7)"><b>2000 GP</b></div></div>
+</div>
+</div>
+<div class="block vall">
+<h4>Игровая валюта</h4>
+<div class="zz">
+<h2>Перевести валюту</h2>
+<b></b>
+<div class="btns b" v-if="menu == 0"><input @input="onInputTrans" v-model="totrans" placeholder="GP Coins" maxlength="9"><input v-model="aftertrans" placeholder="$$$" readonly> </div><div class="btns" v-if="menu == 0"><div class="btn" @click="buy(2)">Перевести</b></div></div>
+</div>
+</div>
+</div>
+
+<div class="bl1 kol">
+<div class="block">
+
+<h4>Колесо фортуны</h4>
+<div class="zz vips"><h2>3 прокрута<div class="btn" @click="buy(10)"><b>75 GP</b></div></h2></div>
+<div class="zz vips"><h2>5 прокрутов <div class="btn" @click="buy(11)"><b>100 GP</b></div></h2></div>
+<div class="zz vips"><h2>10 прокрутов<div class="btn" @click="buy(12)"><b>180 GP</b></div></h2></div>
+<div class="zz vips"><h2>15 прокрутов<div class="btn" @click="buy(13)"><b>230 GP</b></div></h2></div>
+
+</div>
+
+</div>  
+
+<div class="bl1 lvlup">
+<div class="block">
+<h4>Уровень аккаунта</h4>
+<div class="zz vips">
+<h2>Bronze <div class="btn" @click="buy(3)"><b>150 GP</b></div></h2>
+<ul>
+<li>Выдается на 7 дней.</li>
+<li>Увеличивает зарплату во фракции на 15%</li>
+<li>Возможность выйти из фракции (/leave)</li>
+<li>Добавляет 2000$ к зарплате/пособию</li>
+<li>Увеличивает в 2 раза XP в час</li>
+<li>Сумма продажи в гос. за 50%</li>
+</ul>
+</div>
+<div class="zz vips">
+<h2>Silver <div class="btn" @click="buy(4)"><b>300 GP</b></div></h2>
+<ul>
+<li>Выдается на 7 дней.</li>
+<li>Увеличивает зарплату во фракции на 25%</li>
+<li>Возможность выйти из фракции (/leave)</li>
+<li>Добавляет 4000$ к зарплате/пособию</li>
+<li>Увеличивает в 3 раза XP в час</li>
+<li>Сумма продажи в гос. за 60%</li>
+</ul>
+</div>
+<div class="zz vips">
+<h2>Gold <div class="btn" @click="buy(5)"><b>500 GP</b></div></h2>
+<ul>
+<li>Выдается на 7 дней.</li>
+<li>Увеличивает зарплату во фракции на 35%</li>
+<li>Возможность выйти из фракции (/leave)</li>
+<li>Добавляет 5500$ к зарплате/пособию</li>
+<li>Увеличивает в 3 раза XP в час</li>
+<li>Сумма продажи в гос. за 70%</li>
+</ul>
+</div>
+<div class="zz vips">
+<h2>Platinum <div class="btn" @click="buy(6)"><b>750 GP</b></div></h2>
+<ul>
+<li>Выдается на 14 дней.</li>
+<li>Увеличивает зарплату во фракции на 50%</li>
+<li>Возможность выйти из фракции (/leave)</li>
+<li>Добавляет 10000$ к зарплате/пособию</li>
+<li>Увеличивает в 4 раза XP в час</li>
+<li>Сумма продажи в гос. за 80%</li>
+</ul>
+</div>
+<div class="zz vips">
+<h2>Бизнесмен <div class="btn" @click="buy(8)"><b>2500 GP</b></div></h2>
+<ul>
+<li>Даёт возможность приобрести</li>
+<li>второй бизнес, в течении 2 дней</li>
+<li>увеличивает EXP в 2 раза на 7 дней</li>
+<li>Бизнес останется у Вас до момента продажи</li>
+</ul>
+</div>
+<div class="zz vips">
+<h2>GP Бизнес 10 дней <div class="btn" @click="buy(14)"><b>500 GP</b></div></h2>
+<ul>
+<li>Приобретается независимо от Вашего VIP статуса</li>
+<li>Даёт возможность увеличить</li>
+<li>сумму дохода с бизнеса</li>
+<li>с 15% до 25% на срок 10 дней</li>
+</ul>
+</div>
+<div class="zz vips">
+<h2>GP Бизнес 30 дней <div class="btn" @click="buy(15)"><b>1250 GP</b></div></h2>
+<ul>
+<li>Приобретается независимо от Вашего VIP статуса</li>
+<li>Даёт возможность увеличить</li>
+<li>сумму дохода с бизнеса</li>
+<li>с 15% до 25% на срок 30 дней</li>
+</ul>
+</div>
+<div class="zz vips">
+<h2>Big Daddy <div class="btn" @click="buy(9)"><b>3500 GP</b></div></h2>
+<ul>
+<li>Выдается на 14 дней.</li>
+<li>Увеличивает зарплату во фракции на 50%</li>
+<li>Возможность выйти из фракции (/leave)</li>
+<li>Добавляет 10000$ к зарплате/пособию</li>
+<li>Увеличивает в 4 раза XP в час</li>
+<li>Сумма продажи в гос. за 50%</li>
+<li>Каждые 3 часа даёт по 3 колеса фортуны</li>
+<li>Сохраняет весь инвентарь на любой точке спавна</li>
+</ul>
+</div>
+
+<!--div class="zz vips">
+<h2>Смена номера <div class="btn" onclick="openCity(event, 'bl13')"><b>Выбрать автомобиль</b></div></h2>
+</div-->
+
+</div>
+</div>
+
+<div class="bl1 lica" style="display: block; margin: 0px;">
+<div class="block" style="width: auto;margin: 0px 1vh;height: auto;">
+<h4 style="margin-bottom: 1vh;margin-top: 0vh;">Приобрести лицензии</h4>
+<div class="zz vips"><h2><p>Мотоциклы</p> <div class="btn" @click="buy(17)"><b>15 GP</b></div></h2></div>
+<div class="zz vips"><h2><p>Легковой</p> <div class="btn" @click="buy(18)"> <b>30 GP</b></div></h2></div>
+<div class="zz vips"><h2><p>Грузовой</p> <div class="btn" @click="buy(19)"><b>35 GP</b></div></h2></div>
+<div class="zz vips"><h2><p>Самолёт</p> <div class="btn" @click="buy(22)"><b>75 GP</b></div></h2></div>
+<div class="zz vips"><h2><p>Вертолёт</p> <div class="btn" @click="buy(21)"><b>50 GP</b></div></h2></div>
+<div class="zz vips"><h2><p>Мед. карта</p> <div class="btn" @click="buy(24)"><b>150 GP</b></div></h2></div>
+<div class="zz vips"><h2><p>Военный билет</p> <div class="btn" @click="buy(26)"><b>700 GP</b></div></h2></div>
+<div class="zz vips"><h2><p>Адвокат</p> <div class="btn" @click="buy(26)"><b>100 GP</b></div></h2></div>
+</div>
+</div>
+</div>
+</div>
+<div class="promocode">
+  <div class="prochee"><h2>Прочее</h2></div>
+  <div class="jj"><p>Персональный промокод</p></div>
+  <div class="kk"><input @input="onInputPromo" v-model="promocode" placeholder="Промокод" maxlength="9"></div>
+  <div @click="promo(16)" class="bbtn"><b>100 GP</b></div>
+</div>
+</div>
+</div>  
+</div>
+
+<div id="bl11" class="tabcontent">
+<div class="flex-popap">
+<div class="popap">
+<h3>Квесты на сегодня:</h3>
+<div class="balance_block">
+<div class="bl1">
+<div class="block">
+<h4>Задания</h4>
+<div class="zz kv"><h2>{{quests[0][0]}}</h2><b>{{quests[0][1]}}</b></div>
+<div class="zz kv"><h2>{{quests[1][0]}}</h2><b>{{quests[1][1]}}</b></div>
+<div class="zz kv"><h2>{{quests[2][0]}}</h2><b>{{quests[2][1]}}</b></div>
+<div class="zz kv"><h2>{{quests[3][0]}}</h2><b>{{quests[3][1]}}</b></div>
+</div>
+</div>
+<div class="bl1">
+<div class="block">
+<h4>Информация</h4>
+<div class="zz kv">
+<p>За выполнение каждой задачи Вы получите 500$.</p>
+<p>За выполнения ежедневных задач Вы получите 25GP.</p>
+<p>Полученные GP коины, Вы сможете обменять на игровую валюту, открыть контейнер с автомобилями или приобрести какую либо другую услугу в сообтвествующем разделе.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="bl9" class="tabcontent kompanyload">
+<div class="flex-popap">
+<div class="popap">    
+<h3>Доставка материалов на бизнес:</h3>
+<div class="center">
+<div class="komp" v-if="access == 2"><h4>Запросы на поставку</h4><div class="zap" v-for="data in orders"><h4 class="gr1">{{data[0]}}<span v-bind:class="[ data[1] == 'Online' ? 'online' : 'offline' ]">{{data[1]}}</span></h4><span class="gr2">Бизнес №{{data[3]}}</span><span class="gr3">Кол-во мат. {{data[4]}} шт.</span><span class="gr4">Телефон {{data[2]}}</span><span class="gr6" v-if="data[5] == 1" v-on:click="cancel()">Отменить заказ</span><span class="gr5" v-else v-on:click="select(data[0])">Принять заказ</span></div></div>
+<div class="bizz" v-if="access == 1"><h4>Запрос на поставки материалов</h4><div class="zap"><span class="gr2">Укажите ID Бизнеса <input placeholder="111" v-model="bizid" maxlength="30"></span><span class="gr3">Укажите кол-во мат. <input placeholder="9999" v-model="bizmats" maxlength="30"></span><span class="gr5" onclick="tablet.inputfor()">Отправить запрос на доставку</span></div></div>
+<div class="bizz" v-if="access == 3"><h4>Оставить заявку</h4><div class="zap"><span class="gr6" onclick="tablet.cancel()">Отменить заказ</span></div></div>
+</div>  
+</div>
+</div>
+</div>
+
+<div id="bl13" class="tabcontent kompanyload">
+<div class="flex-popap">
+<div class="popap">    
+<h3>Перебивка номера автомобиля</h3>
+<div class="center">
+<div class="market__content">
+                <div class="market__num-l">
+				 <p class="market__num-p">Выберите автомобиль</p>
+				 <div class="autos">
+				 <div v-for="(car,index) in cars" :value="index" class="bb" @click="sel(index)" :class="index == myselect ? 'active' : ''">{{car}}</div>
+				 </div>
+   
+                    <p class="market__num-p">Введи новый номер автомобиля  </p>
+                    <div class="market__num-place">
+                        <input type="text" class="market__num-in" maxlength="1">
+                        <input type="text" class="market__num-in" maxlength="1">
+                        <input type="text" class="market__num-in" maxlength="1">
+                        <input type="text" class="market__num-in" maxlength="1">
+                        <input type="text" class="market__num-in" maxlength="1">
+                        <input type="text" class="market__num-in" maxlength="1">
+						<input type="text" class="market__num-in" maxlength="1">
+						<input type="text" class="market__num-in" maxlength="1">
+                    </div>
+					<p class="market__error-field" style="color:red"></p>
+                    <p class="market__num-p">Стоимость: <span>899</span> GP</p>
+                    <button class="market__num-btn" @click="change">Сменить номер</button>
+                </div>
+                <div class="market__num-r">
+                    <p class="market__num-p-r">Тут можно оформить себе уникальый номер на автомобиль. Услуга платная, её можно повторять бесконечное количество раз, и сменить очередной номер если надоел.</p>
+				</div>
+            </div>
+</div>  
+</div>
+</div>
+</div>
+
+<div id="bl10" class="tabcontent">
+<div class="flex-popap"><div class="popap">
+<h3>Напишите Ваш вопрос или жалобу</h3>
+<div class="center">
+<div class="report">
+        <div class="upblock">
+          <div class="blockses">
+            <div class="rep1">
+              <textarea v-model="texts" type="text" placeholder="Укажите Ваш вопрос"></textarea>
+              <a @click="submit(`report`)" class="otp">Отправить сообщение</a>
+            </div>
+          </div>
+        </div>
+        <div class="downblock">
+          <div class="activeticket" v-if="answer == null ? fixnullanswer : true">
+            <h3>Ответ № {{answer.id}}</h3>
+            <div class="form">
+              <p class="admin">
+                Админ: <span>{{answer.admin}}</span>
+              </p>
+              <p class="answer">
+                <b>Вопрос:</b>
+                <textarea placeholder="Вопрос" type="text":value="answer.ques" disabled></textarea>
+              </p>
+              <p class="question">
+                <b>Ответ:</b>
+                <textarea placeholder="Ответ" type="text" :value="answer.ans" disabled></textarea>
+              </p>
+            </div>
+          </div>
+          <div class="list">
+            <span class="header">
+              <h3>Ответы</h3>
+              <i @click="clearAll()" class="fa fa-trash" aria-hidden="true"></i>
+            </span>
+            <div class="tickets">
+              <div @click="selectanswer(ans)" class="ticket" v-for="(ans, index) in answers">
+                <p>
+                  <i @click="deleteAnswer(ans)"  class="fa fa-minus-square" aria-hidden="true" ></i>
+                  <b style="color: rgb(88, 129, 219)">#{{ans.id}}
+                    <span>{{ans.admin}}</span>
+                  </b>
+                </p>
+                <p>
+                  Ваш вопрос: {{ans.ques}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div> 
+</div> 
+</div>
+</div>
+<div id="bl8" class="tabcontent">
+<div class="flex-popap">
+<div class="popap">
+<h3>Мой бизнес: <p>Количество материалов равно доходу в 21:00 по МСК, списание материалов происходит каждые 3 часа в небольшом объёме</p></h3>
+<div class="center">
+<h1 v-if="bizlist.length == 0">У Вас нет бизнесов в личном пользование</h1> <!--Отображается когда нет не одного бизнеса -->
+
+<!--Блок вывода бизнеса, если их два, то блок дублируется и выводится инфа о другом бизнесе, кнопку бизнеса из телефона нужно убрать-->
+<div class="bl1" v-for="(biz, index) in bizlist">
+<div class="block">
+<h4>{{biz[0]}}</h4>
+<div class="zz"><h2>Денег на балансе</h2> <b>{{biz[1]}}$</b></div>
+<div class="zz"><h2>Налог в сутки</h2> <b>{{biz[2]}}$</b></div>
+<div class="zz"><h2>Доход в сутки</h2> <b>{{biz[3]}}$</b></div>
+<div class="zz"><h2>Материалов</h2> <b>{{biz[4]}}</b></div>
+<div class="zz"><div class="prim" v-on:click="sellbiz(index)">Продать бизнес государству за {{biz[5]}}$</div></div>
+</div>
+</div>
+<!--Блок вывода бизнеса, если их два, то блок дублируется и выводится инфа о другом бизнесе-->
+
+</div>
+</div> 
+</div> 
+</div> 
+
+<div id="bl12" class="tabcontent">
+<div class="flex-popap">
+<div class="popap">
+<h3>Параметры игры:</h3>
+<div class="center">
+<div class="report">
+<div class="bl1">
+<div class="block">
+<h4>Отображение интерфейса</h4>
+<div class="zz" @click="showhud()"><h4>Игровой HUD</h4> <div :class="hud ? 'switch-btn switch-on' : 'switch-btn'"></div></div>
+<div class="zz" @click="showchat()"><h4>Чат</h4> <div :class="chat ? 'switch-btn switch-on' : 'switch-btn'"></div></div>
+<div class="zz" @click="showeat()"><h4>Потребности</h4> <div :class="eat ? 'switch-btn switch-on' : 'switch-btn'"></div></div>
+<div class="zz" @click="showveh()"><h4>HUD авто</h4> <div :class="veh ? 'switch-btn switch-on' : 'switch-btn'"></div></div>
+<div class="zz" @click="showhudhelp()"><h4>Подсказки</h4> <div :class="hudhelp ? 'switch-btn switch-on' : 'switch-btn'"></div></div>
+<div class="zz" @click="showplayers()"><h4>Имена игроков</h4> <div :class="players ? 'switch-btn switch-on' : 'switch-btn'"></div></div>
+<div class="zz" @click="showpos()"><h4>Местоположение</h4> <div :class="pos ? 'switch-btn switch-on' : 'switch-btn'"></div></div>
+</div>
+</div>
+
+<div class="bl1">
+<div class="block">
+<h4>Дополнительные опции</h4>
+<div class="zz"><h4>Микрофон</h4> <div class="prim" @click="updatevoice()" style="padding: 0.5vh 2.2vh;margin-left: 2.9vh;">Нажмите для перезапуска или [F3]</div></div>
+<div class="zz"><h4>Замутить игрока</h4> <div class="menu-input-block"><input maxlength="26" class="menu-input" v-model="muteplayers" placeholder="ID игроков через пробел"></div> <div class="prim" @click="updatemute()">Применить</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> 
+</div> 
+
+<!--div id="bl14" class="tabcontent">
+<div class="flex-popap">
+<div class="popap">
+<h3>Магазин товаров:</h3>
+<div class="center">
+<div class="report magaz">
+<div class="bl1">
+<div class="block">
+<h4>Кабура на ногу</h4>
+<div class="zz">
+<h4>Игровой HUD</h4>
+<div class=""></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> 
+</div--> 
+</div>
+</div>	
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/tablet.js"></script>
+<script src="js/numersauto.js"></script>
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+function show_popap(id_popap) {
+  var id = "#" + id_popap;
+  $(id).addClass('active');
+}
+
+$(".close_popap").click( function(){
+  $(".overlay").removeClass("active");
+});
+</script>
+
+<script>
+    $(function () {
+        $('.switch-btn').click(function () {
+            $(this).toggleClass('switch-on');
+            if ($(this).hasClass('switch-on')) {
+                $(this).trigger('on.switch');
+            } else {
+                $(this).trigger('off.switch');
+            }
+        });
+    });
+</script>
+</body>
+</body>
+</html>

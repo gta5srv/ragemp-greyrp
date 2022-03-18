@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,500,700');
+
+@font-face {
+    font-family: "Uni Neue";
+    src: url("../fonts/UniNeue/400/UniNeueRegular.eot");
+    src: url("../fonts/UniNeue/400/UniNeueRegular.woff") format("woff"), url("../fonts/UniNeue/400/UniNeueRegular.ttf") format("truetype"), url("../fonts/UniNeue/400/UniNeueRegular.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Uni Neue";
+    src: url("../fonts/UniNeue/300/UniNeueLight.eot");
+    src: url("../fonts/UniNeue/300/UniNeueLight.woff") format("woff"), url("../fonts/UniNeue/300/UniNeueLight.ttf") format("truetype"), url("../fonts/UniNeue/300/UniNeueLight.svg") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Uni Neue";
+    src: url("../fonts/UniNeue/500/UniNeueBook.eot");
+    src: url("../fonts/UniNeue/500/UniNeueBook.woff") format("woff"), url("../fonts/UniNeue/500/UniNeueBook.ttf") format("truetype"), url("../fonts/UniNeue/500/UniNeueBook.svg") format("svg");
+    font-weight: 500;
+    font-style: normal;
+}
+body {
+    font-family: 'Uni Neue';
+}   
+
+        .bizWarInfoBlock {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .b-elem {
+            position: absolute;
+        }
+
+        .time-bg {
+            padding: 3px;
+            border-radius: 5px;
+            background: #232323;
+        }
+
+        .time-char {
+            display: inline-block;
+            min-width: 0px;
+            width: 20px;
+            padding: 1px 2px;
+            background: linear-gradient(to left top, #d20a0a, #a82828);
+            text-align: center;
+            border-radius: 2px;
+        }
+  
+    
+    .menu-text {
+    font-size: 17px;
+    color: #fff;
+    text-transform: none;
+}
+
+
+.menu-color-red {
+    color: red;
+    top: 9px;
+    left: 60px;
+    font-size: 16px;
+}
+
+.menu-color-green {
+    color: green;
+    top: 9px;
+    right: 53px;
+    font-size: 16px;
+}

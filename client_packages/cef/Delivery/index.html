@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<link href="./style.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="https://kit.fontawesome.com/c552bfdf6a.js" crossorigin="anonymous"></script>
+<style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<div v-cloak class="delivery">
+<div class="back" v-if="active"><img src="back.png"></div>
+<div class="exit_btn" v-if="active" onClick="exit()">Закрыть</div>
+<div class="start" v-if="active" onClick="exit1()">Устроиться/Уволиться курьером</div>
+<div class="take" v-if="active" onClick="exit2()">Взять заказы</div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>

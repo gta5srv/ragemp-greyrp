@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('ComicSansMS-BoldItalic.eot');
+    src: local('Comic Sans MS Bold Italic'), local('ComicSansMS-BoldItalic'),
+        url('ComicSansMS-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('ComicSansMS-BoldItalic.woff2') format('woff2'),
+        url('ComicSansMS-BoldItalic.woff') format('woff'),
+        url('ComicSansMS-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('ComicSansMS-Italic.eot');
+    src: local('Comic Sans MS Italic'), local('ComicSansMS-Italic'),
+        url('ComicSansMS-Italic.eot?#iefix') format('embedded-opentype'),
+        url('ComicSansMS-Italic.woff2') format('woff2'),
+        url('ComicSansMS-Italic.woff') format('woff'),
+        url('ComicSansMS-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('ComicSansMS.eot');
+    src: local('Comic Sans MS'), local('ComicSansMS'),
+        url('ComicSansMS.eot?#iefix') format('embedded-opentype'),
+        url('ComicSansMS.woff2') format('woff2'),
+        url('ComicSansMS.woff') format('woff'),
+        url('ComicSansMS.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('ComicSansMS-Bold.eot');
+    src: local('Comic Sans MS Bold'), local('ComicSansMS-Bold'),
+        url('ComicSansMS-Bold.eot?#iefix') format('embedded-opentype'),
+        url('ComicSansMS-Bold.woff2') format('woff2'),
+        url('ComicSansMS-Bold.woff') format('woff'),
+        url('ComicSansMS-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+

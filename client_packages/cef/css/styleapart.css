@@ -1,0 +1,24 @@
+html{height:100%}
+body{font-family:"TT Norms",sans-serif;margin:0;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.exit{font-weight:600;position:absolute;color:#fff;margin:0;padding:0;bottom:0;height:inherit;text-align:right;bottom:inherit;top:0;right:0;padding:1.5vh 2vh;border-radius:0}
+.main h1{margin:0;font-size:2vh;color:#fff;padding-left:1vh;padding-top:1.5vh;padding-bottom:1.1vh;background:#2221234d;margin-bottom:1vh}
+.main{width:55vh;background:#222123bd;top:50%;transform:translateY(-50%);height:auto;right:1vh;padding-bottom:0;display:table-cell;vertical-align:middle;position:absolute}
+.exit:hover{color:#888}
+.blockkv{display:inline-block;color:#fff;margin-bottom:1vh;padding:1vh;width:45%;background:#2221234d;margin-left:.5vh;position:relative}
+.blockkv p{margin:0}
+.blockkv p.vl{margin:0;font-size:1.5vh;margin-bottom:1vh}
+.blockkv p.vlno{margin:0;font-size:1.5vh;margin-bottom:1vh}
+.blockkv small{display:block;font-size:1.2vh;color:#c3c3c3}
+.blockkv p.name{font-size:2vh;font-weight:600;margin-bottom:1vh}
+.blockkv .gm p{padding:0}
+.btn{background:#e42d2d;border-radius:.1vh;text-align:center;padding:.6vh;margin-top:1.5vh}
+.btn#act{background:#e42d2d}
+.btn:hover{background:#e42d2d}
+.btn:active{background:#e42d2d}
+.gm{font-size:1.3vh;display:inline-flex}
+.jil{font-size:1.3vh;display:inline-flex;float:right}
+.scr{overflow-y:scroll;max-height:50vh}
+::-webkit-scrollbar{width:2px}
+::-webkit-scrollbar-track{background:#555}
+::-webkit-scrollbar-thumb{background:#000}
+.blockkv p.go,.blockkv p.enter{padding:0}

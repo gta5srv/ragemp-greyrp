@@ -1,0 +1,159 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #171419;
+    background: #171419 url(../img/bg.png) no-repeat top center;
+}
+
+.auth {
+    text-align: center;
+    width: 32.407vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+
+.auth .logo {
+    width: 32.407vh;
+    margin-top: 13vh;
+}
+
+.auth h1 {
+    font-size: 2.593vh;
+    color: #fff;
+    line-height: 3.056vh;
+    margin-top: 18.796vh;
+    margin-bottom: 0;
+}
+
+.auth p {
+    color: #FFFFFF99;
+    font-size: 1.296vh;
+    line-height: 1.530vh;
+    margin-bottom: 3vh;
+}
+
+.auth .butauth { 
+    width: 23.148vh;
+    border-radius: 0.463vh;
+    height: 4.630vh;
+    font-size: 1.296vh;
+    line-height: 1.530vh;
+    font-weight: 700;
+    padding-top: 1.5vh;
+    color: #fff;
+    position: relative;
+    left: 50%;
+    border-bottom: 0.463vh solid #821316;
+    transform: translate(-50%, 2.500vh);
+    box-shadow: 0px 0px 0.926vh rgb(154 28 28 / 40%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(90deg, #FF3731 0%, #F11118 100%);
+    margin-bottom: 4vh;
+}
+
+input[type="name"] {width: 32.407vh;height: 5.556vh;background: #FFFFFF1A;border: 0.093vh solid #CECACA99;border-radius: 0.463vh;margin-bottom: 1.111vh;padding-left: 3.704vh;color: #FFFFFF80;font-size: 1.296vh;line-height: 1.530vh;outline: none;}
+
+input[type="name"]::placeholder {color: #FFFFFF80;}
+
+input[type="password"] {width: 32.407vh;height: 5.556vh;background: #FFFFFF1A;border: 0.093vh solid #CECACA99;border-radius: 0.463vh;margin-bottom: 1.111vh;padding-left: 3.704vh;color: #FFFFFF80;font-size: 1.296vh;line-height: 1.530vh;outline: none;}
+
+input[type="password"]::placeholder {color: #FFFFFF80;}
+
+
+input[type="email"] {width: 32.407vh;height: 5.556vh;background: #FFFFFF1A;border: 0.093vh solid #CECACA99;border-radius: 0.463vh;padding-left: 3.704vh;color: #FFFFFF80;font-size: 1.296vh;line-height: 1.530vh;outline: none;}
+
+input[type="email"]::placeholder {color: #FFFFFF80;}
+
+.auth .namesvg {
+    width: 2.296vh;
+    position: absolute;
+    margin-top: 1.574vh;
+    margin-left: 1.111vh;
+}
+
+.auth .pass1svg {
+    width: 2.296vh;
+    position: absolute;
+    margin-top: 1.389vh;
+    margin-left: 1.111vh;
+}
+
+.auth .pass2svg {
+    width: 2.296vh;
+    position: absolute;
+    margin-top: 1.389vh;
+    margin-left: 1.111vh;
+}
+
+.auth .emailsvg {
+    width: 2.296vh;
+    position: absolute;
+    margin-top: 1.852vh;
+    margin-left: 1.111vh;
+}
+
+.auth form p {
+    color: #fff !important;
+    font-size: 1.111vh !important;
+    line-height: 1.311vh !important;
+}
+
+.auth form a {
+    color: #FF3731;
+    font-size: 1.111vh;
+    line-height: 1.311vh;
+}
+
+.auth form a:hover {
+    color: #FF3731;
+    font-size: 1.111vh;
+    line-height: 1.311vh;
+}
+
+.auth form label {
+    color: #fff;
+    font-size: 1.111vh;
+    line-height: 1.311vh;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+    color: #000;
+    cursor: default;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 10px 0;
+    vertical-align: middle;
+  }
+   
+  /* формируем внешний вид чекбокса в псевдоэлементе before */
+  label:before {
+    content: " ";
+    color: #FF3731;
+    display: inline-block;
+    margin-right: 0.833vh;
+    position: relative;
+    text-align: center;
+    text-indent: 0px;
+    font-size: 2vh;
+    width: 1.852vh;
+    height: 1.852vh;
+    background: #FFFfff00;
+    border: 0.093vh solid #FF3731;
+    border-image: initial;
+    vertical-align: middle;
+  }
+   
+  /* вариации внешнего вида в зав-ти от статуса checkbox */
+  /* checked */
+  input:checked + label:before {
+    content: "x";
+  }
+  /* disabled */
+  input:disabled + label:before {
+    background: #eee;
+    color: #aaa;
+  }

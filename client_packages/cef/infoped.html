@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/infoped.css">
+    <link rel="stylesheet" href="css/infa.css">	
+    <script src="js/vue.js"></script>
+	<style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+
+		<div v-cloak id="infoped" class="infoped" v-if="active">
+		<div class="bgshow"></div>
+
+		<div class="exit_btn" @click="exit">
+			<img src="images/infoped/close.svg" alt="">
+		</div>
+        <div class="list_main" id="infoped_main" v-if="menu == 0">
+			<div class="blockSpawn top dataimages"  data-src="images/infoped/lic_bg.png" data-size="cover" @click="open(1)" style="background: url(&quot;images/infoped/lic_bg.png&quot;) center center / cover no-repeat;">
+				<div class="cover"></div>
+				<img src="images/infoped/lic_take_icon.png" alt="" class="icon">
+				<div class="title">Получение лицензии</div>
+			</div>
+			<div class="blockSpawn down dataimages" data-src="images/infoped/factions_bg.png" data-size="cover" @click="open(2)" style="background: url(&quot;images/infoped/factions_bg.png&quot;) center center / cover no-repeat;">
+				<div class="cover"></div>
+				<img src="images/infoped/lic_icon.png" alt="" class="icon">
+				<div class="title">Фракции</div>
+			</div>
+			<div class="blockSpawn top dataimages" data-src="images/infoped/carier_bg.png" data-size="cover" @click="open(3)" style="background: url(&quot;images/infoped/carier_bg.png&quot;) center center / cover no-repeat;">
+				<div class="cover"></div>
+				<img src="images/infoped/jobs_icon.png" alt="" class="icon">
+				<div class="title">Начальные работы</div>
+			</div>
+			<!--div class="blockSpawn down dataimages" data-src="images/infoped/neft_bg.png" data-size="cover" @click="open(4)" style="background: url(&quot;images/infoped/neft_bg.png&quot;) center center / cover no-repeat;">
+				<div class="cover"></div>
+				<img src="images/infoped/biz_icon.png" alt="" class="icon">
+				<div class="title">Виды бизнесов</div>
+			</div-->
+			<div class="blockSpawn top dataimages" data-src="images/infoped/stroika_bg.png" data-size="cover" @click="open(5)" style="background: url(&quot;images/infoped/stroika_bg.png&quot;) center center / cover no-repeat;">
+				<div class="cover"></div>
+				<img src="images/infoped/jobs_icon.png" alt="" class="icon">
+				<div class="title">Бизнесы и Компании</div>
+			</div>
+			<!--div class="blockSpawn down dataimages" data-src="images/infoped/family_bg.png" data-size="cover" @click="open(6)" style="background: url(&quot;images/infoped/family_bg.png&quot;) center center / cover no-repeat;">
+				<div class="cover"></div>
+				<img src="images/infoped/family_icon.png" alt="" class="icon">
+				<div class="title">Семьи</div>
+            </div-->
+        </div>
+	
+		<div class="block_window" v-if="menu == 1">  <!-----  Получение лицензий  ------->
+		<div class="title">
+					<div class="text"><b>У нас есть различные лицензии:</b></div>
+					<div class="line"></div>
+				</div>
+				<div class="back" @click="open(0)">
+					<img src="images/infoped/arrow.png" alt="">
+				</div>
+				<div class="info">
+			<p><b>Медицинская карта</b> - без нее вы не сможете устроиться в любую организацию. (выдается в EMS)</p> 
+			<p><b>Лицензия парамедика</b> - повышает шанс реанимировать человека (выдается в EMS)</p> 
+			<p><b>Военный билет</b> - без него вы не сможете работать в гос организациях (Выдает армия после службы)</p> 
+			<p><b>Водительское удостоверение</b> - позволяет управлять автомобилями (выдается в школе лицензирования)</p> 
+			<p><b>Лицензия на оружие</b> - позволяет законно носить оружие разрешенное в штате (выдается в LSPD)</p> 
+			</div>
+			</div>
+		
+		<div class="block_window" v-if="menu == 2">  <!-----  Фракции  ------->
+				<div class="title">
+					<div class="text"><b>В нашем штате есть 12 организаций:</b></div>
+					<div class="line"></div>
+				</div>
+				<div class="back" @click="open(0)">
+					<img src="images/infoped/arrow.png" alt="">
+				</div>
+				<div class="info">
+				<p><b>Государственные организации:</b></p>
+				<p>Мэрия </p>
+				<p>FIB (Нахождение местонахождения людей через спутники)</p>
+				<p>LSPD (Пробите номеров, база данных на всех людей)</p>
+				<p>EMS (Выдача лицензии парамедика)</p>
+				<p>Армия (Выдача военного билета)</p>
+				<p>Gruppe 6</p>
+				<p>Новости</p>
+				<br>
+				<p><b>Негосударственные организации:</b></p>
+				<p>Американская мафия (Смена номеров, грабежи,разбои)</p>
+				<p>Итальянское посольство (Выдача поддельных документов,нелегальные вещества, грабежи)</p>
+				<p>Merryweather (снятие розыска, частная компания)</p> 
+				</div>
+			</div>
+		
+		<div class="block_window" v-if="menu == 3">  <!-----  Начальные работы  ------->
+				<div class="title">
+					<div class="text">12 работ с уникальными механиками:</div>
+					<div class="line"></div>
+				</div>
+				<div class="back" @click="open(0)">
+					<img src="images/infoped/arrow.png" alt="">
+				</div>
+				<div class="info">
+					<p><b>Газонокосильщик - только летом</b></p>
+					<p><b>Электрик</b></p>
+					<p><b>Уборщик штата - только зимой</b></p>
+					<p><b>Тракторист - только летом</b></p>
+					<p><b>Рыболов</b></p>
+					<p><b>Шахтер</b></p>
+					<p><b>Таксист</b></p>
+					<p><b>Инкассатор</b></p>
+					<p><b>Водитель автобуса</b></p>
+					<p><b>Дальнобойщик</b></p>
+					<p><b>Аквалангист-археолог (Поисковик)</b></p>
+					<p><b>Сборщик травы</b></p>
+					<p><b>Мусоровозщик</b></p>
+				</div>
+			</div>
+		
+		<!--div class="block_window" v-if="menu == 4">
+				<div class="title">
+					<div class="text">Ваш заголовок</div>
+					<div class="line"></div>
+				</div>
+				<div class="back" @click="open(0)">
+					<img src="images/infoped/arrow.png" alt="">
+				</div>
+				<div class="info"><p>
+			<b>3oxaan Group Prodactions:</b><br>  
+			</p></div>
+			</div-->
+		
+		<div class="block_window" v-if="menu == 5">  <!-----  Компании  ------->
+				<div class="title">
+					<div class="text">Бизнесы и Компании</div>
+					<div class="line"></div>
+				</div>
+				<div class="back" @click="open(0)">
+					<img src="images/infoped/arrow.png" alt="">
+				</div>
+				<div class="info">
+				<p>Вы можете купить любую торговую точку и получать процент с выручки - цена для покупки указана подходя к бизнесу, а приобрести его можно через команду <b>/buybiz</b></p>
+				<p>Ваш доход с бизнеса в сутки = количеству материалов в бизнеса. Количество материалов в бизнесе можно посмотреть через телефон</p>
+				<p>Доставку материалов производят Компании по грузоперевозкам. Для того чтобы сделать заказ материалов нужно нажать <b>O (английская)</b> и в разделе доставок указать нужные данные, после чего с Вами свяжется один из людей который работает в компаниях и согласует время и цену доставки</p>
+				<br>
+				<p><b>Компания по грузоперевозкам</b></p><br>
+				<p>Вы можете создать свой собственный бизнес по доставке материалов для торговых точек, Нанимать туда сотрудников чтобы они развозили материалы,  выплачивать им зарплаты за проделанную работу и покупать грузовой транспорт в специальном магазине грузового транспорта. Команда по вызову планшета компании можно узнать в меню подсказок нажав F7. Для покупки Вам нужна лицензия - которую можно приобрести в "Лицензирование" а так же приобрести ангар, которые можно найти на карте, и приобрести грузовой транспорт, у каждого транспорта есть максимальное кол-во перевозимости материалов за один раз, не забудьте учесть это.</p>
+				</div>
+			</div>
+		
+		<div class="block_window" v-if="menu == 6">  <!-----  Семьи  ------->
+				<div class="info_window">
+					<div class="text">Ваш заголовок</div>
+				</div>
+				<div class="title">
+					<div class="text">Ваш заголовок</div>
+					<div class="line"></div>
+				</div>
+				<div class="back" @click="open(0)">
+					<img src="images/infoped/arrow.png" alt="">
+				</div>
+				<div class="info"><p>
+			<b>3oxaan Group Prodactions:</b><br>  
+			</p></div>
+			</div>
+		</div>
+	
+										
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/infoped.js"></script>
+	
+</body>
+
+</html>

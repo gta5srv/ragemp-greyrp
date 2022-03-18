@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css"><!--Подключение CSS-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script><!--Подключение VueJS-->
+    <!-- Подключение шрифта -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <!--  -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper" v-if="active">
+        <div class="wrapper__block" v-for="kill in kills">
+            <span :class="[kill[1]]">{{kill[0]}}</span>
+            <img v-if="kill[2] == 0" class="killImg" src="assets/images/kill.png" alt="kill">
+            <img v-if="kill[2] != 0" class="gunImg" src="assets/images/magnum357.png" alt="kill">
+            <span :class="[kill[3]]" v-if="kill[2] != 0">{{kill[2]}}</span>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+* {
+    user-select: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: none;  
+}
+
+.warning {
+
+width: 38.889vh;
+
+height: 26.296vh;
+
+position: absolute;
+
+left: 50%;
+
+transform: translate(-50%, 3.241vh);
+}
+
+.warning .headwar {
+
+width: 11.111vh;
+
+position: relative;
+
+height: 3.241vh;
+
+border-radius: 0.463vh;
+
+text-align: center;
+
+color: #fff;
+
+font-size: 1.111vh;
+
+line-height: 1.296vh;
+
+padding-top: 0.915vh;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+linear-gradient(90deg, #FF3731 0%, #F11118 100%);
+
+box-shadow: 0px 0.370vh 0.370vh rgb(0 0 0 / 25%);
+
+left: 50%;
+
+transform: translate(-50%, 0.926vh) rotateZ(3deg);
+
+z-index: 1;
+}
+
+.warning .headwar p {
+
+transform: rotateZ(-3deg);
+
+margin-bottom: 0;
+}
+
+.warning .bgwar {
+
+background: #191B21CC;
+
+border-radius: 0.926vh;
+
+transform: skew(2deg, 4deg);
+
+width: 37.037vh;
+
+height: 23.148vh;
+
+z-index: 0;
+
+margin-left: 0.833vh;
+}
+
+.warning .bgwar img {
+
+width: 23.241vh;
+
+height: 12.870vh;
+
+transform: translate(-50%, 2.241vh) skew(-1deg, -4deg);
+
+position: relative;
+
+left: 50%;
+
+margin-bottom: 2.593vh;
+}
+
+.warning .bgwar p {
+
+color: #fff;
+
+transform: skew(
+-2deg
+, 
+-4deg
+);
+
+text-align: center;
+
+margin-bottom: 0;
+
+font-size: 1.481vh;
+}
+
+.warning .bgwar p b {
+
+color: #BE191E;
+}
+
+.warning .bgwar .leftwar {
+
+width: 6.667vh;
+
+height: 6.667vh;
+
+left: 5%;
+
+top: -8.9vh;
+}
+
+.warning .bgwar .rightwar {
+
+width: 11.852vh;
+
+height: 11.667vh;
+
+left: 87%;
+
+top: -27.5vh;
+}

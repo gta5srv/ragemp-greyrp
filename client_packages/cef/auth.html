@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FiveUP - Auth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/noty.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/auth.css" />
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/auth-new.css">
+
+</head>
+
+<body>
+    <div class="switch-content authDiv">        
+		<main class="gta-acount  authorization  auth-page  show">
+			<div class="auth">
+				<img class="logo" src="img/logo.png">
+				<h1>АВТОРИЗАЦИЯ</h1>
+				<p>Для продолжения авторизируйтесь</p>
+				<div class="container-login100">		
+					<div class="loginform">	
+						<form class="login100-form validate-form" id="auth-form" action="" method="POST">		
+								<div><img class="namesvg" src="img/name.svg"><input name="entry-login" id="entry-login-id" v-model="mylogin" type="name" placeholder="Логин"></div>
+								<div><img class="pass1svg" src="img/pass1.svg"><input name="entry-password" id="entry-password-id" v-model="mypass" type="password" placeholder="Пароль"></div>
+								<div class="butauth js-btn-auth voiti">АВТОРИЗАЦИЯ</div>
+								<input type="checkbox" v-model="remember" name="Receipt" id="Receipt" value="Yes">
+								<label for="Receipt">Запомнить меня</label>
+								<p>Нет аккаунта? <a class="js-btn-register" href="index.html">Регистрация</a></p>
+								<p>Забыли данные от аккаунта? <a class="js-btn-restore" href="index.html">Воостановление</a></p>
+						</form>		
+					</div>		
+				</div>
+			</div>
+        </main>
+		
+        <main class="gta-acount  registration  reg-page">
+			<div class="auth">		
+				<img class="logo" src="img/logo.png">
+				<h1>РЕГИСТРАЦИЯ</h1>
+				<p>Для продолжения зарегистрируйтесь</p>
+				<div class="container-login100">
+					<div class="loginform">	
+						<form class="login100-form validate-form" id="reg-form" action="" method="POST">		
+							
+							<div><img class="namesvg" src="img/name.svg"><input type="name" name="new-user__login" placeholder="Логин"></div>
+							<div><img class="pass1svg" src="img/pass1.svg"><input type="password" name="new-user__pw" placeholder="Пароль"></div>
+							<div><img class="pass2svg" src="img/pass2.svg"><input type="password" name="new-user__pw-repeat" placeholder="Повторите пароль"></div>
+							<div><img class="emailsvg" src="img/email.svg"><input type="email" placeholder="E-mail" name="new-user__email"></div>
+							<div class="butauth btn-register-end voiti">РЕГИСТРАЦИЯ</div>
+							<p>Есть аккаунт <a class="js-btn-back" href="index.html">Авторизация</a></p>	
+							
+						</form>		
+					</div>
+				</div>
+			</div>
+        </main>
+
+		<main class="gta-acount  restorepass  rest-page">
+		
+
+			<div class="auth">		
+				<img class="logo" src="img/logo.png">
+				<h1>ВООСТАНОВЛЕНИЕ</h1>
+				<p>Для продолжения зарегистрируйтесь</p>
+				<div class="container-login100">
+					<div class="loginform">	
+						<form class="login100-form validate-form" id="rest-form" action="" method="POST">		
+							
+							<div><img class="namesvg" src="img/name.svg"><input type="name" class="entry-login" name="entry-login" id="entry-login-id" placeholder="Логин"></div>
+							<div class="butauth btn-restore-end">ПОЛУЧИТЬ КОД</div>
+							<p>Помните данные? <a class="js-btn-back" href="index.html">Авторизация</a></p>	
+							
+						</form>		
+					</div>
+				</div>
+			</div>
+			
+	
+		</main>
+		
+
+		
+
+		
+<main class="gta-acount  slots  slots-page">
+
+<div class="container-login100">
+			<div class="wrap-login100">		
+				<div class="slots__cols">
+				 <div class="slot-col  col-l  ">		
+<div class="active__wrapper  login100-form">
+<div class="login100-form ">
+<span class="login100-form-title">{{slotL[0]}} {{slotL[1]}}</span>
+                            <ul class="characteristics">
+                                <li><b>Уровень:</b><div>{{slotL[2]}}</div></li>
+                                <li><b>Exp:</b><div>{{slotL[3]}} / {{slotL[4]}} </div></li>
+                                <li><b>Фракция:</b><div>{{slotL[5]}}</div></li>
+                                <li><b>Денег на руках:</b><div> <span>{{slotL[6]}}</span> $  </div></li>
+                                <li><b>Денег на счету:</b><div> <span>{{slotL[7]}}</span> $ </div></li>
+								<li><b>Донат валюты:</b><div> <span>{{redbucks}}</span> UP </div></li>
+                            </ul>		
+                        <div class="container-login100-form-btn"><a href="#" class="btn btn-enter js-btn-enter-1 login100-form-btn">Войти</a></div>
+						<div class="container-login100-form-btn"><a href="#" class="js-delete-cancel-1  delete-cancel  login100-form-btn">Отмена</a></div>
+    </div>  
+</div>
+				
+				<div class="free__wrapper login100-form">
+				<a href="#" class="btn  create-new  js-create-new-1 login100-form-title">Создать персонажа</a>
+				
+                    <form id="create-person-1" class="login100-form" action="" method="POST">
+					<div class="wrap-input100">
+						<input class="input100" type="text" name="new-person-1__name" id="new-person-1__name-id" placeholder="Имя (только на английском)" pattern="[A-Za-z]" required>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100"></span>
+					</div>
+					<div class="wrap-input100">
+						<input class="input100" id="new-person-1__sername-id"  type="text" name="new-person-1__sername"  placeholder="Фамилия (только на английском)" pattern="[A-Za-z]" required>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100"></span>
+					</div>	
+					<div class="container-login100-form-btn"><input class="login100-form-btn js-create-person-submit-1" type="submit" value="Создать и перейти к настройке"></div>					
+                    </form>
+					<div class="container-login100-form-btn"><a href="#" class="login100-form-btn cancel  js-create-cancel-1">Отмена</a></div>	
+
+                            <div class="blocked-cont">
+                                <div class="blocked-cont__reason">
+                                    <h4>Причина:</h4>
+                                    <p>{{blockL[0]}}</p>
+                                    <h4>Забанил: &nbsp;<b>{{blockL[1]}}</b></h4>
+                                </div>
+
+                                <ul class="blocked-cont__dates">
+                                    <li>
+                                        <span>Дата бана:</span>
+                                        <time>{{blockL[2]}}</time>
+                                    </li>
+                                    <li>
+                                        <span>Дата разбана:</span>
+                                        <time class="green">{{blockL[3]}}</time>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+				 
+				 </div>	 
+				</div>
+				
+			</div>
+		</div>
+
+        </main>
+       
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/notify.js"></script>
+    <script src="js/noty.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/auth.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >		$('.js-tilt').tilt({			scale: 1.1		})	</script>
+	<script src="js/main.js"></script>
+</body>
+</html>

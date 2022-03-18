@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Character editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/sliderch.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/character.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/phone.css">
+    <link rel="stylesheet" href="css/fonts.css" />    
+    <!--<script src="./assets/greenwich/conf.js"></script>-->
+    <style>
+        body {
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            font-family: "Ubuntu", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor" v-if="active" >
+        <div class="wrap">
+        <div class="title">Редактор персонажа</div>
+        <div class="titleSub">Выберите пункт</div>
+
+        <ul class="mainList">
+            <li :class="step == 1 ? 'active':''" @click="step = 1"><span class="icon user"></span></li>
+            <li :class="step == 2 ? 'active':''" @click="step = 2"><span class="icon smile"></span></li>
+            <li :class="step == 3 ? 'active':''" @click="step = 3"><span class="icon boroda"></span></li>
+            <!-- <li :class="step == 4 ? 'active':''" @click="step = 4"><span class="icon shmot"></span></li> -->
+        </ul>
+
+        <div class="content" v-if="step == 1">
+            <h1>Наследственность</h1>
+            <div class="gene">
+
+                <div id="father"><img :src="'parents/male_' + fatherActive + '.png'"></div>
+                <div id="mother"><img :src="'parents/mother' + motherActive + '.png'"></div>
+
+            </div>
+            <label>Схожесть:</label>
+            <div class="element">
+              
+                <!--list id="similar" num="true"></list-->
+                <div class="slider geneL">
+                    
+                    <input id="similar" type="range" value="0.5" step="0.1" min="0" max="1.0">
+                    <ul class="listif">
+                        <li>Мать</li>
+                        <li>Отец</li>
+                    </ul>
+                </div>
+                
+            </div>
+
+
+            <div class="element listened" >
+                <label>Папа</label>
+                <div class="slider buttonList">
+                   <listfill id="father" @callback="callback"></listfill>
+                </div>
+            </div>
+            
+            <div class="element listened" >
+                <label>Мама</label>
+                <div class="slider buttonList">
+                   <listfill id="mother" @callback="callback"></listfill>
+                </div>
+            </div>
+
+
+            <div class="element listened" >
+                <label>Пол</label>
+                <div class="slider buttonList">
+
+                    <div id="father" class="list" style="display: flex;">
+                    <i class="icon arrowLeft" @click="gender = !gender"></i> <div>
+                        <template v-if="gender">
+                            Мужской
+                        </template>
+                        <template v-else>
+                            Женский
+                        </template>
+                        </div>
+                    <i class="icon arrowRight" @click="gender = !gender"></i></div>
+   
+                </div>
+            </div>
+
+            <div class="element listened">
+                <label>Цвет кожи</label>
+                <!--list id="skin" num="true"></list-->
+                <div class="slider">
+                    <input id="skin" type="range" value="0.5" step="0.1" min="0" max="1">
+                </div>
+              
+            </div>
+        </div>
+
+
+     
+        <div class="content" v-if="step == 2">
+
+            <h1>Лицо</h1>
+
+            <div class="element listened">
+                <label>Ширина носа</label>
+                <!--list id="noseWidth" num="true"></list-->
+                <div class="slider">
+                    <input id="noseWidth" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+
+            </div>
+
+            <div class="element listened">
+                <label>Высота носа:</label>
+                <!--list id="noseHeight" num="true"></list-->
+                <div class="slider">
+                    <input id="noseHeight" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+     
+            </div>
+            <div class="element listened">
+                <label>Длина кончика носа:</label>
+                <!--list id="noseTipLength" num="true"></list-->
+                <div class="slider">
+                    <input id="noseTipLength" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+        
+            </div>
+            <div class="element listened">
+                <label>Глубина моста носа:</label>
+                <!--list id="noseDepth" num="true"></list-->
+                <div class="slider">
+                    <input id="noseDepth" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+
+            </div>
+            <div class="element listened">
+                <label>Высота кончика носа:</label>
+                <!--list id="noseTipHeight" num="true"></list-->
+                <div class="slider">
+                    <input id="noseTipHeight" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+
+            </div>
+            <div class="element listened">
+                <label>Поломаность носа:</label>
+                <!--list id="noseBroke" num="true"></list-->
+                <div class="slider">
+                    <input id="noseBroke" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+       
+            </div>
+            <div class="element listened">
+                <label>Высота бровей:</label>
+                <!--list id="eyebrowHeight" num="true"></list-->
+                <div class="slider">
+                    <input id="eyebrowHeight" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+             
+            </div>
+            <div class="element listened">
+                <label>Глубина бровей:</label>
+                <!--list id="eyebrowDepth" num="true"></list-->
+                <div class="slider">
+                    <input id="eyebrowDepth" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+ 
+            </div>
+            <div class="element listened">
+                <label>Высота скул:</label>
+                <!--list id="cheekboneHeight" num="true"></list-->
+                <div class="slider">
+                    <input id="cheekboneHeight" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+     
+            </div>
+            <div class="element listened">
+                <label>Ширина скул:</label>
+                <!--list id="cheekboneWidth" num="true"></list-->
+                <div class="slider">
+                    <input id="cheekboneWidth" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+        
+            </div>
+            <div class="element listened">
+                <label>Глубина щеки:</label>
+                <!--list id="cheekDepth" num="true"></list-->
+                <div class="slider">
+                    <input id="cheekDepth" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+  
+            </div>
+            <div class="element listened">
+                <label>Размер глаз:</label>
+                <!--list id="eyeScale" num="true"></list-->
+                <div class="slider">
+                    <input id="eyeScale" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+    
+            </div>
+            <div class="element listened">
+                <label>Толщина губ:</label>
+                <!--list id="lipThickness" num="true"></list-->
+                <div class="slider">
+                    <input id="lipThickness" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+   
+            </div>
+            <div class="element listened">
+                <label>Ширина челюсти:</label>
+                <!--list id="jawWidth" num="true"></list-->
+                <div class="slider">
+                    <input id="jawWidth" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+     
+            </div>
+            <div class="element listened">
+                <label>Форма челюсти:</label>
+                <!--list id="jawShape" num="true"></list-->
+                <div class="slider">
+                    <input id="jawShape" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+   
+            </div>
+            <div class="element listened">
+                <label>Высота подбородка:</label>
+                <!--list id="chinHeight" num="true"></list-->
+                <div class="slider">
+                    <input id="chinHeight" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+      
+            </div>
+            <div class="element listened">
+                <label>Глубина подбородка:</label>
+                <!--list id="chinDepth" num="true"></list-->
+                <div class="slider">
+                    <input id="chinDepth" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+
+            </div>
+            <div class="element listened">
+                <label>Ширина подбородка:</label>
+                <!--list id="chinHeight" num="true"></list-->
+                <div class="slider">
+                    <input id="chinWidth" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+
+            </div>
+            <div class="element listened">
+                <label>Подбородочный отступ:</label>
+                <!--list id="chinIndent" num="true"></list-->
+                <div class="slider">
+                    <input id="chinIndent" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+
+            </div>
+            <div class="element listened">
+                <label>Обхват шеи:</label>
+                <!--list id="neck" num="true"></list--> 
+                <div class="slider">
+                    <input id="neck" type="range" value="0" step="0.1" min="-1" max="1">
+                </div>
+
+            </div>
+        </div>
+      
+
+        <div class="content" v-if="step == 3">
+            <div class="element">
+                <label>Волосы:</label>
+                <div class="slider">
+
+                    <ul class="itemsImg">
+                        <li class="i" v-for="(tab, index) in hairs['hairM']" :key="index" :class="hairActive == index ? 'active':''" @click="hairActive = index; triggerList('hairM', index)" v-if="gender">
+                            <img :src="'hairs/' + index + '.png'">
+                        </li>
+                        <li class="i" v-for="(tab, index) in hairs['hairF']" :key="index" :class="hairActive == index ? 'active':''" @click="hairActive = index; triggerList('hairF', index)" v-if="!gender">
+                            <img :src="'hairs/' + index + '.png'">
+                        </li>
+
+                    </ul>
+
+                </div>
+     
+            </div>
+            <div class="element listened">
+                <label>Брови:</label>
+                <div class="slider buttonList">
+                    <listfill id="eyebrowsM" v-if="gender" ></listfill>
+                    <listfill id="eyebrowsF" v-if="!gender" ></listfill>
+                </div>
+            </div>
+            <div class="element listened" v-if="gender">
+                <label>Бородка:</label>
+                <div class="slider buttonList">
+                     <listfill id="beard"></listfill>
+                </div>
+            </div>
+            <div class="element listened" >
+                <label>Цвет волос:</label>
+                <div class="slider buttonList">
+                   <listfill id="hairColor"></listfill>
+                </div>
+            </div>
+            <div class="element listened">
+                <label>Цвет глаз:</label>
+                <div class="slider buttonList">
+                <listfill id="eyeColor"></listfill>
+                </div>
+            </div>
+        </div>
+       
+        <div class="button">
+            <button class="btn purple" @click="save">Создать</button>
+            <!-- <a class="link gray" href="restorepass.html">Забыли пароль?</a> -->
+        </div>
+
+        </div>
+        <div class="listenButtons">
+            <div class="staticBtn">
+                <div><span class="icon mouse1"></div>
+                <div>Приближение</div>
+            </div>
+
+            <div class="staticBtn">
+                <div><span class="icon mouse2"></div>   
+                <div>Поворот</div>
+            </div>
+
+            <div class="staticBtn">
+                <div><span class="icon gor"></div>   
+            </div>
+            <div class="staticBtn">
+                <div><span class="icon ver"></div>   
+                <div class="width">Горячие клавиши </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/rangeslider.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/character.js"></script>
+</body>
+</html>

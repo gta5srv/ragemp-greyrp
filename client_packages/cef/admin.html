@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <title></title>
+   <style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+  <div v-cloak id="app" v-if="active">
+    <div class="container">
+      <header>
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <h1>Онлайн: {{items.length}}</h1>
+        <span>
+          <i @click="closepanel()" class="fa fa-times-circle-o" aria-hidden="true"></i>
+        </span>
+      </header>
+
+      <div class="main pageMembers">
+        <h2>Список игроков</h2>
+        <div class="items">
+          <table>
+            <tr class="item">
+              <th class="idItem">ID</th>
+              <th class="nickItem">Никнейм</th>
+              <th class="cmdItem">Команды</th>
+              <th class="pingItem">Ping</th>
+            </tr>
+            <tr class="item" v-for="item in items">
+              <td>{{item[1]}}</td>
+              <td>{{item[2]}}</td>
+              <td>
+                <span>
+				  <i @click="comand(`metp ` + item[1])" title="Телепорт игрока" class="fa fa-arrow-left" aria-hidden="true"></i>
+                  <i @click="comand(`tp ` + item[1])" title="Телепорт к игроку" class="fa fa-arrow-right" aria-hidden="true"></i>
+				  <i @click="comand(`sp ` + item[1])" title="Следить" class="fa fa-eye" aria-hidden="true"></i>    
+                  <i @click="selectPlayer(item)" title="Другие команды" class="fa fa-bars" aria-hidden="true"></i>
+                </span>
+              </td>
+              <td>{{item[3]}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <transition name="modal">
+      <div class="modal-window" v-if="activeModal">
+        <header>
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <h2>{{item[2]}}</h2>
+        </header>
+        <div class="cmdlist">
+          <div v-for="(cmd, index) in cmdlist" v-if="getState(cmd.Command)">
+            <p>
+              <a class="btnModal btnGps" @click="text[index] == null ? comand(cmd.Command + ` ` + item[1]) : comand(cmd.Command + ` ` + item[1] + ` ` + text[index])">{{cmd.Command}}</a>
+            </p>
+			<span>
+              <input v-model="text[index]" type="text" :placeholder="getArgs(cmd.Command)" v-if="getArgs(cmd.Command) != `нет аргументов`">
+            </span>
+          </div>
+        </div>
+        <footer>
+          <a class="btnModal btnCancel" @click="cancelmodal">Отмена</a>
+        </footer>
+      </div>
+    </transition>
+
+    <transition name="fade">
+      <div class="fade" v-if="activeModal"></div>
+    </transition>
+
+  </div>
+  <script src="js/commands.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  overflow: hidden;
+}
+
+.house-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 31.296vh;
+  background: linear-gradient(152.31deg, #121212 35.92%, #FF2222 103.51%);
+  border-radius: 1.759vh;
+  font-family: 'Gilroy';
+  padding: 0 2.130vh 2.222vh 2.130vh;
+}
+
+.house-wrapper header {
+  height: 7.037vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.house-wrapper header p {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 2.222vh;
+}
+
+.house-wrapper header .background {
+  background-color: rgba(255, 255, 255, 0.13);
+  padding: 0.833vh;
+  border-radius: 0.278vh;
+  width: 2.778vh;
+  height: 2.778vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.house-wrapper header .background img {
+  width: 1.111vh;
+  height: 1.111vh;
+}
+
+.house-wrapper .status {
+  width: 100%;
+  height: 5.000vh;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.556vh;
+  border: solid rgba(255, 255, 255, 0.05) 0.278vh;
+  padding: 0.185vh;
+}
+
+.house-wrapper .status .block {
+  color: white;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 1.296vh;
+  border-radius: 0.463vh;
+  transition: background-color 0.25s;
+}
+
+.house-wrapper .status .active {
+  transition: 0.2s;
+}
+
+.house-wrapper .status .active:nth-child(1) {
+  background-color: #5AA22E;
+}
+
+.house-wrapper .status .active:nth-child(2) {
+  background-color: #552121;
+}
+
+.house-wrapper .information {
+  margin-top: 1.667vh;
+}
+
+.house-wrapper .information .block {
+  height: 4.352vh;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 0.370vh;
+  margin-bottom: 0.556vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.389vh 0 1.389vh;
+  color: white;
+  font-size: 1.296vh;
+}
+
+.house-wrapper .information .block p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.house-wrapper .information .block::before {
+  content: "";
+  width: 0.185vh;
+  position: absolute;
+  height: 2.407vh;
+  background: #FF4747;
+  box-shadow: 0.185vh 0 1.389vh #FF4747;
+  margin-left: -1.389vh;
+}
+
+.house-wrapper .information .block .stars svg {
+  width: 1.852vh;
+}
+
+.house-wrapper .information .block .active path {
+  fill: #FF4747;
+  fill-opacity: 1;
+}
+
+.house-wrapper .buttons {
+  margin-top: 0.741vh;
+  display: flex;
+  justify-content: space-between;
+  height: 5.278vh;
+}
+
+.house-wrapper .buttons .button {
+  text-align: center;
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.370vh;
+  transition: 0.2s;
+  font-size: 1.296vh;
+
+}
+
+.house-wrapper .buttons .button:nth-child(1) {
+  background-color: #5AA12E;
+  color: white;
+}
+
+.house-wrapper .buttons .button:nth-child(2), .house-wrapper .bottom .button {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.house-wrapper .bottom {
+  margin-top: 0.741vh;
+}
+
+.house-wrapper .bottom .button {
+  text-align: center;
+  padding: 0.833vh 0 0.833vh 0;
+  transition: 0.2s;
+  font-size: 1.296vh;
+
+}
+
+.house-wrapper .buttons .button:hover, .house-wrapper .bottom .button:hover, 
+.house-wrapper .status .active:hover, .house-wrapper header .background:hover {
+  opacity: 0.5;
+}
