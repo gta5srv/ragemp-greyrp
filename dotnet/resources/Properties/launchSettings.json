@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "lifesheets": {
+      "commandName": "Executable",
+      "executablePath": "F:\\project\\ragemp-greyrp\\ragemp-server.exe",
+      "workingDirectory": "F:\\project\\ragemp-greyrp",
+      "name": "RAGE-MP Launch (build)",
+      "program": "ragemp-server.exe",
+      "request": "launch",
+      "stopAtEntry": false,
+      "internalConsoleOptions": "neverOpen",
+      "console": "externalTerminal",
+      "cwd": "..\\..\\..\\ragemp-greyrp/",
+      "preLaunchTask": "compile",
+      "type": "coreclr"
+    }
+  }
+}
